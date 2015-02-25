@@ -90,6 +90,8 @@ public class NavigationDrawerFragment extends Fragment {
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
             Bundle savedInstanceState) {
+
+
         mDrawerListView = (ListView) inflater.inflate(
                 R.layout.fragment_navigation_drawer, container, false);
         mDrawerListView.setOnItemClickListener(new AdapterView.OnItemClickListener() {
@@ -99,35 +101,18 @@ public class NavigationDrawerFragment extends Fragment {
             }
         });
 
-		String model = android.os.Build.MODEL;
-        if(model.contains("Nokia_X") || model.contains("Nokia_XL") || model.contains("NokiaX2")) {
-	        mDrawerListView.setAdapter(new ArrayAdapter<String>(
-	                getActionBar().getThemedContext(),
-	                R.layout.text_row_nav_drawer, R.id.text1,
-	                new String[]{
-	                    getString(R.string.menu_hardware),
-	                    getString(R.string.menu_sensor),
-	                    getString(R.string.menu_screen),
-	                    getString(R.string.menu_camera),
-	                    getString(R.string.menu_features),
-	                    getString(R.string.menu_applist),
-	                    getString(R.string.menu_exit),
-	                }));
-        } else {
-        	mDrawerListView.setAdapter(new ArrayAdapter<String>(
-                    getActionBar().getThemedContext(),
-                    R.layout.text_row_nav_drawer, R.id.text1,
-                    new String[]{
+        mDrawerListView.setAdapter(new ArrayAdapter<String>(
+                getActionBar().getThemedContext(),
+                R.layout.text_row_nav_drawer, R.id.text1,
+                new String[]{
                         getString(R.string.menu_testing),
                         getString(R.string.menu_hardware),
                         getString(R.string.menu_sensor),
                         getString(R.string.menu_screen),
                         getString(R.string.menu_camera),
                         getString(R.string.menu_features),
-                        getString(R.string.menu_applist),
-                        getString(R.string.menu_exit),
-                    }));
-        }
+                        getString(R.string.menu_applist)
+                }));
         
         mDrawerListView.setItemChecked(mCurrentSelectedPosition, true);
         return mDrawerListView;

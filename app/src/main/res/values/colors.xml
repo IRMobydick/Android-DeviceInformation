@@ -18,6 +18,10 @@
     <color name="screen_measure_bg2">#77038d88</color>
     
     <color name="list_selector_bg">#fdcf09</color>
-    
-    
+
+    <color name="global_background">#f0f0f0</color>
+
+    <color name="white">#ffffff</color>
+    <color name="black">#000000</color>
+
 </resources>

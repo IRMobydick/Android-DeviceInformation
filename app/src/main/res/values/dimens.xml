@@ -14,6 +14,13 @@
     <dimen name="global_text_sub_size">10dp</dimen>
     <dimen name="global_text_size">15dp</dimen>
     <dimen name="global_text_header_size">18dp</dimen>
+
+
+    <dimen name="global_card_view_corner">5dp</dimen>
+
+    <dimen name="global_margin_padding_small">5dp</dimen>
+    <dimen name="global_margin_padding">10dp</dimen>
+    <dimen name="global_margin_padding_large">20dp</dimen>
     
     <dimen name="dialog_whatsnew_margin">20dp</dimen>
     
@@ -67,6 +74,12 @@
     <dimen name="dialog_sensor_text_width">120dp</dimen>   
     
     <dimen name="dialog_loading_width">240dp</dimen>  
-    <dimen name="dialog_loading_height">180dp</dimen>    
+    <dimen name="dialog_loading_height">180dp</dimen>
+
+
+    <!-- Welcome -->
+
+    <dimen name="welcome_text_header_size">35dp</dimen>
+    <dimen name="welcome_text_app_name_size">20dp</dimen>
     
 </resources>

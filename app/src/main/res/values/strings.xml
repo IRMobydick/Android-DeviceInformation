@@ -108,5 +108,12 @@
     <string name="hardware_ram_info">Memory Information</string>
     <string name="hardware_rom_info">Storage Information</string>
     <string name="hardware_connection_info">Connection Information</string>
+    <string name="title_activity_welcome">Welcome</string>
+
+    <string name="hello_world">Hello world!</string>
+    <string name="action_settings">Settings</string>
+
+<!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
 
 </resources>

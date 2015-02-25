@@ -45,41 +45,12 @@ public class MainActivity extends ActionBarActivity implements
 
 	protected void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
-		setContentView(R.layout.layout_main);
+		setContentView(R.layout.activity_main);
 				
 		ActionBar ab = getSupportActionBar();
 		String strColor = getResources().getString(R.color.action_bar_bg);
         ab.setBackgroundDrawable(new ColorDrawable(Color.parseColor(strColor)));
 
-		String model = android.os.Build.MODEL;
-        if(!model.contains("Nokia_X") || !model.contains("Nokia_XL") || !model.contains("NokiaX2")) {
-	        SharedPreferences settings = getSharedPreferences(PREFERENCE_NAME, 0);
-		    boolean isFirstRun = settings.getBoolean(KEYWORD_NAME, true);
-		    if(isFirstRun) {
-		    	final Dialog dialog = new Dialog(MainActivity.this);
-		        dialog.requestWindowFeature(Window.FEATURE_NO_TITLE);
-		        dialog.setContentView(R.layout.dialog_whatsnew);
-		        dialog.setCancelable(false);
-		        dialog.setOnDismissListener(new OnDismissListener() {
-					public void onDismiss(DialogInterface dialog) {
-						SharedPreferences settings = getSharedPreferences(PREFERENCE_NAME, Context.MODE_PRIVATE);
-						SharedPreferences.Editor editor = settings.edit();
-						editor.putBoolean(KEYWORD_NAME, false);
-						editor.commit();
-					}
-				});
-		        
-		        TextView textWhatnewOK = (TextView)dialog.findViewById(R.id.textWhatnewOK);
-		        textWhatnewOK.setOnClickListener(new OnClickListener() {
-		        	public void onClick(View v) {
-		        		dialog.dismiss();
-		        	}
-		        });
-		        
-				dialog.show();
-		    }
-        }
-        
 		mNavigationDrawerFragment = (NavigationDrawerFragment)getSupportFragmentManager()
 				.findFragmentById(R.id.navigation_drawer);
 		mTitle = getTitle();
@@ -87,15 +58,9 @@ public class MainActivity extends ActionBarActivity implements
 		mNavigationDrawerFragment.setUp(R.id.navigation_drawer,
 				(DrawerLayout) findViewById(R.id.drawer_layout));
 
-        if(model.contains("Nokia_X") || model.contains("Nokia_XL") || model.contains("NokiaX2")) {
-        	Fragment fragment = HardwareFragment.newInstance();
-    		FragmentManager fragmentManager = getSupportFragmentManager();
-    		fragmentManager.beginTransaction().replace(R.id.container, fragment).commit();
-        } else {
-        	Fragment fragment = TestingFragment.newInstance();
-    		FragmentManager fragmentManager = getSupportFragmentManager();
-    		fragmentManager.beginTransaction().replace(R.id.container, fragment).commit();
-        }
+        Fragment fragment = TestingFragment.newInstance();
+        FragmentManager fragmentManager = getSupportFragmentManager();
+        fragmentManager.beginTransaction().replace(R.id.container, fragment).commit();
 		onSectionAttached(0);
 		
 		mNavigationDrawerFragment.showNavigationDrawer();  
@@ -109,87 +74,45 @@ public class MainActivity extends ActionBarActivity implements
 	public void onNavigationDrawerItemSelected(int position) {
 		Fragment fragment = null;
 		if(current_position != position) {
-			String model = android.os.Build.MODEL;
-	        if(model.contains("Nokia_X") || model.contains("Nokia_XL") || model.contains("NokiaX2")) {
-				if(position != 6) {
-				        if(position == 0) {
-							fragment = HardwareFragment.newInstance();
-						} else if(position == 1) {
-							fragment = SensorFragment.newInstance();
-						} else if(position == 2) {
-							fragment = ScreenFragment.newInstance();
-						} else if(position == 3) {
-							fragment = CameraFragment.newInstance();
-						} else if(position == 4) {
-							fragment = FeatureFragment.newInstance();
-						} else if(position == 5) {
-							fragment = AppListFragment.newInstance();
-						}
-					
-					if(!getSupportActionBar().isShowing())
-						getSupportActionBar().show();
-					FragmentManager fragmentManager = getSupportFragmentManager();
-					fragmentManager.beginTransaction().replace(R.id.container, fragment).commit();
-					current_position = position;
-					onSectionAttached(position);	
-				} else {
-					finish();
-				}
-			} else {
-				if(position != 7) {
-					if(position == 0) {
-						fragment = TestingFragment.newInstance();
-					} else if(position == 1) {
-						fragment = HardwareFragment.newInstance();
-					} else if(position == 2) {
-						fragment = SensorFragment.newInstance();
-					} else if(position == 3) {
-						fragment = ScreenFragment.newInstance();
-					} else if(position == 4) {
-						fragment = CameraFragment.newInstance();
-					} else if(position == 5) {
-						fragment = FeatureFragment.newInstance();
-					} else if(position == 6) {
-						fragment = AppListFragment.newInstance();
-					}
-				
-					if(!getSupportActionBar().isShowing())
-						getSupportActionBar().show();
-					FragmentManager fragmentManager = getSupportFragmentManager();
-					fragmentManager.beginTransaction().replace(R.id.container, fragment).commit();
-					current_position = position;
-					onSectionAttached(position);	
-				} else {
-					finish();
-				}
-			}
+            if(position != 7) {
+                if(position == 0) {
+                    fragment = TestingFragment.newInstance();
+                } else if(position == 1) {
+                    fragment = HardwareFragment.newInstance();
+                } else if(position == 2) {
+                    fragment = SensorFragment.newInstance();
+                } else if(position == 3) {
+                    fragment = ScreenFragment.newInstance();
+                } else if(position == 4) {
+                    fragment = CameraFragment.newInstance();
+                } else if(position == 5) {
+                    fragment = FeatureFragment.newInstance();
+                } else if(position == 6) {
+                    fragment = AppListFragment.newInstance();
+                }
+
+                if(!getSupportActionBar().isShowing())
+                    getSupportActionBar().show();
+                FragmentManager fragmentManager = getSupportFragmentManager();
+                fragmentManager.beginTransaction().replace(R.id.container, fragment).commit();
+                current_position = position;
+                onSectionAttached(position);
+            } else {
+                finish();
+            }
 		}
 	}
 
 	public void onSectionAttached(int number) {
-
-		String model = android.os.Build.MODEL;
-        if(model.contains("Nokia_X") || model.contains("Nokia_XL") || model.contains("NokiaX2")) {
-			switch (number) {
-			case 0: mTitle = getString(R.string.menu_hardware); break;
-			case 1: mTitle = getString(R.string.menu_sensor); break;
-			case 2: mTitle = getString(R.string.menu_screen); break;
-			case 3: mTitle = getString(R.string.menu_camera); break;
-			case 4: mTitle = getString(R.string.menu_features); break;
-			case 5: mTitle = getString(R.string.menu_applist); break;
-			case 6: mTitle = getString(R.string.menu_exit); break;
-			}
-        } else {
-			switch (number) {
-			case 0: mTitle = getString(R.string.menu_testing); break;
-			case 1: mTitle = getString(R.string.menu_hardware); break;
-			case 2: mTitle = getString(R.string.menu_sensor); break;
-			case 3: mTitle = getString(R.string.menu_screen); break;
-			case 4: mTitle = getString(R.string.menu_camera); break;
-			case 5: mTitle = getString(R.string.menu_features); break;
-			case 6: mTitle = getString(R.string.menu_applist); break;
-			case 7: mTitle = getString(R.string.menu_exit); break;
-			}
+        switch (number) {
+            case 0: mTitle = getString(R.string.menu_testing); break;
+            case 1: mTitle = getString(R.string.menu_hardware); break;
+            case 2: mTitle = getString(R.string.menu_sensor); break;
+            case 3: mTitle = getString(R.string.menu_screen); break;
+            case 4: mTitle = getString(R.string.menu_camera); break;
+            case 5: mTitle = getString(R.string.menu_features); break;
+            case 6: mTitle = getString(R.string.menu_applist); break;
+            case 7: mTitle = getString(R.string.menu_exit); break;
         }
 	}
 
