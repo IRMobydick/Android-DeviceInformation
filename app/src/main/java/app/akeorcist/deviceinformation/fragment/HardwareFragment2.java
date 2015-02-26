@@ -22,25 +22,25 @@ import android.widget.TextView;
 import app.akeorcist.deviceinformation.manager.InfoManager.HardwareInfo;
 import app.akeorcist.deviceinformation.R;
 
-public class HardwareFragment extends Fragment {
+public class HardwareFragment2 extends Fragment {
 	LinearLayout layoutBuild, layoutOS, layoutCPU, layoutGPU, layoutRam
 			, layoutRom, layoutConnection, layoutLoading;
 	ScrollView scrollHardware;
 	LayoutInflater mInflater;
 	GLSurfaceView glSurfaceView;
 	
-	public static HardwareFragment newInstance() {
-		HardwareFragment fragment = new HardwareFragment();
+	public static HardwareFragment2 newInstance() {
+		HardwareFragment2 fragment = new HardwareFragment2();
 		return fragment;
 	}
 
-	public HardwareFragment() { }
+	public HardwareFragment2() { }
 
 	@SuppressWarnings("deprecation")
 	@SuppressLint("NewApi")
 	public View onCreateView(LayoutInflater inflater, ViewGroup container,
 			Bundle savedInstanceState) {
-		View rootView = inflater.inflate(R.layout.fragment_hardware, container,
+		View rootView = inflater.inflate(R.layout.fragment_hardware2, container,
 				false);
 		mInflater = (LayoutInflater)getActivity().getSystemService(Context.LAYOUT_INFLATER_SERVICE);
 		
@@ -57,8 +57,8 @@ public class HardwareFragment extends Fragment {
 		layoutConnection = (LinearLayout)rootView.findViewById(R.id.layoutConnection);
 
 	    glSurfaceView = (GLSurfaceView)rootView.findViewById(R.id.glSurfaceView);
-		
-	    glSurfaceView.setRenderer(new ClearRenderer(layoutGPU, mInflater, getActivity()));
+
+        glSurfaceView.setRenderer(new ClearRenderer(layoutGPU, mInflater, getActivity()));
 	    
 	    new Handler().postDelayed(new Runnable() {
 	    	public void run() {
@@ -73,7 +73,7 @@ public class HardwareFragment extends Fragment {
 		    		arrBuild.add("Device : " + Build.DEVICE);
 		    		arrBuild.add("Display : " + Build.DISPLAY);
 		    		arrBuild.add("Fingerprint : " + Build.FINGERPRINT);
-		    		arrBuild.add("Hardware : " + Build.HARDWARE);
+		    		arrBuild.add("Data : " + Build.HARDWARE);
 		    		arrBuild.add("Host : " + Build.HOST);
 		    		arrBuild.add("ID : " + Build.ID);
 		    		arrBuild.add("Manufacturer : " + Build.MANUFACTURER);

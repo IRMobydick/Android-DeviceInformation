@@ -5,31 +5,23 @@ import android.support.v7.app.ActionBar;
 import android.support.v4.app.Fragment;
 import android.support.v4.app.FragmentManager;
 import android.annotation.SuppressLint;
-import android.app.Dialog;
-import android.content.Context;
-import android.content.DialogInterface;
-import android.content.DialogInterface.OnDismissListener;
-import android.content.SharedPreferences;
-import android.graphics.Color;
 import android.graphics.drawable.ColorDrawable;
 import android.os.Bundle;
 import android.view.Menu;
 import android.view.MenuItem;
-import android.view.View;
-import android.view.View.OnClickListener;
-import android.view.Window;
-import android.widget.TextView;
 import android.support.v4.widget.DrawerLayout;
 
+import app.akeorcist.deviceinformation.fragment.HardwareFragment2;
 import app.akeorcist.deviceinformation.fragment.NavigationDrawerFragment;
 import app.akeorcist.deviceinformation.R;
 import app.akeorcist.deviceinformation.fragment.AppListFragment;
 import app.akeorcist.deviceinformation.fragment.CameraFragment;
 import app.akeorcist.deviceinformation.fragment.FeatureFragment;
-import app.akeorcist.deviceinformation.fragment.HardwareFragment;
 import app.akeorcist.deviceinformation.fragment.ScreenFragment;
 import app.akeorcist.deviceinformation.fragment.SensorFragment;
-import app.akeorcist.deviceinformation.fragment.TestingFragment;
+import app.akeorcist.deviceinformation.fragment.main.HardwareFragment;
+import app.akeorcist.deviceinformation.fragment.main.SubmitFragment;
+import app.akeorcist.deviceinformation.manager.HardwareManager;
 
 public class MainActivity extends ActionBarActivity implements
         NavigationDrawerFragment.NavigationDrawerCallbacks {
@@ -47,10 +39,9 @@ public class MainActivity extends ActionBarActivity implements
 		super.onCreate(savedInstanceState);
 		setContentView(R.layout.activity_main);
 
-
 		ActionBar ab = getSupportActionBar();
-		String strColor = getResources().getString(R.color.action_bar_bg);
-        ab.setBackgroundDrawable(new ColorDrawable(Color.parseColor(strColor)));
+        if(ab != null)
+            ab.setBackgroundDrawable(new ColorDrawable(getResources().getColor(R.color.blue)));
 
 		mNavigationDrawerFragment = (NavigationDrawerFragment)getSupportFragmentManager()
 				.findFragmentById(R.id.navigation_drawer);
@@ -59,16 +50,12 @@ public class MainActivity extends ActionBarActivity implements
 		mNavigationDrawerFragment.setUp(R.id.navigation_drawer,
 				(DrawerLayout) findViewById(R.id.drawer_layout));
 
-        Fragment fragment = TestingFragment.newInstance();
+        Fragment fragment = SubmitFragment.newInstance();
         FragmentManager fragmentManager = getSupportFragmentManager();
         fragmentManager.beginTransaction().replace(R.id.container, fragment).commit();
 		onSectionAttached(0);
 		
-		mNavigationDrawerFragment.showNavigationDrawer();  
-		 
-
-		
-	    
+		//mNavigationDrawerFragment.showNavigationDrawer();
 	}
 
 	@SuppressLint("InlinedApi")
@@ -77,7 +64,7 @@ public class MainActivity extends ActionBarActivity implements
 		if(current_position != position) {
             if(position != 7) {
                 if(position == 0) {
-                    fragment = TestingFragment.newInstance();
+                    fragment = SubmitFragment.newInstance();
                 } else if(position == 1) {
                     fragment = HardwareFragment.newInstance();
                 } else if(position == 2) {

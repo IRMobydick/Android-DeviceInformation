@@ -157,7 +157,7 @@ public class TestingFragment extends Fragment {
 						strWrite += "Device : " + Build.DEVICE + "\n";
 						strWrite += "Display : " + Build.DISPLAY + "\n";
 						strWrite += "Fingerprint : " + Build.FINGERPRINT + "\n";
-						strWrite += "Hardware : " + Build.HARDWARE + "\n";
+						strWrite += "Data : " + Build.HARDWARE + "\n";
 						strWrite += "Host : " + Build.HOST + "\n";
 						strWrite += "ID : " + Build.ID + "\n";
 						strWrite += "Manufacturer : " + Build.MANUFACTURER + "\n";
@@ -1037,7 +1037,7 @@ public class TestingFragment extends Fragment {
 			arr_list.add(bufferedReader.readLine().split(":")[1].trim()); // CPU Variant
 			arr_list.add(bufferedReader.readLine().split(":")[1].trim());	// CPU Part
 			arr_list.add(bufferedReader.readLine().split(":")[1].trim()); // CPU Revision
-			arr_list.add(bufferedReader.readLine().split(":")[1].trim());	// Hardware
+			arr_list.add(bufferedReader.readLine().split(":")[1].trim());	// Data
 			arr_list.add(bufferedReader.readLine().split(":")[1].trim()); // Revision
 
 			try {

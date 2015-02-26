@@ -1,0 +1,192 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    android:gravity="center_horizontal"
+    android:orientation="vertical"
+    android:padding="@dimen/global_margin_padding_large">
+
+    <com.dd.CircularProgressButton
+        android:id="@+id/btn_submit_info"
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        android:layout_marginBottom="@dimen/global_margin_padding_large"
+        android:layout_marginTop="@dimen/global_margin_padding_large"
+        android:textColor="@color/white"
+        android:textSize="@dimen/global_text_size"
+        app:cpb_cornerRadius="@dimen/global_corner_radius"
+        app:cpb_iconComplete="@drawable/menu_icon_app"
+        app:cpb_selectorComplete="@drawable/selector_green"
+        app:cpb_selectorError="@drawable/selector_green"
+        app:cpb_selectorIdle="@drawable/selector_red"
+        app:cpb_textIdle="Send" />
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center_vertical"
+            android:orientation="horizontal"
+            android:padding="@dimen/global_margin_padding_small">
+
+            <ImageView
+                android:id="@+id/iv_submit_hwsw"
+                android:layout_width="30dp"
+                android:layout_height="30dp"
+                android:layout_marginRight="@dimen/global_margin_padding"
+                android:background="@color/light_gray" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Collect hardware/software info"
+                android:textColor="@color/dark_gray"
+                android:textSize="@dimen/global_text_size_small" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center_vertical"
+            android:orientation="horizontal"
+            android:padding="@dimen/global_margin_padding_small">
+
+            <ImageView
+                android:id="@+id/iv_submit_sensor"
+                android:layout_width="30dp"
+                android:layout_height="30dp"
+                android:layout_marginRight="@dimen/global_margin_padding"
+                android:background="@color/light_gray" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Collect sensor info"
+                android:textColor="@color/dark_gray"
+                android:textSize="@dimen/global_text_size_small" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center_vertical"
+            android:orientation="horizontal"
+            android:padding="@dimen/global_margin_padding_small">
+
+            <ImageView
+                android:id="@+id/iv_submit_screen"
+                android:layout_width="30dp"
+                android:layout_height="30dp"
+                android:layout_marginRight="@dimen/global_margin_padding"
+                android:background="@color/light_gray" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Collect screen info"
+                android:textColor="@color/dark_gray"
+                android:textSize="@dimen/global_text_size_small" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center_vertical"
+            android:orientation="horizontal"
+            android:padding="@dimen/global_margin_padding_small">
+
+            <ImageView
+                android:id="@+id/iv_submit_camera"
+                android:layout_width="30dp"
+                android:layout_height="30dp"
+                android:layout_marginRight="@dimen/global_margin_padding"
+                android:background="@color/light_gray" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Collect camera info"
+                android:textColor="@color/dark_gray"
+                android:textSize="@dimen/global_text_size_small" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center_vertical"
+            android:orientation="horizontal"
+            android:padding="@dimen/global_margin_padding_small">
+
+            <ImageView
+                android:id="@+id/iv_submit_feature"
+                android:layout_width="30dp"
+                android:layout_height="30dp"
+                android:layout_marginRight="@dimen/global_margin_padding"
+                android:background="@color/light_gray" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Collect feature info"
+                android:textColor="@color/dark_gray"
+                android:textSize="@dimen/global_text_size_small" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center_vertical"
+            android:orientation="horizontal"
+            android:padding="@dimen/global_margin_padding_small">
+
+            <ImageView
+                android:id="@+id/iv_submit_app"
+                android:layout_width="30dp"
+                android:layout_height="30dp"
+                android:layout_marginRight="@dimen/global_margin_padding"
+                android:background="@color/light_gray" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Collect app info"
+                android:textColor="@color/dark_gray"
+                android:textSize="@dimen/global_text_size_small" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center_vertical"
+            android:orientation="horizontal"
+            android:padding="@dimen/global_margin_padding_small">
+
+            <ImageView
+                android:id="@+id/iv_submit_send"
+                android:layout_width="30dp"
+                android:layout_height="30dp"
+                android:layout_marginRight="@dimen/global_margin_padding"
+                android:background="@color/light_gray" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Send device information"
+                android:textColor="@color/dark_gray"
+                android:textSize="@dimen/global_text_size_small" />
+
+        </LinearLayout>
+    </LinearLayout>
+</LinearLayout>

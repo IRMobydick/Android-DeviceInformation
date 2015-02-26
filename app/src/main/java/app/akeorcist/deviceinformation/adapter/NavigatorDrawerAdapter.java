@@ -3,6 +3,7 @@ package app.akeorcist.deviceinformation.adapter;
 import android.content.Context;
 import android.util.Log;
 import android.view.LayoutInflater;
+import android.view.MotionEvent;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.BaseAdapter;
@@ -11,6 +12,7 @@ import android.widget.LinearLayout;
 import android.widget.TextView;
 
 import app.akeorcist.deviceinformation.R;
+import app.akeorcist.deviceinformation.Utilities.AnimateUtils;
 
 /**
  * Created by Ake on 2/26/2015.
@@ -43,11 +45,16 @@ public class NavigatorDrawerAdapter extends BaseAdapter {
     }
 
     private void setLayoutPressed(View view, boolean state) {
-        if (view != null)
-            if(state)
-                view.setBackgroundColor(context.getResources().getColor(R.color.yellow));
-            else
+        if (view != null) {
+            TextView tvMenuList = (TextView) view.findViewById(R.id.tv_menu_list);
+            if (state) {
+                tvMenuList.setTextColor(context.getResources().getColor(R.color.white));
+                view.setBackgroundColor(context.getResources().getColor(R.color.dark_gray));
+            } else {
+                tvMenuList.setTextColor(context.getResources().getColor(R.color.dark_gray));
                 view.setBackgroundResource(R.drawable.selector_menu);
+            }
+        }
     }
 
     @Override
@@ -72,16 +79,19 @@ public class NavigatorDrawerAdapter extends BaseAdapter {
             viewMenuList[position] = convertView;
         }
 
-        if(checkedPosition == position)
-            convertView.setBackgroundColor(context.getResources().getColor(R.color.yellow));
-        else
-            convertView.setBackgroundResource(R.drawable.selector_menu);
+        ImageView ivMenuList = (ImageView) convertView.findViewById(R.id.iv_menu_list);
+        ivMenuList.setImageResource(arrIconList[position]);
 
         TextView tvMenuList = (TextView) convertView.findViewById(R.id.tv_menu_list);
         tvMenuList.setText(arrMenuList[position]);
 
-        ImageView ivMenuList = (ImageView) convertView.findViewById(R.id.iv_menu_list);
-        ivMenuList.setImageResource(arrIconList[position]);
+        if(checkedPosition == position) {
+            convertView.setBackgroundColor(context.getResources().getColor(R.color.dark_gray));
+            tvMenuList.setTextColor(context.getResources().getColor(R.color.white));
+        } else {
+            convertView.setBackgroundResource(R.drawable.selector_menu);
+            tvMenuList.setTextColor(context.getResources().getColor(R.color.dark_gray));
+        }
 
         return convertView;
     }
