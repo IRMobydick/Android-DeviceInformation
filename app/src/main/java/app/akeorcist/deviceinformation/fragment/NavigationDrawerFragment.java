@@ -22,6 +22,7 @@ import android.widget.ArrayAdapter;
 import android.widget.ListView;
 
 import app.akeorcist.deviceinformation.R;
+import app.akeorcist.deviceinformation.adapter.NavigatorDrawerAdapter;
 
 /**
  * Fragment used for managing interactions for and presentation of a navigation drawer.
@@ -53,11 +54,16 @@ public class NavigationDrawerFragment extends Fragment {
 
     private DrawerLayout mDrawerLayout;
     private ListView mDrawerListView;
+    private View mDrawerRootView;
+    private NavigatorDrawerAdapter mDrawerAdapter;
     private View mFragmentContainerView;
 
     private int mCurrentSelectedPosition = 0;
     private boolean mFromSavedInstanceState;
     private boolean mUserLearnedDrawer;
+
+    private String[] arrMenuList;
+    private int[] arrIconList;
 
     public NavigationDrawerFragment() {
     }
@@ -90,32 +96,39 @@ public class NavigationDrawerFragment extends Fragment {
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
             Bundle savedInstanceState) {
+        mDrawerRootView = inflater.inflate(R.layout.fragment_navigation_drawer, container, false);
+        mDrawerListView = (ListView) mDrawerRootView.findViewById(R.id.lv_menu);
 
+        arrMenuList = new String[]{
+                getString(R.string.menu_submit),
+                getString(R.string.menu_hardware),
+                getString(R.string.menu_sensor),
+                getString(R.string.menu_screen),
+                getString(R.string.menu_camera),
+                getString(R.string.menu_features),
+                getString(R.string.menu_applist)
+        };
 
-        mDrawerListView = (ListView) inflater.inflate(
-                R.layout.fragment_navigation_drawer, container, false);
+        arrIconList = new int[] {
+                R.drawable.menu_icon_submit,
+                R.drawable.menu_icon_hardware,
+                R.drawable.menu_icon_sensor,
+                R.drawable.menu_icon_screen,
+                R.drawable.menu_icon_camera,
+                R.drawable.menu_icon_feature,
+                R.drawable.menu_icon_app
+        };
+
+        mDrawerAdapter = new NavigatorDrawerAdapter(getActivity(), arrMenuList, arrIconList);
+        mDrawerListView.setAdapter(mDrawerAdapter);
         mDrawerListView.setOnItemClickListener(new AdapterView.OnItemClickListener() {
             @Override
             public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
                 selectItem(position);
             }
         });
-
-        mDrawerListView.setAdapter(new ArrayAdapter<String>(
-                getActionBar().getThemedContext(),
-                R.layout.text_row_nav_drawer, R.id.text1,
-                new String[]{
-                        getString(R.string.menu_testing),
-                        getString(R.string.menu_hardware),
-                        getString(R.string.menu_sensor),
-                        getString(R.string.menu_screen),
-                        getString(R.string.menu_camera),
-                        getString(R.string.menu_features),
-                        getString(R.string.menu_applist)
-                }));
-        
-        mDrawerListView.setItemChecked(mCurrentSelectedPosition, true);
-        return mDrawerListView;
+        mDrawerAdapter.setItemChecked(mCurrentSelectedPosition);
+        return mDrawerRootView;
     }
 
     public boolean isDrawerOpen() {
@@ -199,7 +212,7 @@ public class NavigationDrawerFragment extends Fragment {
     private void selectItem(int position) {
         mCurrentSelectedPosition = position;
         if (mDrawerListView != null) {
-            mDrawerListView.setItemChecked(position, true);
+            mDrawerAdapter.setItemChecked(position);
         }
         if (mDrawerLayout != null) {
             mDrawerLayout.closeDrawer(mFragmentContainerView);

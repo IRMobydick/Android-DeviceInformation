@@ -9,10 +9,8 @@
          Per the design guidelines, navigation drawers should be between 240dp and 320dp:
          https://developer.android.com/design/patterns/navigation-drawer.html
     -->
-    <dimen name="navigation_drawer_width">240dp</dimen>
     
     <dimen name="global_text_sub_size">10dp</dimen>
-    <dimen name="global_text_size">15dp</dimen>
     <dimen name="global_text_header_size">18dp</dimen>
 
 
@@ -77,8 +75,19 @@
     <dimen name="dialog_loading_height">180dp</dimen>
 
 
-    <!-- Welcome -->
+    <!-- Global -->
+    <dimen name="global_text_size_small">12dp</dimen>
+    <dimen name="global_text_size">18dp</dimen>
+    <dimen name="global_text_size_large">25dp</dimen>
 
+
+    <!-- Menu -->
+    <dimen name="menu_image_size">60dp</dimen>
+    <dimen name="menu_image_device_size">48dp</dimen>
+    <dimen name="navigation_drawer_width">300dp</dimen>
+
+
+    <!-- Welcome -->
     <dimen name="welcome_text_header_size">35dp</dimen>
     <dimen name="welcome_text_app_name_size">20dp</dimen>
     

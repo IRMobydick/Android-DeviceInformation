@@ -46,7 +46,8 @@ public class MainActivity extends ActionBarActivity implements
 	protected void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
 		setContentView(R.layout.activity_main);
-				
+
+
 		ActionBar ab = getSupportActionBar();
 		String strColor = getResources().getString(R.color.action_bar_bg);
         ab.setBackgroundDrawable(new ColorDrawable(Color.parseColor(strColor)));
@@ -105,7 +106,7 @@ public class MainActivity extends ActionBarActivity implements
 
 	public void onSectionAttached(int number) {
         switch (number) {
-            case 0: mTitle = getString(R.string.menu_testing); break;
+            case 0: mTitle = getString(R.string.menu_submit); break;
             case 1: mTitle = getString(R.string.menu_hardware); break;
             case 2: mTitle = getString(R.string.menu_sensor); break;
             case 3: mTitle = getString(R.string.menu_screen); break;

@@ -23,5 +23,16 @@
 
     <color name="white">#ffffff</color>
     <color name="black">#000000</color>
+    <color name="transparent">#00000000</color>
+
+    <color name="dark_gray">#6d6e70</color>
+    <color name="gray">#d1d2d4</color>
+    <color name="light_gray">#edecec</color>
+    <color name="yellow">#fdbb11</color>
+    <color name="red">#e81d5b</color>
+    <color name="dark_blue">#086ea5</color>
+    <color name="blue">#338fce</color>
+    <color name="light_blue">#5bb4e5</color>
+    <color name="green">#67bf6f</color>
 
 </resources>

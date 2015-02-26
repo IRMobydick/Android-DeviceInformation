@@ -20,7 +20,7 @@
     <string name="global_prev">&lt;</string>
     
     <string name="menu_choose">Choose Information</string>
-    <string name="menu_testing">Testing</string>
+    <string name="menu_submit">Submit Your Device Info</string>
     <string name="menu_hardware">Hardware &amp; Software</string>
     <string name="menu_sensor">Sensor</string>
     <string name="menu_screen">Screen</string>
