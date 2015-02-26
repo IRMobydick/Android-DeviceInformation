@@ -4,7 +4,7 @@
     android:layout_height="match_parent"
     android:orientation="horizontal"
     android:paddingTop="@dimen/global_margin_padding_small"
-    android:paddingBottom="@dimen/global_margin_padding_small">
+    android:paddingBottom="@dimen/global_margin_padding">
 
     <TextView
         android:id="@+id/tv_title"

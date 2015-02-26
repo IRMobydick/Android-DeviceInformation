@@ -16,10 +16,6 @@ import javax.microedition.khronos.opengles.GL10;
  */
 
 public class GpuManager {
-    public void a() {
-    }
-
-        // OpenGL ES 1
     public static class Renderer implements GLSurfaceView.Renderer {
         SurfaceListener listener;
 
@@ -30,10 +26,6 @@ public class GpuManager {
         public void onSurfaceCreated(GL10 gl, EGLConfig config) {
             if (listener != null)
                 listener.onSurfaceCreated(gl, config);
-//        arr.add("Name : " + gl.glGetString(GL10.GL_RENDERER));
-//        arr.add("Vendor : " + gl.glGetString(GL10.GL_VENDOR));
-//        arr.add("GL Version : " + gl.glGetString(GL10.GL_VERSION));
-//        arr.add("GL Extensions : \n\n• " + dividing(gl.glGetString(GL10.GL_EXTENSIONS)));
         }
 
         public void onSurfaceChanged(GL10 gl, int w, int h) {

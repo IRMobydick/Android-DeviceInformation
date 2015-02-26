@@ -3,15 +3,14 @@ package app.akeorcist.deviceinformation.fragment.main;
 
 import android.os.Bundle;
 import android.support.v4.app.Fragment;
+import android.support.v7.widget.RecyclerView;
+import android.support.v7.widget.StaggeredGridLayoutManager;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
-import android.widget.ListView;
-
-import java.lang.reflect.Array;
 
 import app.akeorcist.deviceinformation.R;
-import app.akeorcist.deviceinformation.adapter.HardwareCardAdapter;
+import app.akeorcist.deviceinformation.adapter.HardwearCardAdapter;
 
 /**
  * A simple {@link Fragment} subclass.
@@ -30,9 +29,10 @@ public class HardwareFragment extends Fragment {
                              Bundle savedInstanceState) {
         View rootView = inflater.inflate(R.layout.fragment_hardware, container, false);
 
-        HardwareCardAdapter hardwareCardAdapter = new HardwareCardAdapter(getActivity());
-        ListView lvHardwareCard = (ListView) rootView.findViewById(R.id.lv_hardware_card);
-        lvHardwareCard.setAdapter(hardwareCardAdapter);
+        RecyclerView.Adapter adapter = new HardwearCardAdapter(getActivity());
+        RecyclerView rvHardwareCard = (RecyclerView) rootView.findViewById(R.id.rv_hardware_card);
+        rvHardwareCard.setAdapter(adapter);
+        rvHardwareCard.setLayoutManager(new StaggeredGridLayoutManager(1, StaggeredGridLayoutManager.VERTICAL));
         
         return rootView;
     }
