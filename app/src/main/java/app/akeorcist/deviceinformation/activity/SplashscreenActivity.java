@@ -10,8 +10,10 @@ import android.view.MenuItem;
 
 import app.akeorcist.deviceinformation.R;
 import app.akeorcist.deviceinformation.manager.HardwareManager;
+import app.akeorcist.deviceinformation.manager.ScreenManager;
+import app.akeorcist.deviceinformation.manager.SensorListManager;
 
-public class SlashscreenActivity extends ActionBarActivity {
+public class SplashscreenActivity extends ActionBarActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -20,6 +22,8 @@ public class SlashscreenActivity extends ActionBarActivity {
 
         GLSurfaceView glSurfaceView = (GLSurfaceView) findViewById(R.id.gl_surface_view);
         HardwareManager.initialData(this, glSurfaceView);
+        SensorListManager.initialData(this);
+        ScreenManager.initialData(this);
 
         new Handler().postDelayed(new Runnable() {
             @Override

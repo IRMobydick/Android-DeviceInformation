@@ -1,22 +1,9 @@
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
-    xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@color/gray"
     android:gravity="center_horizontal"
     android:orientation="vertical">
-
-    <ListView
-        android:id="@+id/lv_hardware_card"
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:divider="@color/transparent"
-        android:overScrollMode="never"
-        android:scrollbars="none"
-        android:cacheColorHint="@color/transparent"
-        android:listSelector="@color/transparent"
-        android:visibility="gone"/>
 
     <android.support.v7.widget.RecyclerView
         android:id="@+id/rv_hardware_card"

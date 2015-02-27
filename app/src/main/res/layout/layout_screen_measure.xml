@@ -3,26 +3,27 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:gravity="center" >
+    android:gravity="center"
+    tools:context="app.akeorcist.deviceinformation.activity.ScreenMeasureActivity">
 
     <RelativeLayout
-    	android:id="@+id/layoutScreenMeasurement"
+        android:id="@+id/layoutScreenMeasurement"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:background="@color/global_bg" >
+        android:background="@color/global_bg">
 
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:gravity="left|center_vertical"
-            android:orientation="vertical" >
+            android:orientation="vertical">
 
             <LinearLayout
                 android:layout_width="1280dp"
                 android:layout_height="@dimen/screen_measure_size"
                 android:layout_marginBottom="@dimen/screen_measure_margin"
                 android:layout_marginTop="@dimen/screen_measure_margin"
-                android:background="@drawable/screen_measure_bg_vertical_1" >
+                android:background="@drawable/screen_measure_bg_vertical_1">
 
                 <TextView
                     android:layout_width="wrap_content"
@@ -38,7 +39,7 @@
                 android:layout_height="@dimen/screen_measure_size"
                 android:layout_marginBottom="@dimen/screen_measure_margin"
                 android:layout_marginTop="@dimen/screen_measure_margin"
-                android:background="@drawable/screen_measure_bg_vertical_1" >
+                android:background="@drawable/screen_measure_bg_vertical_1">
 
                 <TextView
                     android:layout_width="wrap_content"
@@ -54,7 +55,7 @@
                 android:layout_height="@dimen/screen_measure_size"
                 android:layout_marginBottom="@dimen/screen_measure_margin"
                 android:layout_marginTop="@dimen/screen_measure_margin"
-                android:background="@drawable/screen_measure_bg_vertical_2" >
+                android:background="@drawable/screen_measure_bg_vertical_2">
 
                 <TextView
                     android:layout_width="wrap_content"
@@ -70,7 +71,7 @@
                 android:layout_height="@dimen/screen_measure_size"
                 android:layout_marginBottom="@dimen/screen_measure_margin"
                 android:layout_marginTop="@dimen/screen_measure_margin"
-                android:background="@drawable/screen_measure_bg_vertical_2" >
+                android:background="@drawable/screen_measure_bg_vertical_2">
 
                 <TextView
                     android:layout_width="wrap_content"
@@ -86,7 +87,7 @@
                 android:layout_height="@dimen/screen_measure_size"
                 android:layout_marginBottom="@dimen/screen_measure_margin"
                 android:layout_marginTop="@dimen/screen_measure_margin"
-                android:background="@drawable/screen_measure_bg_vertical_1" >
+                android:background="@drawable/screen_measure_bg_vertical_1">
 
                 <TextView
                     android:layout_width="wrap_content"
@@ -102,7 +103,7 @@
                 android:layout_height="@dimen/screen_measure_size"
                 android:layout_marginBottom="@dimen/screen_measure_margin"
                 android:layout_marginTop="@dimen/screen_measure_margin"
-                android:background="@drawable/screen_measure_bg_vertical_2" >
+                android:background="@drawable/screen_measure_bg_vertical_2">
 
                 <TextView
                     android:layout_width="wrap_content"
@@ -118,7 +119,7 @@
                 android:layout_height="@dimen/screen_measure_size"
                 android:layout_marginBottom="@dimen/screen_measure_margin"
                 android:layout_marginTop="@dimen/screen_measure_margin"
-                android:background="@drawable/screen_measure_bg_vertical_1" >
+                android:background="@drawable/screen_measure_bg_vertical_1">
 
                 <TextView
                     android:layout_width="wrap_content"
@@ -134,7 +135,7 @@
                 android:layout_height="@dimen/screen_measure_size"
                 android:layout_marginBottom="@dimen/screen_measure_margin"
                 android:layout_marginTop="@dimen/screen_measure_margin"
-                android:background="@drawable/screen_measure_bg_vertical_2" >
+                android:background="@drawable/screen_measure_bg_vertical_2">
 
                 <TextView
                     android:layout_width="wrap_content"
@@ -150,7 +151,7 @@
                 android:layout_height="@dimen/screen_measure_size"
                 android:layout_marginBottom="@dimen/screen_measure_margin"
                 android:layout_marginTop="@dimen/screen_measure_margin"
-                android:background="@drawable/screen_measure_bg_vertical_1" >
+                android:background="@drawable/screen_measure_bg_vertical_1">
 
                 <TextView
                     android:layout_width="wrap_content"
@@ -166,7 +167,7 @@
                 android:layout_height="@dimen/screen_measure_size"
                 android:layout_marginBottom="@dimen/screen_measure_margin"
                 android:layout_marginTop="@dimen/screen_measure_margin"
-                android:background="@drawable/screen_measure_bg_vertical_2" >
+                android:background="@drawable/screen_measure_bg_vertical_2">
 
                 <TextView
                     android:layout_width="wrap_content"
@@ -182,7 +183,7 @@
                 android:layout_height="@dimen/screen_measure_size"
                 android:layout_marginBottom="@dimen/screen_measure_margin"
                 android:layout_marginTop="@dimen/screen_measure_margin"
-                android:background="@drawable/screen_measure_bg_vertical_1" >
+                android:background="@drawable/screen_measure_bg_vertical_1">
 
                 <TextView
                     android:layout_width="wrap_content"
@@ -198,7 +199,7 @@
                 android:layout_height="@dimen/screen_measure_size"
                 android:layout_marginBottom="@dimen/screen_measure_margin"
                 android:layout_marginTop="@dimen/screen_measure_margin"
-                android:background="@drawable/screen_measure_bg_vertical_2" >
+                android:background="@drawable/screen_measure_bg_vertical_2">
 
                 <TextView
                     android:layout_width="wrap_content"
@@ -214,7 +215,7 @@
                 android:layout_height="@dimen/screen_measure_size"
                 android:layout_marginBottom="@dimen/screen_measure_margin"
                 android:layout_marginTop="@dimen/screen_measure_margin"
-                android:background="@drawable/screen_measure_bg_vertical_1" >
+                android:background="@drawable/screen_measure_bg_vertical_1">
 
                 <TextView
                     android:layout_width="wrap_content"
@@ -230,7 +231,7 @@
                 android:layout_height="@dimen/screen_measure_size"
                 android:layout_marginBottom="@dimen/screen_measure_margin"
                 android:layout_marginTop="@dimen/screen_measure_margin"
-                android:background="@drawable/screen_measure_bg_vertical_2" >
+                android:background="@drawable/screen_measure_bg_vertical_2">
 
                 <TextView
                     android:layout_width="wrap_content"
@@ -246,7 +247,7 @@
                 android:layout_height="@dimen/screen_measure_size"
                 android:layout_marginBottom="@dimen/screen_measure_margin"
                 android:layout_marginTop="@dimen/screen_measure_margin"
-                android:background="@drawable/screen_measure_bg_vertical_1" >
+                android:background="@drawable/screen_measure_bg_vertical_1">
 
                 <TextView
                     android:layout_width="wrap_content"
@@ -262,7 +263,7 @@
                 android:layout_height="@dimen/screen_measure_size"
                 android:layout_marginBottom="@dimen/screen_measure_margin"
                 android:layout_marginTop="@dimen/screen_measure_margin"
-                android:background="@drawable/screen_measure_bg_vertical_2" >
+                android:background="@drawable/screen_measure_bg_vertical_2">
 
                 <TextView
                     android:layout_width="wrap_content"
@@ -278,7 +279,7 @@
                 android:layout_height="@dimen/screen_measure_size"
                 android:layout_marginBottom="@dimen/screen_measure_margin"
                 android:layout_marginTop="@dimen/screen_measure_margin"
-                android:background="@drawable/screen_measure_bg_vertical_1" >
+                android:background="@drawable/screen_measure_bg_vertical_1">
 
                 <TextView
                     android:layout_width="wrap_content"
@@ -294,7 +295,7 @@
                 android:layout_height="@dimen/screen_measure_size"
                 android:layout_marginBottom="@dimen/screen_measure_margin"
                 android:layout_marginTop="@dimen/screen_measure_margin"
-                android:background="@drawable/screen_measure_bg_vertical_1" >
+                android:background="@drawable/screen_measure_bg_vertical_1">
 
                 <TextView
                     android:layout_width="wrap_content"
@@ -310,7 +311,7 @@
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:gravity="bottom|center_horizontal"
-            android:orientation="horizontal" >
+            android:orientation="horizontal">
 
             <LinearLayout
                 android:layout_width="@dimen/screen_measure_size"
@@ -318,7 +319,7 @@
                 android:layout_marginLeft="@dimen/screen_measure_margin"
                 android:layout_marginRight="@dimen/screen_measure_margin"
                 android:background="@drawable/screen_measure_bg_horizontal_1"
-                android:gravity="bottom" >
+                android:gravity="bottom">
 
                 <TextView
                     android:layout_width="wrap_content"
@@ -335,7 +336,7 @@
                 android:layout_marginLeft="@dimen/screen_measure_margin"
                 android:layout_marginRight="@dimen/screen_measure_margin"
                 android:background="@drawable/screen_measure_bg_horizontal_1"
-                android:gravity="bottom" >
+                android:gravity="bottom">
 
                 <TextView
                     android:layout_width="wrap_content"
@@ -352,7 +353,7 @@
                 android:layout_marginLeft="@dimen/screen_measure_margin"
                 android:layout_marginRight="@dimen/screen_measure_margin"
                 android:background="@drawable/screen_measure_bg_horizontal_2"
-                android:gravity="bottom" >
+                android:gravity="bottom">
 
                 <TextView
                     android:layout_width="wrap_content"
@@ -369,7 +370,7 @@
                 android:layout_marginLeft="@dimen/screen_measure_margin"
                 android:layout_marginRight="@dimen/screen_measure_margin"
                 android:background="@drawable/screen_measure_bg_horizontal_1"
-                android:gravity="bottom" >
+                android:gravity="bottom">
 
                 <TextView
                     android:layout_width="wrap_content"
@@ -386,7 +387,7 @@
                 android:layout_marginLeft="@dimen/screen_measure_margin"
                 android:layout_marginRight="@dimen/screen_measure_margin"
                 android:background="@drawable/screen_measure_bg_horizontal_2"
-                android:gravity="bottom" >
+                android:gravity="bottom">
 
                 <TextView
                     android:layout_width="wrap_content"
@@ -403,7 +404,7 @@
                 android:layout_marginLeft="@dimen/screen_measure_margin"
                 android:layout_marginRight="@dimen/screen_measure_margin"
                 android:background="@drawable/screen_measure_bg_horizontal_1"
-                android:gravity="bottom" >
+                android:gravity="bottom">
 
                 <TextView
                     android:layout_width="wrap_content"
@@ -420,7 +421,7 @@
                 android:layout_marginLeft="@dimen/screen_measure_margin"
                 android:layout_marginRight="@dimen/screen_measure_margin"
                 android:background="@drawable/screen_measure_bg_horizontal_2"
-                android:gravity="bottom" >
+                android:gravity="bottom">
 
                 <TextView
                     android:layout_width="wrap_content"
@@ -437,7 +438,7 @@
                 android:layout_marginLeft="@dimen/screen_measure_margin"
                 android:layout_marginRight="@dimen/screen_measure_margin"
                 android:background="@drawable/screen_measure_bg_horizontal_1"
-                android:gravity="bottom" >
+                android:gravity="bottom">
 
                 <TextView
                     android:layout_width="wrap_content"
@@ -454,7 +455,7 @@
                 android:layout_marginLeft="@dimen/screen_measure_margin"
                 android:layout_marginRight="@dimen/screen_measure_margin"
                 android:background="@drawable/screen_measure_bg_horizontal_2"
-                android:gravity="bottom" >
+                android:gravity="bottom">
 
                 <TextView
                     android:layout_width="wrap_content"
@@ -471,7 +472,7 @@
                 android:layout_marginLeft="@dimen/screen_measure_margin"
                 android:layout_marginRight="@dimen/screen_measure_margin"
                 android:background="@drawable/screen_measure_bg_horizontal_1"
-                android:gravity="bottom" >
+                android:gravity="bottom">
 
                 <TextView
                     android:layout_width="wrap_content"
@@ -488,7 +489,7 @@
                 android:layout_marginLeft="@dimen/screen_measure_margin"
                 android:layout_marginRight="@dimen/screen_measure_margin"
                 android:background="@drawable/screen_measure_bg_horizontal_2"
-                android:gravity="bottom" >
+                android:gravity="bottom">
 
                 <TextView
                     android:layout_width="wrap_content"
@@ -505,7 +506,7 @@
                 android:layout_marginLeft="@dimen/screen_measure_margin"
                 android:layout_marginRight="@dimen/screen_measure_margin"
                 android:background="@drawable/screen_measure_bg_horizontal_1"
-                android:gravity="bottom" >
+                android:gravity="bottom">
 
                 <TextView
                     android:layout_width="wrap_content"
@@ -522,7 +523,7 @@
                 android:layout_marginLeft="@dimen/screen_measure_margin"
                 android:layout_marginRight="@dimen/screen_measure_margin"
                 android:background="@drawable/screen_measure_bg_horizontal_2"
-                android:gravity="bottom" >
+                android:gravity="bottom">
 
                 <TextView
                     android:layout_width="wrap_content"
@@ -539,7 +540,7 @@
                 android:layout_marginLeft="@dimen/screen_measure_margin"
                 android:layout_marginRight="@dimen/screen_measure_margin"
                 android:background="@drawable/screen_measure_bg_horizontal_1"
-                android:gravity="bottom" >
+                android:gravity="bottom">
 
                 <TextView
                     android:layout_width="wrap_content"
@@ -556,7 +557,7 @@
                 android:layout_marginLeft="@dimen/screen_measure_margin"
                 android:layout_marginRight="@dimen/screen_measure_margin"
                 android:background="@drawable/screen_measure_bg_horizontal_2"
-                android:gravity="bottom" >
+                android:gravity="bottom">
 
                 <TextView
                     android:layout_width="wrap_content"
@@ -573,7 +574,7 @@
                 android:layout_marginLeft="@dimen/screen_measure_margin"
                 android:layout_marginRight="@dimen/screen_measure_margin"
                 android:background="@drawable/screen_measure_bg_horizontal_2"
-                android:gravity="bottom" >
+                android:gravity="bottom">
 
                 <TextView
                     android:layout_width="wrap_content"
@@ -590,7 +591,7 @@
                 android:layout_marginLeft="@dimen/screen_measure_margin"
                 android:layout_marginRight="@dimen/screen_measure_margin"
                 android:background="@drawable/screen_measure_bg_horizontal_1"
-                android:gravity="bottom" >
+                android:gravity="bottom">
 
                 <TextView
                     android:layout_width="wrap_content"
@@ -607,7 +608,7 @@
                 android:layout_marginLeft="@dimen/screen_measure_margin"
                 android:layout_marginRight="@dimen/screen_measure_margin"
                 android:background="@drawable/screen_measure_bg_horizontal_1"
-                android:gravity="bottom" >
+                android:gravity="bottom">
 
                 <TextView
                     android:layout_width="wrap_content"

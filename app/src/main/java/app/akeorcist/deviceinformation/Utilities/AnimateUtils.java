@@ -30,7 +30,7 @@ public class AnimateUtils {
         }
     };
 
-    private static void scaleAnimate(View v, float scale) {
+    public static void scaleAnimate(View v, float scale) {
         ObjectAnimator animatorScaleX = ObjectAnimator.ofFloat(v, "scaleX", scale);
         animatorScaleX.setInterpolator(new OvershootInterpolator());
         ObjectAnimator animatorScaleY = ObjectAnimator.ofFloat(v, "scaleY", scale);

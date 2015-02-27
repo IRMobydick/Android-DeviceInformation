@@ -32,27 +32,27 @@ import android.widget.TextView;
 
 import app.akeorcist.deviceinformation.R;
 
-public class ScreenFragment extends Fragment {
-	ScreenPagerAdapter mSectionsPagerAdapter;
+public class ScreenFragment2 extends Fragment {
+	//ScreenPagerAdapter mSectionsPagerAdapter;
 	ViewPager mViewPager;
 
 	LinearLayout layoutLoading;
 	TextView btnScreenNext, btnScreenPrev;
 	
-	public static ScreenFragment newInstance() {
-		ScreenFragment fragment = new ScreenFragment();
+	public static ScreenFragment2 newInstance() {
+		ScreenFragment2 fragment = new ScreenFragment2();
 		return fragment;
 	}
 
-	public ScreenFragment() { }
+	public ScreenFragment2() { }
 
 	@SuppressLint("NewApi")
 	public View onCreateView(LayoutInflater inflater, ViewGroup container,
 			Bundle savedInstanceState) {
-		final View rootView = inflater.inflate(R.layout.fragment_screen, container,
+		final View rootView = inflater.inflate(R.layout.fragment_screen2, container,
 				false);
 
-		mSectionsPagerAdapter = new ScreenPagerAdapter(getChildFragmentManager());
+		//mSectionsPagerAdapter = new ScreenPagerAdapter(getChildFragmentManager());
 
 		layoutLoading = (LinearLayout)rootView.findViewById(R.id.layoutLoading);
 		
@@ -68,7 +68,7 @@ public class ScreenFragment extends Fragment {
 		new Handler().postDelayed(new Runnable() {
 			public void run() {
 				try {
-					mViewPager.setAdapter(mSectionsPagerAdapter);
+					//mViewPager.setAdapter(mSectionsPagerAdapter);
 					mViewPager.setOnPageChangeListener(new OnPageChangeListener() {
 						public void onPageSelected(int arg0) {
 							if(arg0 == 0) {
@@ -86,21 +86,21 @@ public class ScreenFragment extends Fragment {
 									View decorView = getActivity().getWindow().getDecorView();
 									decorView.setSystemUiVisibility(uiOptions);
 								}
-								
-								Button layoutScreenMeasurement = (Button)rootView.findViewById(R.id.buttonScreenShare);
-								layoutScreenMeasurement.setOnClickListener(new OnClickListener() {
-									public void onClick(View v) {
-										File file = new File(Environment.getExternalStorageDirectory() 
-												+ "/Device_Information/screen_measurement.png");
-										Intent intent = new Intent(Intent.ACTION_SEND);
-							            String mimeType = MimeTypeMap.getSingleton()
-							                    .getMimeTypeFromExtension(MimeTypeMap
-							                            .getFileExtensionFromUrl(file.getPath()));
-							            intent.setType(mimeType);
-							            intent.putExtra(Intent.EXTRA_STREAM, Uri.fromFile(file));
-							            startActivity(Intent.createChooser(intent, "Share file via"));
-									}
-								});
+//
+//								Button layoutScreenMeasurement = (Button)rootView.findViewById(R.id.buttonScreenShare);
+//								layoutScreenMeasurement.setOnClickListener(new OnClickListener() {
+//									public void onClick(View v) {
+//										File file = new File(Environment.getExternalStorageDirectory()
+//												+ "/Device_Information/screen_measurement.png");
+//										Intent intent = new Intent(Intent.ACTION_SEND);
+//							            String mimeType = MimeTypeMap.getSingleton()
+//							                    .getMimeTypeFromExtension(MimeTypeMap
+//							                            .getFileExtensionFromUrl(file.getPath()));
+//							            intent.setType(mimeType);
+//							            intent.putExtra(Intent.EXTRA_STREAM, Uri.fromFile(file));
+//							            startActivity(Intent.createChooser(intent, "Share file via"));
+//									}
+//								});
 								
 								File file = new File(Environment.getExternalStorageDirectory() 
 										+ "/Device_Information/screen_measurement.png");
@@ -140,11 +140,11 @@ public class ScreenFragment extends Fragment {
 						public void onPageScrollStateChanged(int arg0) { }
 					});
 	
-					if(mSectionsPagerAdapter.getCount() < 2) 
-						btnScreenNext.setVisibility(View.GONE);
-					else 
-						btnScreenNext.setVisibility(View.VISIBLE);
-						
+//					if(mSectionsPagerAdapter.getCount() < 2)
+//						btnScreenNext.setVisibility(View.GONE);
+//					else
+//						btnScreenNext.setVisibility(View.VISIBLE);
+//
 					btnScreenNext.setOnClickListener(new OnClickListener() {
 						public void onClick(View arg0) {
 							mViewPager.setCurrentItem(mViewPager.getCurrentItem() + 1);
@@ -167,33 +167,5 @@ public class ScreenFragment extends Fragment {
 		}, 500);
 		        
 		return rootView;
-	}
-
-	public void onAttach(Activity activity) {
-		super.onAttach(activity);
-	}
-	
-	public class ScreenPagerAdapter extends FragmentPagerAdapter {
-
-		public ScreenPagerAdapter(FragmentManager fm) {
-			super(fm);
-		}
-
-		@SuppressLint("NewApi")
-		public Fragment getItem(int position) {
-			if(position == 0)
-				return ScreenSub1Fragment.newInstance();
-			else if(position == 1)
-				return ScreenSub2Fragment.newInstance();
-			return null;
-		}
-
-		public int getCount() {
-			return 2;
-		}
-
-		public CharSequence getPageTitle(int position) {
-			return null;
-		}
 	}
 }

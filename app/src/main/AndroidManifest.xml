@@ -21,31 +21,18 @@
     <uses-feature
         android:name="android.hardware.camera.autofocus"
         android:required="false" />
-
     <uses-feature
         android:name="android.hardware.telephony"
         android:required="false" />
-
     <uses-feature
         android:name="android.hardware.bluetooth"
         android:required="false" />
-
     <uses-feature
         android:name="android.hardware.camera"
         android:required="false" />
-
     <uses-feature
         android:name="android.hardware.wifi"
         android:required="false" />
-
-    <uses-feature
-        android:glEsVersion="0x00020000"
-        android:required="false" />
-
-    <uses-feature
-        android:glEsVersion="0x00030000"
-        android:required="false" />
-
     <uses-feature
         android:glEsVersion="0x00030001"
         android:required="false" />
@@ -68,7 +55,7 @@
             android:screenOrientation="fullSensor" >
         </activity>
         <activity
-            android:name=".activity.SlashscreenActivity"
+            android:name=".activity.SplashscreenActivity"
             android:configChanges="keyboardHidden|orientation|screenSize"
             android:screenOrientation="fullSensor" >
             <intent-filter>
@@ -76,6 +63,10 @@
 
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
+        </activity>
+        <activity
+            android:name=".activity.ScreenMeasureActivity"
+            android:label="@string/title_activity_screen_measure" >
         </activity>
     </application>
 

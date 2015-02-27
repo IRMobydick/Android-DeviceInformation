@@ -3,7 +3,7 @@ package app.akeorcist.deviceinformation.model;
 /**
  * Created by Akexorcist on 2/26/15 AD.
  */
-public class Data {
+public class SimpleData {
     public static final int DATA_ANDROID = 0;
     public static final int DATA_BUILD = 1;
     public static final int DATA_COMMUNICATION = 2;
@@ -23,7 +23,7 @@ public class Data {
     private String title;
     private String detail;
 
-    public Data(String title, String detail) {
+    public SimpleData(String title, String detail) {
         this.title = title;
         this.detail = detail;
     }

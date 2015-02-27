@@ -297,24 +297,24 @@ public class TestingFragment extends Fragment {
 			    		onProgressUpdate("Sensor Information");
 			    		
 			    		strWrite = "";
-			    		
-			    		SensorManager mSensorManager = (SensorManager)getActivity().getSystemService(Context.SENSOR_SERVICE);
-			    		List<Sensor> listSensor = mSensorManager.getSensorList(Sensor.TYPE_ALL);
-			    		for(int i = 0 ; i < listSensor.size() ; i++) {
-			    			Sensor sensor = listSensor.get(i);
-			    			strWrite += "Name : " + SensorInfo.getName(sensor) + "\n";
-			    			strWrite += "Vendor : " + SensorInfo.getVendor(sensor) + "\n";
-			    			strWrite += "Type : " + SensorInfo.getType(sensor) + "\n";
-			    			strWrite += "Version : " + SensorInfo.getVersion(sensor) + "\n";
-			    			strWrite += "Power : " + SensorInfo.getPower(sensor) + "\n";
-			    			strWrite += "Max Range : " + SensorInfo.getMaximumRange(sensor) + "\n";
-			    			strWrite += "Resolution : " + SensorInfo.getResolution(sensor) + "\n";
-			    			strWrite += "Min Delay : " + SensorInfo.getMinDelay(sensor) + "\n";
-			    			strWrite += "FIFO Reserved Event : " + SensorInfo.getFifoReservedEventCount(sensor) + "\n";
-			    			strWrite += "FIFO Max Event : " + SensorInfo.getFifoMaxEventCount(sensor);
-			    			if(i < listSensor.size() - 1)
-			    				strWrite += "\n***********\n";
-			    		}
+//
+//			    		SensorManager mSensorManager = (SensorManager)getActivity().getSystemService(Context.SENSOR_SERVICE);
+//			    		List<Sensor> listSensor = mSensorManager.getSensorList(Sensor.TYPE_ALL);
+//			    		for(int i = 0 ; i < listSensor.size() ; i++) {
+//			    			Sensor sensor = listSensor.get(i);
+//			    			strWrite += "Name : " + SensorInfo.getName(sensor) + "\n";
+//			    			strWrite += "Vendor : " + SensorInfo.getVendor(sensor) + "\n";
+//			    			strWrite += "Type : " + SensorInfo.getType(sensor) + "\n";
+//			    			strWrite += "Version : " + SensorInfo.getVersion(sensor) + "\n";
+//			    			strWrite += "Power : " + SensorInfo.getPower(sensor) + "\n";
+//			    			strWrite += "Max Range : " + SensorInfo.getMaximumRange(sensor) + "\n";
+//			    			strWrite += "Resolution : " + SensorInfo.getResolution(sensor) + "\n";
+//			    			strWrite += "Min Delay : " + SensorInfo.getMinDelay(sensor) + "\n";
+//			    			strWrite += "FIFO Reserved Event : " + SensorInfo.getFifoReservedEventCount(sensor) + "\n";
+//			    			strWrite += "FIFO Max Event : " + SensorInfo.getFifoMaxEventCount(sensor);
+//			    			if(i < listSensor.size() - 1)
+//			    				strWrite += "\n***********\n";
+//			    		}
 			
 			    		writeToFile(strWrite, "sensor_info.txt",  activity[0]);    	
 			

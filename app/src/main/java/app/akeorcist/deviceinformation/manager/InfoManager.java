@@ -360,141 +360,12 @@ public class InfoManager {
 	}
 	
 	public static class SensorInfo {
-		@SuppressLint("NewApi")
-		public static String getSensorInfo(Sensor sensor) {
-			String strWrite = "";
-			strWrite += "Name : " + sensor.getName() + "\n";
-			strWrite += "Vendor : " + sensor.getVendor() + "\n";
-			strWrite += "Type : " + getType(sensor.getType()) + "\n";
-			strWrite += "Version : " + sensor.getVersion() + "\n";
-			strWrite += "Power : " + sensor.getPower() + "\n";
-			strWrite += "Max Range : " + sensor.getMaximumRange() + "\n";
-			strWrite += "Resolution : " + sensor.getResolution() + "\n";
-			if(Build.VERSION.SDK_INT >= Build.VERSION_CODES.GINGERBREAD) {
-				strWrite += "Min Delay : " + sensor.getMinDelay() + "\n";
-			} else {
-				strWrite += "Min Delay : -\n";
-			}
-			if(Build.VERSION.SDK_INT >= Build.VERSION_CODES.KITKAT) {
-				strWrite += "FIFO Reserved Event : " + sensor.getFifoReservedEventCount() + "\n";
-				strWrite += "FIFO Max Event : " + sensor.getFifoMaxEventCount() + "\n";
-			} else {
 
-				strWrite += "FIFO Reserved Event : -\n";
-				strWrite += "FIFO Max Event : -\n";
-			}
-			
-			return strWrite;
-		}
-		
-		public static String getName(Sensor sensor) {
-			return sensor.getName();
-		}
-		
-		public static String getVendor(Sensor sensor) {
-			return sensor.getVendor();
-		}
-		
-		public static String getType(Sensor sensor) {
-			return getType(sensor.getType());
-		}
-		
-		public static String getVersion(Sensor sensor) {
-			return "" + sensor.getVersion();
-		}
-		
-		public static String getPower(Sensor sensor) {
-			return "" + sensor.getPower();
-		}
-		
-		public static String getMaximumRange(Sensor sensor) {
-			return "" + sensor.getMaximumRange();
-		}
-		
-		public static String getResolution(Sensor sensor) {
-			return "" + sensor.getResolution();
-		}
-		
-		@SuppressLint("NewApi")
-		public static String getMinDelay(Sensor sensor) {
-			if(Build.VERSION.SDK_INT >= Build.VERSION_CODES.GINGERBREAD) {
-				return "" + sensor.getMinDelay();
-			} else {
-				return "-";
-			}
-		}
-		
-		@SuppressLint("NewApi")
-		public static String getFifoReservedEventCount(Sensor sensor) {
-			if(Build.VERSION.SDK_INT >= Build.VERSION_CODES.KITKAT) {
-				return "" + sensor.getFifoReservedEventCount();
-			} else {
-				return "-";
-			}
-		}
-		
-		@SuppressLint("NewApi")
-		public static String getFifoMaxEventCount(Sensor sensor) {
-			if(Build.VERSION.SDK_INT >= Build.VERSION_CODES.KITKAT) {
-				return "" + sensor.getFifoMaxEventCount();
-			} else {
-				return "-";
-			}
-		}
-		
-		@SuppressWarnings("deprecation")
-		public static String getType(int type) {
-			switch(type) {
-			case Sensor.TYPE_ACCELEROMETER:
-				return "Accelerometer";
-			case Sensor.TYPE_AMBIENT_TEMPERATURE:
-				return "Temperature";
-			case Sensor.TYPE_GAME_ROTATION_VECTOR:
-				return "Game Rotation Vector";
-			case Sensor.TYPE_GEOMAGNETIC_ROTATION_VECTOR:
-				return "Geomagnetic Rotation Vector";
-			case Sensor.TYPE_GRAVITY:
-				return "Gravity";
-			case Sensor.TYPE_GYROSCOPE:
-				return "Gyroscope";
-			case Sensor.TYPE_GYROSCOPE_UNCALIBRATED:
-				return "Gyroscope Uncalibrated";
-			case Sensor.TYPE_HEART_RATE:
-				return "Haert Rate";
-			case Sensor.TYPE_LIGHT:
-				return "Light";
-			case Sensor.TYPE_LINEAR_ACCELERATION:
-				return "Linear Acceleration";
-			case Sensor.TYPE_MAGNETIC_FIELD:
-				return "Magnetic Field";
-			case Sensor.TYPE_MAGNETIC_FIELD_UNCALIBRATED:
-				return "Magnetic Field Uncalibrated";
-			case Sensor.TYPE_ORIENTATION:
-				return "Orientation";
-			case Sensor.TYPE_PRESSURE:
-				return "Pressure";
-			case Sensor.TYPE_PROXIMITY:
-				return "Proximity";
-			case Sensor.TYPE_RELATIVE_HUMIDITY:
-				return "Humidity";
-			case Sensor.TYPE_ROTATION_VECTOR:
-				return "Rotation Vector";
-			case Sensor.TYPE_SIGNIFICANT_MOTION:
-				return "Signigicant Motion";
-			case Sensor.TYPE_STEP_COUNTER:
-				return "Step Counter";
-			case Sensor.TYPE_STEP_DETECTOR:
-				return "Step Detector";
-			case Sensor.TYPE_TEMPERATURE:
-				return "Temperature";
-			}
-			return "Unknown";
-		}
 	}
 	
 	public static class ScreenInfo {		
 		public static String getMultitouch(Activity activity) {
-			if(Build.VERSION.SDK_INT >= Build.VERSION_CODES.GINGERBREAD 
+			if(Build.VERSION.SDK_INT >= Build.VERSION_CODES.GINGERBREAD
 					&& activity.getPackageManager().hasSystemFeature(PackageManager.FEATURE_TOUCHSCREEN_MULTITOUCH_JAZZHAND)) {
 				return "5+ Points";
 			} else if(activity.getPackageManager().hasSystemFeature(PackageManager.FEATURE_TOUCHSCREEN_MULTITOUCH_DISTINCT)) {
@@ -504,7 +375,7 @@ public class InfoManager {
 			}
 			return "Not supported";
 		}
-		
+
 		public static String getDensity(Activity activity) {
 			String model = Build.MODEL;
 			if(model.contains("Ascend G300") || model.contains("Nexus S")
@@ -513,28 +384,28 @@ public class InfoManager {
 	        } else if(model.contains("i-mobile i-note WiFi 9")) {
 		        return "Low";
 	        }
-			
+
 	        DisplayMetrics dm = new DisplayMetrics();
 	        activity.getWindowManager().getDefaultDisplay().getMetrics(dm);
-			
-			if(dm.densityDpi == DisplayMetrics.DENSITY_LOW) 
+
+			if(dm.densityDpi == DisplayMetrics.DENSITY_LOW)
 	        	return "Low";
-	        else if(dm.densityDpi == DisplayMetrics.DENSITY_MEDIUM) 
+	        else if(dm.densityDpi == DisplayMetrics.DENSITY_MEDIUM)
 	        	return "Medium";
-	        else if(dm.densityDpi == DisplayMetrics.DENSITY_TV) 
+	        else if(dm.densityDpi == DisplayMetrics.DENSITY_TV)
 	        	return "TV";
-	        else if(dm.densityDpi == DisplayMetrics.DENSITY_HIGH) 
+	        else if(dm.densityDpi == DisplayMetrics.DENSITY_HIGH)
 	        	return "High";
-	        else if(dm.densityDpi == DisplayMetrics.DENSITY_XHIGH) 
+	        else if(dm.densityDpi == DisplayMetrics.DENSITY_XHIGH)
 	        	return "Extra High";
-	        else if(dm.densityDpi == DisplayMetrics.DENSITY_XXHIGH) 
+	        else if(dm.densityDpi == DisplayMetrics.DENSITY_XXHIGH)
 	        	return "Extra Extra High";
-	        else if(dm.densityDpi == DisplayMetrics.DENSITY_XXXHIGH) 
+	        else if(dm.densityDpi == DisplayMetrics.DENSITY_XXXHIGH)
 	        	return "Extra Extra Extra High";
-			
+
 			return "";
 		}
-		
+
 		public static String getDpi(Activity activity) {
 			String model = Build.MODEL;
 			if(model.contains("Ascend G300") || model.contains("Nexus S")
@@ -543,13 +414,13 @@ public class InfoManager {
 	        } else if(model.contains("i-mobile i-note WiFi 9")) {
 		        return "120 dpi";
 	        }
-			
+
 	        DisplayMetrics dm = new DisplayMetrics();
 	        activity.getWindowManager().getDefaultDisplay().getMetrics(dm);
-			
+
 			return dm.densityDpi + "dpi";
 		}
-		
+
 		@SuppressLint("NewApi")
 		public static String getDpiX(Activity activity) {
 			String model = Build.MODEL;
@@ -559,24 +430,24 @@ public class InfoManager {
 	        } else if(model.contains("i-mobile i-note WiFi 9")) {
 		        return "103.66 dpi";
 	        }
-			
+
 			float xdpi = 0;
 
-			Display display = activity.getWindowManager().getDefaultDisplay();    
+			Display display = activity.getWindowManager().getDefaultDisplay();
 	        DisplayMetrics dm = new DisplayMetrics();
 	        activity.getWindowManager().getDefaultDisplay().getMetrics(dm);
-	        
+
 	        if(android.os.Build.VERSION.SDK_INT < android.os.Build.VERSION_CODES.JELLY_BEAN_MR1) {
 	        	xdpi = activity.getResources().getDisplayMetrics().xdpi;
 	    	} else if(android.os.Build.VERSION.SDK_INT >= android.os.Build.VERSION_CODES.JELLY_BEAN_MR1) {
 	    		DisplayMetrics outMetrics = new DisplayMetrics ();
 	    		display.getRealMetrics(outMetrics);
-	    		xdpi = outMetrics.xdpi;	
+	    		xdpi = outMetrics.xdpi;
 	    	}
-	        
+
 			return xdpi + " dpi";
 		}
-		
+
 		@SuppressLint("NewApi")
 		public static String getDpiY(Activity activity) {
 			String model = Build.MODEL;
@@ -586,24 +457,24 @@ public class InfoManager {
 	        } else if(model.contains("i-mobile i-note WiFi 9")) {
 		        return "103.66 dpi";
 	        }
-			
+
 			float ydpi = 0;
 
-			Display display = activity.getWindowManager().getDefaultDisplay();    
+			Display display = activity.getWindowManager().getDefaultDisplay();
 	        DisplayMetrics dm = new DisplayMetrics();
 	        activity.getWindowManager().getDefaultDisplay().getMetrics(dm);
-	        
+
 	        if(android.os.Build.VERSION.SDK_INT < android.os.Build.VERSION_CODES.JELLY_BEAN_MR1) {
     	        ydpi = activity.getResources().getDisplayMetrics().ydpi;
 	    	} else if(android.os.Build.VERSION.SDK_INT >= android.os.Build.VERSION_CODES.JELLY_BEAN_MR1) {
 	    		DisplayMetrics outMetrics = new DisplayMetrics ();
 	    		display.getRealMetrics(outMetrics);
-	    		ydpi = outMetrics.ydpi;	    	
+	    		ydpi = outMetrics.ydpi;
 	    	}
-	        
+
 			return ydpi + " dpi";
 		}
-		
+
 		@SuppressWarnings("deprecation")
 		@SuppressLint("NewApi")
 		public static String getResolutionDP(Activity activity) {
@@ -614,13 +485,13 @@ public class InfoManager {
 	        } else if(model.contains("i-mobile i-note WiFi 9")) {
 		        return "1066 x 640 dp";
 	        }
-			
-			Display display = activity.getWindowManager().getDefaultDisplay();  
+
+			Display display = activity.getWindowManager().getDefaultDisplay();
 	        DisplayMetrics dm = new DisplayMetrics();
 	        activity.getWindowManager().getDefaultDisplay().getMetrics(dm);
-	        
+
 	        int xres = 0, yres = 0;
-	
+
 	        if(android.os.Build.VERSION.SDK_INT < android.os.Build.VERSION_CODES.JELLY_BEAN_MR1) {
 	        	try {
 	    	        Method mGetRawH = Display.class.getMethod("getRawHeight");
@@ -634,34 +505,34 @@ public class InfoManager {
 	    	} else if(android.os.Build.VERSION.SDK_INT >= android.os.Build.VERSION_CODES.JELLY_BEAN_MR1) {
 	    		DisplayMetrics outMetrics = new DisplayMetrics ();
 	    		display.getRealMetrics(outMetrics);
-	    		
+
 				xres = outMetrics.widthPixels;
 				yres = outMetrics.heightPixels;
 	    	}
-	        
+
 	        int hdp = (int)(yres * (1f / dm.density));
 	        int wdp = (int)(xres * (1f / dm.density));
 
 			return hdp + " x " + wdp + " dp";
 		}
-		
+
 		@SuppressLint("NewApi")
 		@SuppressWarnings("deprecation")
 		public static String getResolutionPX(Activity activity) {
 			String model = Build.MODEL;
-			if(model.contains("Ascend G300") 
+			if(model.contains("Ascend G300")
 					|| model.contains("Nexus S")
-	        		|| model.contains("Lenovo A380") 
+	        		|| model.contains("Lenovo A380")
 	        		|| model.contains("i-mobile i-note WiFi 9")) {
 		        return "800 x 480 px";
 	        }
-			
+
 			int xres = 0, yres = 0;
-			
-			Display display = activity.getWindowManager().getDefaultDisplay();    
+
+			Display display = activity.getWindowManager().getDefaultDisplay();
 	        DisplayMetrics dm = new DisplayMetrics();
 	        activity.getWindowManager().getDefaultDisplay().getMetrics(dm);
-			
+
 	        if(android.os.Build.VERSION.SDK_INT < android.os.Build.VERSION_CODES.JELLY_BEAN_MR1) {
 	        	try {
 	    	        Method mGetRawH = Display.class.getMethod("getRawHeight");
@@ -674,15 +545,15 @@ public class InfoManager {
 	    		}
 	    	} else if(android.os.Build.VERSION.SDK_INT >= android.os.Build.VERSION_CODES.JELLY_BEAN_MR1) {
 	    		DisplayMetrics outMetrics = new DisplayMetrics ();
-	    		display.getRealMetrics(outMetrics);  	
-	    		
+	    		display.getRealMetrics(outMetrics);
+
 				xres = outMetrics.widthPixels;
 				yres = outMetrics.heightPixels;
 	    	}
-			
+
 			return yres + " x " + xres + " px";
 		}
-		
+
 		public static String getScreenSize(Activity activity) {
 			String model = Build.MODEL;
 			if(model.contains("Ascend G300") || model.contains("Nexus S")
@@ -691,21 +562,21 @@ public class InfoManager {
 	        } else if(model.contains("i-mobile i-note WiFi 9")) {
 		        return "Large";
 	        }
-			
-			int screenSize = activity.getResources().getConfiguration().screenLayout 
+
+			int screenSize = activity.getResources().getConfiguration().screenLayout
 	        		& Configuration.SCREENLAYOUT_SIZE_MASK;
-	
-	        if(screenSize == Configuration.SCREENLAYOUT_SIZE_SMALL) 
+
+	        if(screenSize == Configuration.SCREENLAYOUT_SIZE_SMALL)
 	        	return "Small";
-	        else if(screenSize == Configuration.SCREENLAYOUT_SIZE_NORMAL) 
+	        else if(screenSize == Configuration.SCREENLAYOUT_SIZE_NORMAL)
 	        	return "Normal";
-	        else if(screenSize == Configuration.SCREENLAYOUT_SIZE_LARGE) 
+	        else if(screenSize == Configuration.SCREENLAYOUT_SIZE_LARGE)
 	        	return "Large";
-	        else if(screenSize == Configuration.SCREENLAYOUT_SIZE_XLARGE) 
+	        else if(screenSize == Configuration.SCREENLAYOUT_SIZE_XLARGE)
 	        	return "Extra Large";
-			
+
 			return "";
-		}	
+		}
 	}
 
 	@SuppressLint("NewApi")

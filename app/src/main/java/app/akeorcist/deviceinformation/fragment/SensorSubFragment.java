@@ -75,8 +75,8 @@ public class SensorSubFragment extends Fragment {
 		textName.setText(getArguments().getString(BUNDLE_NAME));
 		textName.setOnClickListener(new OnClickListener() {
 			public void onClick(View v) {
-				showDialog(SensorInfo.getType(getArguments().getInt(BUNDLE_TYPE))
-						, getArguments().getInt(BUNDLE_TYPE));
+//				showDialog(SensorInfo.getType(getArguments().getInt(BUNDLE_TYPE))
+//						, getArguments().getInt(BUNDLE_TYPE));
 			}
 		});
 		
@@ -84,7 +84,7 @@ public class SensorSubFragment extends Fragment {
 		textVendor.setText(getArguments().getString(BUNDLE_VENDOR));
 
 		TextView textType = (TextView)rootView.findViewById(R.id.textSensorType);
-		textType.setText(SensorInfo.getType(getArguments().getInt(BUNDLE_TYPE)));
+//		textType.setText(SensorInfo.getType(getArguments().getInt(BUNDLE_TYPE)));
 
 		TextView textVersion = (TextView)rootView.findViewById(R.id.textSensorVersion);
 		textVersion.setText("" + getArguments().getString(BUNDLE_VERSION));

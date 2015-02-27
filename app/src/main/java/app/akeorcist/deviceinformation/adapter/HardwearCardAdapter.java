@@ -15,12 +15,12 @@ import java.util.ArrayList;
 
 import app.akeorcist.deviceinformation.R;
 import app.akeorcist.deviceinformation.manager.HardwareManager;
-import app.akeorcist.deviceinformation.model.Data;
+import app.akeorcist.deviceinformation.model.SimpleData;
 import app.akeorcist.deviceinformation.holder.HardwareDataHolder;
 
 public class HardwearCardAdapter extends RecyclerView.Adapter<HardwareDataHolder> {
+    private Context context;
 
-    Context context;
     public HardwearCardAdapter(Context context) {
         this.context = context;
     }
@@ -34,28 +34,28 @@ public class HardwearCardAdapter extends RecyclerView.Adapter<HardwareDataHolder
     public void onBindViewHolder(HardwareDataHolder viewHolder, int position) {
         viewHolder.layoutHardwareCard.removeAllViews();
 
-        ArrayList<Data> arrData = null;
-        if(position == Data.DATA_ANDROID) {
+        ArrayList<SimpleData> arrData = null;
+        if(position == SimpleData.DATA_ANDROID) {
             arrData = HardwareManager.getAndroidDataList();
-            viewHolder.tvCardHeader.setText(Data.TITLE_ANDROID);
-        } else if(position == Data.DATA_BUILD) {
+            viewHolder.tvCardHeader.setText(SimpleData.TITLE_ANDROID);
+        } else if(position == SimpleData.DATA_BUILD) {
             arrData = HardwareManager.getBuildDataList();
-            viewHolder.tvCardHeader.setText((Data.TITLE_BUILD));
-        } else if(position == Data.DATA_COMMUNICATION) {
+            viewHolder.tvCardHeader.setText((SimpleData.TITLE_BUILD));
+        } else if(position == SimpleData.DATA_COMMUNICATION) {
             arrData = HardwareManager.getCommunicationDataList();
-            viewHolder.tvCardHeader.setText((Data.TITLE_COMMUNICATION));
-        } else if(position == Data.DATA_CPU) {
+            viewHolder.tvCardHeader.setText((SimpleData.TITLE_COMMUNICATION));
+        } else if(position == SimpleData.DATA_CPU) {
             arrData = HardwareManager.getCpuDataList();
-            viewHolder.tvCardHeader.setText((Data.TITLE_CPU));
-        } else if(position == Data.DATA_GPU) {
+            viewHolder.tvCardHeader.setText((SimpleData.TITLE_CPU));
+        } else if(position == SimpleData.DATA_GPU) {
             arrData = HardwareManager.getGpuDataList();
-            viewHolder.tvCardHeader.setText((Data.TITLE_GPU));
-        } else if(position == Data.DATA_MEMORY) {
+            viewHolder.tvCardHeader.setText((SimpleData.TITLE_GPU));
+        } else if(position == SimpleData.DATA_MEMORY) {
             arrData = HardwareManager.getMemoryDataList();
-            viewHolder.tvCardHeader.setText((Data.TITLE_MEMORY));
-        } else if(position == Data.DATA_STORAGE) {
+            viewHolder.tvCardHeader.setText((SimpleData.TITLE_MEMORY));
+        } else if(position == SimpleData.DATA_STORAGE) {
             arrData = HardwareManager.getStorageDataList();
-            viewHolder.tvCardHeader.setText((Data.TITLE_STORAGE));
+            viewHolder.tvCardHeader.setText((SimpleData.TITLE_STORAGE));
         }
 
         for(int i = 0 ; i < arrData.size() ; i++) {

@@ -11,17 +11,16 @@ import android.view.Menu;
 import android.view.MenuItem;
 import android.support.v4.widget.DrawerLayout;
 
-import app.akeorcist.deviceinformation.fragment.HardwareFragment2;
 import app.akeorcist.deviceinformation.fragment.NavigationDrawerFragment;
 import app.akeorcist.deviceinformation.R;
 import app.akeorcist.deviceinformation.fragment.AppListFragment;
 import app.akeorcist.deviceinformation.fragment.CameraFragment;
 import app.akeorcist.deviceinformation.fragment.FeatureFragment;
-import app.akeorcist.deviceinformation.fragment.ScreenFragment;
-import app.akeorcist.deviceinformation.fragment.SensorFragment;
+import app.akeorcist.deviceinformation.fragment.ScreenFragment2;
+import app.akeorcist.deviceinformation.fragment.main.ScreenFragment;
+import app.akeorcist.deviceinformation.fragment.main.SensorFragment;
 import app.akeorcist.deviceinformation.fragment.main.HardwareFragment;
 import app.akeorcist.deviceinformation.fragment.main.SubmitFragment;
-import app.akeorcist.deviceinformation.manager.HardwareManager;
 
 public class MainActivity extends ActionBarActivity implements
         NavigationDrawerFragment.NavigationDrawerCallbacks {
