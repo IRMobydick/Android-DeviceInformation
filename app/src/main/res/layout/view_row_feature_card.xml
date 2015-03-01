@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="horizontal">
+
+    <android.support.v7.widget.CardView
+        android:id="@+id/card_view"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginBottom="@dimen/global_margin_padding_small"
+        android:layout_marginLeft="@dimen/global_margin_padding_small"
+        android:layout_marginRight="@dimen/global_margin_padding_small"
+        android:layout_marginTop="@dimen/global_margin_padding_small"
+        app:cardBackgroundColor="@color/white">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <TextView
+                android:id="@+id/tv_feature_title"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_alignParentLeft="true"
+                android:layout_marginBottom="@dimen/global_margin_padding_small"
+                android:layout_marginLeft="@dimen/global_margin_padding_large"
+                android:layout_marginRight="@dimen/global_margin_padding"
+                android:layout_marginTop="@dimen/global_margin_padding_large"
+                android:layout_toLeftOf="@+id/btn_feature_info"
+                android:text="New Text"
+                android:textColor="@color/dark_gray"
+                android:textSize="@dimen/global_text_size" />
+
+            <TextView
+                android:id="@+id/tv_feature_package"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignLeft="@+id/tv_feature_title"
+                android:layout_alignStart="@+id/tv_feature_title"
+                android:layout_below="@+id/tv_feature_title"
+                android:layout_marginBottom="@dimen/global_margin_padding_large"
+                android:layout_marginRight="@dimen/global_margin_padding_large"
+                android:text="New Text"
+                android:textColor="@color/gray"
+                android:textSize="@dimen/global_text_size_small" />
+
+            <Button
+                android:id="@+id/btn_feature_info"
+                android:layout_width="@dimen/feature_button_info_size"
+                android:layout_height="@dimen/feature_button_info_size"
+                android:layout_alignParentEnd="true"
+                android:layout_alignParentRight="true"
+                android:layout_alignParentTop="true"
+                android:layout_marginRight="@dimen/global_margin_padding"
+                android:layout_marginTop="@dimen/global_margin_padding"
+                android:background="@drawable/selector_oval_yellow"
+                android:text="i"
+                android:textColor="@color/white" />
+        </RelativeLayout>
+    </android.support.v7.widget.CardView>
+</LinearLayout>

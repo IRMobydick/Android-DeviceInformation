@@ -1039,22 +1039,7 @@ public class InfoManager {
 		
 	}
 
-	public static class FeatureInfo {				
-		private static String isFeatureSupported(Activity activity, String feature) {
-			if(activity.getPackageManager().hasSystemFeature(feature)) 
-				return "Yes";
-			else 
-				return "No";
-		}
-		
-		public static String hasFeature(Activity activity, String feature, int minVersion) {
-			int version = Build.VERSION.SDK_INT;
-			if (version >= minVersion)
-				return isFeatureSupported(activity, feature);
-			else
-				return "No";
-		}
-	}
+
 }
 
 

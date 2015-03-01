@@ -5,22 +5,15 @@ package app.akeorcist.deviceinformation.adapter;
  */
 
 import android.content.Context;
-import android.hardware.Sensor;
 import android.support.v7.widget.RecyclerView;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
-import android.widget.TextView;
-
-import java.util.ArrayList;
 
 import app.akeorcist.deviceinformation.R;
-import app.akeorcist.deviceinformation.holder.HardwareDataHolder;
 import app.akeorcist.deviceinformation.holder.SensorDataHolder;
-import app.akeorcist.deviceinformation.manager.HardwareManager;
 import app.akeorcist.deviceinformation.manager.SensorListManager;
 import app.akeorcist.deviceinformation.model.SensorData;
-import app.akeorcist.deviceinformation.model.SimpleData;
 
 public class SensorCardAdapter extends RecyclerView.Adapter<SensorDataHolder> {
     private Context context;

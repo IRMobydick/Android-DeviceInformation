@@ -53,7 +53,6 @@ import android.view.Window;
 import android.widget.Button;
 import android.widget.TextView;
 import android.widget.Toast;
-import app.akeorcist.deviceinformation.manager.InfoManager.FeatureInfo;
 import app.akeorcist.deviceinformation.manager.InfoManager.HardwareInfo;
 import app.akeorcist.deviceinformation.manager.InfoManager.ScreenInfo;
 import app.akeorcist.deviceinformation.manager.InfoManager.SensorInfo;
@@ -430,54 +429,6 @@ public class TestingFragment extends Fragment {
 			    		
 			    		strWrite = "";
 						
-			    		strWrite += "App Widget : " + FeatureInfo.hasFeature(getActivity(), PackageManager.FEATURE_APP_WIDGETS, Build.VERSION_CODES.JELLY_BEAN_MR2) + "\n";
-			    		strWrite += "Audio Low Latency : " + FeatureInfo.hasFeature(getActivity(), PackageManager.FEATURE_AUDIO_LOW_LATENCY, Build.VERSION_CODES.GINGERBREAD) + "\n";
-			    		strWrite += "Bluetooth : " + FeatureInfo.hasFeature(getActivity(), PackageManager.FEATURE_BLUETOOTH, Build.VERSION_CODES.FROYO) + "\n";
-			    		strWrite += "Bluetooth Low Energy : " + FeatureInfo.hasFeature(getActivity(), PackageManager.FEATURE_BLUETOOTH_LE, Build.VERSION_CODES.JELLY_BEAN_MR2) + "\n";
-			    		strWrite += "Camera : " + FeatureInfo.hasFeature(getActivity(), PackageManager.FEATURE_CAMERA, Build.VERSION_CODES.ECLAIR_MR1) + "\n";
-			    		strWrite += "Camera Any : " + FeatureInfo.hasFeature(getActivity(), PackageManager.FEATURE_CAMERA_ANY, Build.VERSION_CODES.JELLY_BEAN_MR1) + "\n";
-			    		strWrite += "Camera Autofocus : " + FeatureInfo.hasFeature(getActivity(), PackageManager.FEATURE_CAMERA_AUTOFOCUS, Build.VERSION_CODES.ECLAIR_MR1) + "\n";
-			    		strWrite += "Camera Flash : " + FeatureInfo.hasFeature(getActivity(), PackageManager.FEATURE_CAMERA_FLASH, Build.VERSION_CODES.ECLAIR_MR1) + "\n";
-			    		strWrite += "Camera Front : " + FeatureInfo.hasFeature(getActivity(), PackageManager.FEATURE_CAMERA_FRONT, Build.VERSION_CODES.GINGERBREAD) + "\n";
-			    		strWrite += "Consumer IR : " + FeatureInfo.hasFeature(getActivity(), PackageManager.FEATURE_CONSUMER_IR, Build.VERSION_CODES.KITKAT) + "\n";
-			    		strWrite += "Device Admin : " + FeatureInfo.hasFeature(getActivity(), PackageManager.FEATURE_DEVICE_ADMIN, Build.VERSION_CODES.KITKAT) + "\n";
-			    		strWrite += "Faketouch : " + FeatureInfo.hasFeature(getActivity(), PackageManager.FEATURE_FAKETOUCH, Build.VERSION_CODES.HONEYCOMB) + "\n";
-			    		strWrite += "Faketouch Multitouch Distinct : " + FeatureInfo.hasFeature(getActivity(), PackageManager.FEATURE_FAKETOUCH_MULTITOUCH_DISTINCT, Build.VERSION_CODES.HONEYCOMB_MR2) + "\n";
-			    		strWrite += "Faketouch Multitouch Jazzhand : " + FeatureInfo.hasFeature(getActivity(), PackageManager.FEATURE_FAKETOUCH_MULTITOUCH_JAZZHAND, Build.VERSION_CODES.HONEYCOMB_MR2) + "\n";
-			    		strWrite += "Home Screen : " + FeatureInfo.hasFeature(getActivity(), PackageManager.FEATURE_HOME_SCREEN, Build.VERSION_CODES.JELLY_BEAN_MR2) + "\n";
-			    		strWrite += "Input Methods : " + FeatureInfo.hasFeature(getActivity(), PackageManager.FEATURE_INPUT_METHODS, Build.VERSION_CODES.JELLY_BEAN_MR2) + "\n";
-			    		strWrite += "Live Wallpaper : " + FeatureInfo.hasFeature(getActivity(), PackageManager.FEATURE_LIVE_WALLPAPER, Build.VERSION_CODES.ECLAIR_MR1) + "\n";
-			    		strWrite += "Location : " + FeatureInfo.hasFeature(getActivity(), PackageManager.FEATURE_LOCATION, Build.VERSION_CODES.FROYO) + "\n";
-			    		strWrite += "Location GPS : " + FeatureInfo.hasFeature(getActivity(), PackageManager.FEATURE_LOCATION_GPS, Build.VERSION_CODES.FROYO) + "\n";
-			    		strWrite += "Location Network : " + FeatureInfo.hasFeature(getActivity(), PackageManager.FEATURE_LOCATION_NETWORK, Build.VERSION_CODES.FROYO) + "\n";
-			    		strWrite += "Microphone : " + FeatureInfo.hasFeature(getActivity(), PackageManager.FEATURE_MICROPHONE, Build.VERSION_CODES.FROYO) + "\n";
-			    		strWrite += "NFC : " + FeatureInfo.hasFeature(getActivity(), PackageManager.FEATURE_NFC, Build.VERSION_CODES.GINGERBREAD) + "\n";
-			    		strWrite += "NFC Host Card Emulation : " + FeatureInfo.hasFeature(getActivity(), PackageManager.FEATURE_NFC_HOST_CARD_EMULATION, Build.VERSION_CODES.KITKAT) + "\n";
-			    		strWrite += "Screen Landscape : " + FeatureInfo.hasFeature(getActivity(), PackageManager.FEATURE_SCREEN_LANDSCAPE, Build.VERSION_CODES.HONEYCOMB_MR2) + "\n";
-			    		strWrite += "Screen Portrait : " + FeatureInfo.hasFeature(getActivity(), PackageManager.FEATURE_SCREEN_PORTRAIT, Build.VERSION_CODES.HONEYCOMB_MR2) + "\n";
-			    		strWrite += "Sensor Accelerometer : " + FeatureInfo.hasFeature(getActivity(), PackageManager.FEATURE_SENSOR_ACCELEROMETER, Build.VERSION_CODES.FROYO) + "\n";
-			    		strWrite += "Sensor Barometer : " + FeatureInfo.hasFeature(getActivity(), PackageManager.FEATURE_SENSOR_BAROMETER, Build.VERSION_CODES.GINGERBREAD) + "\n";
-			    		strWrite += "Sensor Compass : " + FeatureInfo.hasFeature(getActivity(), PackageManager.FEATURE_SENSOR_COMPASS, Build.VERSION_CODES.FROYO) + "\n";
-			    		strWrite += "Sensor Gyroscope : " + FeatureInfo.hasFeature(getActivity(), PackageManager.FEATURE_SENSOR_GYROSCOPE, Build.VERSION_CODES.GINGERBREAD) + "\n";
-			    		strWrite += "Sensor Light : " + FeatureInfo.hasFeature(getActivity(), PackageManager.FEATURE_SENSOR_LIGHT, Build.VERSION_CODES.ECLAIR_MR1) + "\n";
-			    		strWrite += "Sensor Proximity : " + FeatureInfo.hasFeature(getActivity(), PackageManager.FEATURE_SENSOR_PROXIMITY, Build.VERSION_CODES.ECLAIR_MR1) + "\n";
-			    		strWrite += "Sensor Step Counter : " + FeatureInfo.hasFeature(getActivity(), PackageManager.FEATURE_SENSOR_STEP_COUNTER, Build.VERSION_CODES.KITKAT) + "\n";
-			    		strWrite += "Sensor Step Detector : " + FeatureInfo.hasFeature(getActivity(), PackageManager.FEATURE_SENSOR_STEP_DETECTOR, Build.VERSION_CODES.KITKAT) + "\n";
-			    		strWrite += "SIP : " + FeatureInfo.hasFeature(getActivity(), PackageManager.FEATURE_SIP, Build.VERSION_CODES.GINGERBREAD) + "\n";
-			    		strWrite += "SIP VOIP : " + FeatureInfo.hasFeature(getActivity(), PackageManager.FEATURE_SIP_VOIP, Build.VERSION_CODES.GINGERBREAD) + "\n";
-			    		strWrite += "Telephony : " + FeatureInfo.hasFeature(getActivity(), PackageManager.FEATURE_TELEPHONY, Build.VERSION_CODES.ECLAIR_MR1) + "\n";
-			    		strWrite += "Telephony CDMA : " + FeatureInfo.hasFeature(getActivity(), PackageManager.FEATURE_TELEPHONY_CDMA, Build.VERSION_CODES.ECLAIR_MR1) + "\n";
-			    		strWrite += "Telephony GSM : " + FeatureInfo.hasFeature(getActivity(), PackageManager.FEATURE_TELEPHONY_GSM, Build.VERSION_CODES.ECLAIR_MR1) + "\n";
-			    		strWrite += "Television : " + FeatureInfo.hasFeature(getActivity(), PackageManager.FEATURE_TELEVISION, Build.VERSION_CODES.JELLY_BEAN) + "\n";
-			    		strWrite += "Touchscreen : " + FeatureInfo.hasFeature(getActivity(), PackageManager.FEATURE_TOUCHSCREEN, Build.VERSION_CODES.FROYO) + "\n";
-			    		strWrite += "Touchscreen Multitouch : " + FeatureInfo.hasFeature(getActivity(), PackageManager.FEATURE_TOUCHSCREEN_MULTITOUCH, Build.VERSION_CODES.ECLAIR_MR1) + "\n";
-			    		strWrite += "Touchscreen Multitouch Distinct : " + FeatureInfo.hasFeature(getActivity(), PackageManager.FEATURE_TOUCHSCREEN_MULTITOUCH_DISTINCT, Build.VERSION_CODES.ECLAIR_MR1) + "\n";
-			    		strWrite += "Touchscreen Multitouch Jazzhand : " + FeatureInfo.hasFeature(getActivity(), PackageManager.FEATURE_TOUCHSCREEN_MULTITOUCH_JAZZHAND, Build.VERSION_CODES.FROYO) + "\n";
-			    		strWrite += "USB Accessory : " + FeatureInfo.hasFeature(getActivity(), PackageManager.FEATURE_USB_ACCESSORY, Build.VERSION_CODES.HONEYCOMB_MR1) + "\n";
-			    		strWrite += "USB Host : " + FeatureInfo.hasFeature(getActivity(), PackageManager.FEATURE_USB_HOST, Build.VERSION_CODES.HONEYCOMB_MR1) + "\n";
-			    		strWrite += "WiFi : " + FeatureInfo.hasFeature(getActivity(), PackageManager.FEATURE_WIFI, Build.VERSION_CODES.FROYO) + "\n";
-			    		strWrite += "WiFi Direct : " + FeatureInfo.hasFeature(getActivity(), PackageManager.FEATURE_WIFI_DIRECT, Build.VERSION_CODES.ICE_CREAM_SANDWICH);
-			
 			    		writeToFile(strWrite, "feature_info.txt",  activity[0]);  
 			
 			    		/*******************************************************/  

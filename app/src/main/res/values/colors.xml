@@ -29,6 +29,7 @@
     <color name="gray">#d1d2d4</color>
     <color name="light_gray">#edecec</color>
     <color name="yellow">#fdbb11</color>
+    <color name="yellow_pressed">#f2cf23</color>
     <color name="red">#e81d5b</color>
     <color name="red_pressed">#f5336e</color>
     <color name="dark_blue">#0c858d</color>

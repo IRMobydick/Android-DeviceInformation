@@ -19,4 +19,10 @@ public class StringUtils {
         return str;
     }
 
+    public static String wrapUnknownLower(String str) {
+        if(str == null || str.toLowerCase(Locale.getDefault()).equals("null") || str.equals(""))
+            str = "unknown";
+        return str;
+    }
+
 }

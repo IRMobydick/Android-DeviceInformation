@@ -15,8 +15,7 @@ import app.akeorcist.deviceinformation.fragment.NavigationDrawerFragment;
 import app.akeorcist.deviceinformation.R;
 import app.akeorcist.deviceinformation.fragment.AppListFragment;
 import app.akeorcist.deviceinformation.fragment.CameraFragment;
-import app.akeorcist.deviceinformation.fragment.FeatureFragment;
-import app.akeorcist.deviceinformation.fragment.ScreenFragment2;
+import app.akeorcist.deviceinformation.fragment.main.FeatureFragment;
 import app.akeorcist.deviceinformation.fragment.main.ScreenFragment;
 import app.akeorcist.deviceinformation.fragment.main.SensorFragment;
 import app.akeorcist.deviceinformation.fragment.main.HardwareFragment;
@@ -53,7 +52,6 @@ public class MainActivity extends ActionBarActivity implements
         FragmentManager fragmentManager = getSupportFragmentManager();
         fragmentManager.beginTransaction().replace(R.id.container, fragment).commit();
 		onSectionAttached(0);
-		
 		//mNavigationDrawerFragment.showNavigationDrawer();
 	}
 

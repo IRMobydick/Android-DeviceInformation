@@ -1,44 +1,20 @@
 package app.akeorcist.deviceinformation.fragment.main;
 
 import android.annotation.SuppressLint;
-import android.app.Activity;
 import android.content.Intent;
-import android.graphics.Bitmap;
-import android.net.Uri;
-import android.os.Build;
 import android.os.Bundle;
-import android.os.Environment;
-import android.os.Handler;
 import android.support.v4.app.Fragment;
-import android.support.v4.app.FragmentManager;
-import android.support.v4.app.FragmentPagerAdapter;
-import android.support.v4.view.ViewPager;
-import android.support.v4.view.ViewPager.OnPageChangeListener;
-import android.support.v7.app.ActionBarActivity;
 import android.support.v7.widget.CardView;
 import android.view.LayoutInflater;
 import android.view.MotionEvent;
 import android.view.View;
 import android.view.View.OnClickListener;
 import android.view.ViewGroup;
-import android.webkit.MimeTypeMap;
-import android.widget.Button;
-import android.widget.LinearLayout;
 import android.widget.TextView;
-
-import org.w3c.dom.Text;
-
-import java.io.ByteArrayOutputStream;
-import java.io.File;
-import java.io.FileNotFoundException;
-import java.io.FileOutputStream;
-import java.io.IOException;
 
 import app.akeorcist.deviceinformation.R;
 import app.akeorcist.deviceinformation.Utilities.AnimateUtils;
 import app.akeorcist.deviceinformation.activity.ScreenMeasureActivity;
-import app.akeorcist.deviceinformation.fragment.ScreenSub1Fragment;
-import app.akeorcist.deviceinformation.fragment.ScreenSub2Fragment;
 import app.akeorcist.deviceinformation.manager.ScreenManager;
 import app.akeorcist.deviceinformation.model.ScreenData;
 

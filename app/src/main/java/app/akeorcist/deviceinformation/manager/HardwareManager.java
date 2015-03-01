@@ -16,7 +16,7 @@ import app.akeorcist.deviceinformation.manager.hardware.CpuManager;
 import app.akeorcist.deviceinformation.manager.hardware.GpuManager;
 import app.akeorcist.deviceinformation.manager.hardware.MemoryManager;
 import app.akeorcist.deviceinformation.manager.hardware.StorageManager;
-import app.akeorcist.deviceinformation.model.SimpleData;
+import app.akeorcist.deviceinformation.model.TwoColumnData;
 
 /**
  * Created by Akexorcist on 2/26/15 AD.
@@ -24,13 +24,13 @@ import app.akeorcist.deviceinformation.model.SimpleData;
 public class HardwareManager {
     private static final int DATA_COUNT = 7;
 
-    private static ArrayList<SimpleData> androidDataList = new ArrayList<>();
-    private static ArrayList<SimpleData> buildDataList = new ArrayList<>();
-    private static ArrayList<SimpleData> communicationDataList = new ArrayList<>();
-    private static ArrayList<SimpleData> gpuDataList = new ArrayList<>();
-    private static ArrayList<SimpleData> memoryDataList = new ArrayList<>();
-    private static ArrayList<SimpleData> storageDataList = new ArrayList<>();
-    private static ArrayList<SimpleData> cpuDataList = new ArrayList<>();
+    private static ArrayList<TwoColumnData> androidDataList = new ArrayList<>();
+    private static ArrayList<TwoColumnData> buildDataList = new ArrayList<>();
+    private static ArrayList<TwoColumnData> communicationDataList = new ArrayList<>();
+    private static ArrayList<TwoColumnData> gpuDataList = new ArrayList<>();
+    private static ArrayList<TwoColumnData> memoryDataList = new ArrayList<>();
+    private static ArrayList<TwoColumnData> storageDataList = new ArrayList<>();
+    private static ArrayList<TwoColumnData> cpuDataList = new ArrayList<>();
     private static String cpuRawData;
 
     public static void initialData(Activity activity, GLSurfaceView glSurfaceView) {
@@ -48,40 +48,40 @@ public class HardwareManager {
     }
 
     private static void initialAndroidData() {
-        androidDataList.add(new SimpleData("System Type", AndroidManager.getSystemType()));
-        androidDataList.add(new SimpleData("Android Version", Build.VERSION.RELEASE));
-        androidDataList.add(new SimpleData("Version Code", AndroidManager.getVersionCode()));
-        androidDataList.add(new SimpleData("API Version", Build.VERSION.SDK_INT + ""));
-        androidDataList.add(new SimpleData("Incremental", Build.VERSION.INCREMENTAL));
-        androidDataList.add(new SimpleData("Codename", Build.VERSION.CODENAME));
+        androidDataList.add(new TwoColumnData("System Type", AndroidManager.getSystemType()));
+        androidDataList.add(new TwoColumnData("Android Version", Build.VERSION.RELEASE));
+        androidDataList.add(new TwoColumnData("Version Code", AndroidManager.getVersionCode()));
+        androidDataList.add(new TwoColumnData("API Version", Build.VERSION.SDK_INT + ""));
+        androidDataList.add(new TwoColumnData("Incremental", Build.VERSION.INCREMENTAL));
+        androidDataList.add(new TwoColumnData("Codename", Build.VERSION.CODENAME));
     }
 
     @SuppressWarnings("deprecation")
     private static void initialBuildData() {
-        buildDataList.add(new SimpleData("Board", Build.BOARD));
-        buildDataList.add(new SimpleData("Bootloader", Build.BOOTLOADER));
-        buildDataList.add(new SimpleData("Brand", Build.BRAND));
-        buildDataList.add(new SimpleData("Characteristic", InfoManager.HardwareInfo.getChar()));
-        buildDataList.add(new SimpleData("CPU ABI", Build.CPU_ABI));
-        buildDataList.add(new SimpleData("CPU ABI 2", Build.CPU_ABI2));
-        buildDataList.add(new SimpleData("Device", Build.DEVICE));
-        buildDataList.add(new SimpleData("Display", Build.DISPLAY));
-        buildDataList.add(new SimpleData("Fingerprint", Build.FINGERPRINT));
-        buildDataList.add(new SimpleData("Hardware", Build.HARDWARE));
-        buildDataList.add(new SimpleData("Host", Build.HOST));
-        buildDataList.add(new SimpleData("ID", Build.ID));
-        buildDataList.add(new SimpleData("Manufacturer", Build.MANUFACTURER));
-        buildDataList.add(new SimpleData("Model", Build.MODEL));
-        buildDataList.add(new SimpleData("Product", Build.PRODUCT));
-        buildDataList.add(new SimpleData("Radio", BuildManager.getRadio()));
-        buildDataList.add(new SimpleData("Serial", BuildManager.getSerial()));
-        buildDataList.add(new SimpleData("Supported ABIS", BuildManager.getSupportABIS()));
-        buildDataList.add(new SimpleData("Supported 32-bit ABIS", BuildManager.getSupport32ABIS()));
-        buildDataList.add(new SimpleData("Supported 64-bit ABIS", BuildManager.getSupport64ABIS()));
-        buildDataList.add(new SimpleData("Tags", Build.TAGS));
-        buildDataList.add(new SimpleData("Time", Build.TIME + ""));
-        buildDataList.add(new SimpleData("Type", Build.TYPE));
-        buildDataList.add(new SimpleData("User", Build.USER));
+        buildDataList.add(new TwoColumnData("Board", Build.BOARD));
+        buildDataList.add(new TwoColumnData("Bootloader", Build.BOOTLOADER));
+        buildDataList.add(new TwoColumnData("Brand", Build.BRAND));
+        buildDataList.add(new TwoColumnData("Characteristic", InfoManager.HardwareInfo.getChar()));
+        buildDataList.add(new TwoColumnData("CPU ABI", Build.CPU_ABI));
+        buildDataList.add(new TwoColumnData("CPU ABI 2", Build.CPU_ABI2));
+        buildDataList.add(new TwoColumnData("Device", Build.DEVICE));
+        buildDataList.add(new TwoColumnData("Display", Build.DISPLAY));
+        buildDataList.add(new TwoColumnData("Fingerprint", Build.FINGERPRINT));
+        buildDataList.add(new TwoColumnData("Hardware", Build.HARDWARE));
+        buildDataList.add(new TwoColumnData("Host", Build.HOST));
+        buildDataList.add(new TwoColumnData("ID", Build.ID));
+        buildDataList.add(new TwoColumnData("Manufacturer", Build.MANUFACTURER));
+        buildDataList.add(new TwoColumnData("Model", Build.MODEL));
+        buildDataList.add(new TwoColumnData("Product", Build.PRODUCT));
+        buildDataList.add(new TwoColumnData("Radio", BuildManager.getRadio()));
+        buildDataList.add(new TwoColumnData("Serial", BuildManager.getSerial()));
+        buildDataList.add(new TwoColumnData("Supported ABIS", BuildManager.getSupportABIS()));
+        buildDataList.add(new TwoColumnData("Supported 32-bit ABIS", BuildManager.getSupport32ABIS()));
+        buildDataList.add(new TwoColumnData("Supported 64-bit ABIS", BuildManager.getSupport64ABIS()));
+        buildDataList.add(new TwoColumnData("Tags", Build.TAGS));
+        buildDataList.add(new TwoColumnData("Time", Build.TIME + ""));
+        buildDataList.add(new TwoColumnData("Type", Build.TYPE));
+        buildDataList.add(new TwoColumnData("User", Build.USER));
     }
 
     private static void initialCpuData() {
@@ -94,7 +94,7 @@ public class HardwareManager {
                         String[] strCpuRow = strCpuList[i].split(":");
                         String strTitle = strCpuRow[0].trim();
                         String strDetail = strCpuRow[1].trim();
-                        cpuDataList.add(new SimpleData(strTitle, strDetail));
+                        cpuDataList.add(new TwoColumnData(strTitle, strDetail));
                     } catch (IndexOutOfBoundsException e) { }
                 }
             }
@@ -102,21 +102,21 @@ public class HardwareManager {
     }
 
     private static void initialCommunicationData(Activity activity) {
-        communicationDataList.add(new SimpleData("Vibrate Motor", CommunicationManager.hasVibrate(activity)));
-        communicationDataList.add(new SimpleData("Microphone", CommunicationManager.hasMicrophone(activity)));
-        communicationDataList.add(new SimpleData("Telephony", CommunicationManager.hasTelephony(activity)));
-        communicationDataList.add(new SimpleData("Cellular", CommunicationManager.hasCellular(activity)));
-        communicationDataList.add(new SimpleData("GPS", CommunicationManager.hasGps(activity)));
-        communicationDataList.add(new SimpleData("Bluetooth", CommunicationManager.hasBluetooth(activity)));
-        communicationDataList.add(new SimpleData("Bluetooth LE", CommunicationManager.hasBluetoothLE(activity)));
-        communicationDataList.add(new SimpleData("WiFi", CommunicationManager.hasWiFi(activity)));
-        communicationDataList.add(new SimpleData("WiFi Direct", CommunicationManager.hasWiFiDirect(activity)));
-        communicationDataList.add(new SimpleData("Ethernet", CommunicationManager.hasEthernet(activity)));
-        communicationDataList.add(new SimpleData("WiMax", CommunicationManager.hasWiMax(activity)));
-        communicationDataList.add(new SimpleData("USB OTG", CommunicationManager.hasOTG(activity)));
-        communicationDataList.add(new SimpleData("USB Accessory", CommunicationManager.hasAOA(activity)));
-        communicationDataList.add(new SimpleData("NFC", CommunicationManager.hasNFC(activity)));
-        communicationDataList.add(new SimpleData("NFC HCE", CommunicationManager.hasNFCHost(activity)));
+        communicationDataList.add(new TwoColumnData("Vibrate Motor", CommunicationManager.hasVibrate(activity)));
+        communicationDataList.add(new TwoColumnData("Microphone", CommunicationManager.hasMicrophone(activity)));
+        communicationDataList.add(new TwoColumnData("Telephony", CommunicationManager.hasTelephony(activity)));
+        communicationDataList.add(new TwoColumnData("Cellular", CommunicationManager.hasCellular(activity)));
+        communicationDataList.add(new TwoColumnData("GPS", CommunicationManager.hasGps(activity)));
+        communicationDataList.add(new TwoColumnData("Bluetooth", CommunicationManager.hasBluetooth(activity)));
+        communicationDataList.add(new TwoColumnData("Bluetooth LE", CommunicationManager.hasBluetoothLE(activity)));
+        communicationDataList.add(new TwoColumnData("WiFi", CommunicationManager.hasWiFi(activity)));
+        communicationDataList.add(new TwoColumnData("WiFi Direct", CommunicationManager.hasWiFiDirect(activity)));
+        communicationDataList.add(new TwoColumnData("Ethernet", CommunicationManager.hasEthernet(activity)));
+        communicationDataList.add(new TwoColumnData("WiMax", CommunicationManager.hasWiMax(activity)));
+        communicationDataList.add(new TwoColumnData("USB OTG", CommunicationManager.hasOTG(activity)));
+        communicationDataList.add(new TwoColumnData("USB Accessory", CommunicationManager.hasAOA(activity)));
+        communicationDataList.add(new TwoColumnData("NFC", CommunicationManager.hasNFC(activity)));
+        communicationDataList.add(new TwoColumnData("NFC HCE", CommunicationManager.hasNFCHost(activity)));
     }
 
     private static void initialGpuData(GLSurfaceView glSurfaceView, Activity activity) {
@@ -124,53 +124,53 @@ public class HardwareManager {
         glSurfaceView.setRenderer(new GpuManager.Renderer(new GpuManager.Renderer.SurfaceListener() {
             @Override
             public void onSurfaceCreated(GL10 gl, EGLConfig config) {
-                gpuDataList.add(new SimpleData("Renderer", gl.glGetString(GL10.GL_RENDERER)));
-                gpuDataList.add(new SimpleData("Vendor", gl.glGetString(GL10.GL_VENDOR)));
-                gpuDataList.add(new SimpleData("Version", gl.glGetString(GL10.GL_VERSION)));
-                gpuDataList.add(new SimpleData("Extensions", gl.glGetString(GL10.GL_EXTENSIONS).replace(" ", "\n")));
+                gpuDataList.add(new TwoColumnData("Renderer", gl.glGetString(GL10.GL_RENDERER)));
+                gpuDataList.add(new TwoColumnData("Vendor", gl.glGetString(GL10.GL_VENDOR)));
+                gpuDataList.add(new TwoColumnData("Version", gl.glGetString(GL10.GL_VERSION)));
+                gpuDataList.add(new TwoColumnData("Extensions", gl.glGetString(GL10.GL_EXTENSIONS).replace(" ", "\n")));
             }
         }));
-        gpuDataList.add(new SimpleData("OpenGL Supported", GpuManager.getOpenGLVersion(activity) + ""));
+        gpuDataList.add(new TwoColumnData("OpenGL Supported", GpuManager.getOpenGLVersion(activity) + ""));
     }
 
     private static void initialMemoryData() {
-        memoryDataList.add(new SimpleData("Total Memory", MemoryManager.getMemory()));
-        memoryDataList.add(new SimpleData("Heap Size", MemoryManager.getHeapSize()));
-        memoryDataList.add(new SimpleData("Heap Start Size", MemoryManager.getHeapStartSize()));
-        memoryDataList.add(new SimpleData("Heap Growth Limit", MemoryManager.getHeapGrowthLimit()));
+        memoryDataList.add(new TwoColumnData("Total Memory", MemoryManager.getMemory()));
+        memoryDataList.add(new TwoColumnData("Heap Size", MemoryManager.getHeapSize()));
+        memoryDataList.add(new TwoColumnData("Heap Start Size", MemoryManager.getHeapStartSize()));
+        memoryDataList.add(new TwoColumnData("Heap Growth Limit", MemoryManager.getHeapGrowthLimit()));
     }
 
     private static void initialStorageData() {
-        storageDataList.add(new SimpleData("Internal Storage", StorageManager.getTotalInternalStorage()));
-        storageDataList.add(new SimpleData("External Storage", StorageManager.getTotalExternalStorage()));
-        storageDataList.add(new SimpleData("SD Card Supported", StorageManager.isSDSupported()));
+        storageDataList.add(new TwoColumnData("Internal Storage", StorageManager.getTotalInternalStorage()));
+        storageDataList.add(new TwoColumnData("External Storage", StorageManager.getTotalExternalStorage()));
+        storageDataList.add(new TwoColumnData("SD Card Supported", StorageManager.isSDSupported()));
     }
 
-    public static ArrayList<SimpleData> getAndroidDataList() {
+    public static ArrayList<TwoColumnData> getAndroidDataList() {
         return androidDataList;
     }
 
-    public static ArrayList<SimpleData> getBuildDataList() {
+    public static ArrayList<TwoColumnData> getBuildDataList() {
         return buildDataList;
     }
 
-    public static ArrayList<SimpleData> getCommunicationDataList() {
+    public static ArrayList<TwoColumnData> getCommunicationDataList() {
         return communicationDataList;
     }
 
-    public static ArrayList<SimpleData> getCpuDataList() {
+    public static ArrayList<TwoColumnData> getCpuDataList() {
         return cpuDataList;
     }
 
-    public static ArrayList<SimpleData> getGpuDataList() {
+    public static ArrayList<TwoColumnData> getGpuDataList() {
         return gpuDataList;
     }
 
-    public static ArrayList<SimpleData> getMemoryDataList() {
+    public static ArrayList<TwoColumnData> getMemoryDataList() {
         return memoryDataList;
     }
 
-    public static ArrayList<SimpleData> getStorageDataList() {
+    public static ArrayList<TwoColumnData> getStorageDataList() {
         return storageDataList;
     }
 }

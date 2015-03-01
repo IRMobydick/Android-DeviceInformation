@@ -9,7 +9,10 @@
         android:id="@+id/card_view"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_margin="@dimen/global_margin_padding_small"
+        android:layout_marginLeft="@dimen/global_margin_padding"
+        android:layout_marginRight="@dimen/global_margin_padding"
+        android:layout_marginTop="@dimen/global_margin_padding_small"
+        android:layout_marginBottom="@dimen/global_margin_padding_small"
         android:background="@color/white"
         app:cardCornerRadius="@dimen/global_card_view_corner">
 
