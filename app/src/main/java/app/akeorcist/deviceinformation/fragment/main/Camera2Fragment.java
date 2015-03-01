@@ -10,18 +10,18 @@ import android.view.ViewGroup;
 import com.astuetz.PagerSlidingTabStrip;
 
 import app.akeorcist.deviceinformation.R;
+import app.akeorcist.deviceinformation.adapter.Camera2PagerAdapter;
 import app.akeorcist.deviceinformation.adapter.CameraPagerAdapter;
-import app.akeorcist.deviceinformation.adapter.FeaturePagerAdapter;
 import app.akeorcist.deviceinformation.manager.Camera2Manager;
 
-public class CameraFragment extends Fragment {
+public class Camera2Fragment extends Fragment {
 
-	public static CameraFragment newInstance() {
-		CameraFragment fragment = new CameraFragment();
+	public static Camera2Fragment newInstance() {
+		Camera2Fragment fragment = new Camera2Fragment();
 		return fragment;
 	}
 
-	public CameraFragment() { }
+	public Camera2Fragment() { }
 
 	public View onCreateView(LayoutInflater inflater, ViewGroup container,
 			Bundle savedInstanceState) {
@@ -32,7 +32,7 @@ public class CameraFragment extends Fragment {
         for(int i = 0 ; i < cameraCount ; i++) {
             strTitle[i] = "Camera " + i;
         }
-        CameraPagerAdapter adapter = new CameraPagerAdapter(getFragmentManager(), strTitle);
+        Camera2PagerAdapter adapter = new Camera2PagerAdapter(getFragmentManager(), strTitle);
         ViewPager vpContent = (ViewPager) rootView.findViewById(R.id.vp_content);
         vpContent.setAdapter(adapter);
         PagerSlidingTabStrip pagerTab = (PagerSlidingTabStrip) rootView.findViewById(R.id.pager_tab);

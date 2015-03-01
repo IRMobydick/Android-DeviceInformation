@@ -101,7 +101,7 @@
     <dimen name="sensor_card_info_icon_size">40dp</dimen>
 
     <!-- Camera -->
-    <dimen name="camera_card_title_width">150dp</dimen>
+    <dimen name="camera_card_title_width">120dp</dimen>
 
     <!-- Feature -->
     <dimen name="feature_button_info_size">20dp</dimen>

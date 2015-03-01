@@ -14,7 +14,7 @@ import android.support.v4.widget.DrawerLayout;
 import app.akeorcist.deviceinformation.fragment.NavigationDrawerFragment;
 import app.akeorcist.deviceinformation.R;
 import app.akeorcist.deviceinformation.fragment.AppListFragment;
-import app.akeorcist.deviceinformation.fragment.CameraFragment;
+import app.akeorcist.deviceinformation.fragment.main.CameraFragment;
 import app.akeorcist.deviceinformation.fragment.main.FeatureFragment;
 import app.akeorcist.deviceinformation.fragment.main.ScreenFragment;
 import app.akeorcist.deviceinformation.fragment.main.SensorFragment;

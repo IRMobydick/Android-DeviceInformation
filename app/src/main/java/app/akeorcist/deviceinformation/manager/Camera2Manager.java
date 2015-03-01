@@ -13,7 +13,6 @@ import android.hardware.camera2.CameraManager;
 import android.hardware.camera2.params.StreamConfigurationMap;
 import android.media.MediaRecorder;
 import android.os.Build;
-import android.util.Log;
 import android.util.Range;
 import android.util.Rational;
 import android.util.Size;
@@ -22,12 +21,14 @@ import android.util.SizeF;
 import java.util.ArrayList;
 
 import app.akeorcist.deviceinformation.Utilities.StringUtils;
+import app.akeorcist.deviceinformation.model.Camera2Data;
 import app.akeorcist.deviceinformation.model.TwoColumnData;
 
 /**
  * Created by Ake on 2/28/2015.
  */
 public class Camera2Manager {
+    private static final int DATA_COUNT = 60;
     private static ArrayList<ArrayList<TwoColumnData>> cameraDataList = new ArrayList<>();
 
     private static String str = "";
@@ -41,7 +42,7 @@ public class Camera2Manager {
     }
 
     public static int getCameraDataCount(int position) {
-        return cameraDataList.get(position).size();
+        return DATA_COUNT;
     }
 
     public static ArrayList<TwoColumnData> getCameraData(int position) {
@@ -57,66 +58,69 @@ public class Camera2Manager {
                 for (int i = 0; i < cameraList.length; i++) {
                     CameraCharacteristics cc = manager.getCameraCharacteristics(cameraList[i]);
                     ArrayList<TwoColumnData> cameraData = new ArrayList<>();
-                    cameraData.add(new TwoColumnData("Tone Map Max Curve Point", getToneMapMaxCurvePoint(cc)));
-                    cameraData.add(new TwoColumnData("Available Tone Map Mode", getAvailableToneMapMode(cc)));
-                    cameraData.add(new TwoColumnData("Sync Max Latency", getSyncMaxLatency(cc)));
-                    cameraData.add(new TwoColumnData("Max Face Count", getMaxFaceCount(cc)));
-                    cameraData.add(new TwoColumnData("Available Hot Pixel Map Mode", getAvailableHotPixelMapMode(cc)));
-                    cameraData.add(new TwoColumnData("Available Face Detect Mode", getAvailableFaceDetectMode(cc)));
-                    cameraData.add(new TwoColumnData("Reference Illuminant 1", getReferenceIlluminant1(cc)));
-                    cameraData.add(new TwoColumnData("Reference Illuminant 2", getReferenceIlluminant2(cc)));
-                    cameraData.add(new TwoColumnData("Sensor Orientation", getSensorOrientation(cc)));
-                    cameraData.add(new TwoColumnData("Max Analog Sensitivity", getMaxAnalogSensitivity(cc)));
-                    cameraData.add(new TwoColumnData("White Level", getWhiteLevel(cc)));
-                    cameraData.add(new TwoColumnData("Timestamp Source", getTimestampSource(cc)));
-                    cameraData.add(new TwoColumnData("Sensitivity Range", getSensitivityRange(cc)));
-                    cameraData.add(new TwoColumnData("Pixel Array Size", getPixelArraySize(cc)));
-                    cameraData.add(new TwoColumnData("Physical Size", getPhysicalSize(cc)));
-                    cameraData.add(new TwoColumnData("Max Frame Duration", getMaxFrameDuration(cc)));
-                    cameraData.add(new TwoColumnData("Exposure Time Range", getExposureTimeRange(cc)));
-                    cameraData.add(new TwoColumnData("Color Filter Arrangement", getColorFilterArrangement(cc)));
-                    cameraData.add(new TwoColumnData("Active Array Size", getActiveArraySize(cc)));
-                    cameraData.add(new TwoColumnData("Available Test Pattern Mode", getAvailableTestPatternMode(cc)));
-                    cameraData.add(new TwoColumnData("Scale Cropping Type", getScaleCroppingType(cc)));
-                    cameraData.add(new TwoColumnData("Available Max Digital Zoom", getAvailableMaxDigitalZoom(cc)));
-                    cameraData.add(new TwoColumnData("Pipeline Max Depth", getPipelineMaxDepth(cc)));
-                    cameraData.add(new TwoColumnData("Partial Result Count", getPartialResultCount(cc)));
-                    cameraData.add(new TwoColumnData("Max Num Output Raw", getMaxNumOutputRaw(cc)));
-                    cameraData.add(new TwoColumnData("Max Num Output Proc Stall", getMaxNumOutputProcStall(cc)));
-                    cameraData.add(new TwoColumnData("Max Num Output Proc", getMaxNumOutputProc(cc)));
-                    cameraData.add(new TwoColumnData("Request Available Capability", getRequestAvailableCapability(cc)));
-                    cameraData.add(new TwoColumnData("Noise Reduction Available Noise Reduction Mode", getNoiseReductionAvailableNoiseReductionMode(cc)));
-                    cameraData.add(new TwoColumnData("Minimum Focus Distance", getMinimumFocusDistance(cc)));
-                    cameraData.add(new TwoColumnData("Hyperfocal Distance", getHyperfocalDistance(cc)));
-                    cameraData.add(new TwoColumnData("Focus Distance Calibration", getFocusDistanceCalibration(cc)));
-                    cameraData.add(new TwoColumnData("Available Optical Stabilization", getAvailableOpticalStabilization(cc)));
-                    cameraData.add(new TwoColumnData("Available Focal Length", getAvailableFocalLength(cc)));
-                    cameraData.add(new TwoColumnData("Available Filter Density", getAvailableFilterDensity(cc)));
-                    cameraData.add(new TwoColumnData("Available Aperture", getAvailableAperture(cc)));
-                    cameraData.add(new TwoColumnData("Lens Facing", getLensFacing(cc)));
-                    cameraData.add(new TwoColumnData("Available JPEG Thumbnail Size", getAvailableJpegThumbnailSize(cc)));
-                    cameraData.add(new TwoColumnData("Supported Hardware Level", getSupportedHardwareLevel(cc)));
-                    cameraData.add(new TwoColumnData("Available HotPixel Mode", getAvailableHotPixelMode(cc)));
-                    cameraData.add(new TwoColumnData("Available Flash", getAvailableFlash(cc)));
-                    cameraData.add(new TwoColumnData("Available Edge Mode", getAvailableEdgeMode(cc)));
-                    cameraData.add(new TwoColumnData("Max Region AE", getMaxRegionAE(cc)));
-                    cameraData.add(new TwoColumnData("Max Region AF", getMaxRegionAF(cc)));
-                    cameraData.add(new TwoColumnData("Max Region AWB", getMaxRegionAWB(cc)));
-                    cameraData.add(new TwoColumnData("Available AWB Mode", getAvailableAWBMode(cc)));
-                    cameraData.add(new TwoColumnData("Available Video Stabilization Mode", getAvailableVideoStabilizationMode(cc)));
-                    cameraData.add(new TwoColumnData("Available Scene Mode", getAvailableSceneMode(cc)));
-                    cameraData.add(new TwoColumnData("Available Effect", getAvailableEffect(cc)));
-                    cameraData.add(new TwoColumnData("AE Compensation Step", getAECompensationStep(cc)));
-                    cameraData.add(new TwoColumnData("AE Compensation Range", getAECompensationRange(cc)));
-                    cameraData.add(new TwoColumnData("Available AE Target FPS Ranges", getAvailableAETargetFPSRanges(cc)));
-                    cameraData.add(new TwoColumnData("Available AE Mode", getAvailableAEMode(cc)));
-                    cameraData.add(new TwoColumnData("Available AE Antibanding Mode", getAvailableAEAntibandingMode(cc)));
-                    cameraData.add(new TwoColumnData("Available AF Mode", getAvailableAFMode(cc)));
-                    cameraData.add(new TwoColumnData("Support High Speed Video Size", getSupportHighSpeedVideoSize(cc)));
-                    cameraData.add(new TwoColumnData("Support High Speed Video FPS Range", getSupportHighSpeedVideoFpsRange(cc)));
-                    cameraData.add(new TwoColumnData("SupportAberrationMode", getSupportAberrationMode(cc)));
-                    cameraData.add(new TwoColumnData("Support Image Format", getSupportImageFormat(cc)));
-                    cameraData.add(new TwoColumnData("Support Output Size", getSupportOutputSize(cc)));
+                    Camera2Data data = new Camera2Data();
+                    data.setCameraId(cameraList[i]);
+                    data.setActiveArraySize(getActiveArraySize(cc));
+                    data.setaECompensationRange(getAECompensationRange(cc));
+                    data.setaECompensationStep(getAECompensationStep(cc));
+                    data.setAvailableAEAntibandingMode(getAvailableAEAntibandingMode(cc));
+                    data.setAvailableAEMode(getAvailableAEMode(cc));
+                    data.setAvailableAFMode(getAvailableAFMode(cc));
+                    data.setAvailableAETargetFpsRange(getAvailableAETargetFPSRange(cc));
+                    data.setAvailableAperture(getAvailableAperture(cc));
+                    data.setAvailableAWBMode(getAvailableAWBMode(cc));
+                    data.setAvailableEdgeMode(getAvailableEdgeMode(cc));
+                    data.setAvailableEffect(getAvailableEffect(cc));
+                    data.setAvailableFaceDetectMode(getAvailableFaceDetectMode(cc));
+                    data.setAvailableFilterDensity(getAvailableFilterDensity(cc));
+                    data.setAvailableFlash(getAvailableFlash(cc));
+                    data.setAvailableFocalLength(getAvailableFocalLength(cc));
+                    data.setAvailableHotPixelMapMode(getAvailableHotPixelMapMode(cc));
+                    data.setAvailableHotPixelMode(getAvailableHotPixelMode(cc));
+                    data.setAvailableJpegThumbnailSize(getAvailableJpegThumbnailSize(cc));
+                    data.setAvailableMaxDigitalZoom(getAvailableMaxDigitalZoom(cc));
+                    data.setAvailableNoiseReductionMode(getAvailableNoiseReductionMode(cc));
+                    data.setAvailableOpticalStabilization(getAvailableOpticalStabilization(cc));
+                    data.setAvailableRequestCapability(getAvailableRequestCapability(cc));
+                    data.setAvailableSceneMode(getAvailableSceneMode(cc));
+                    data.setAvailableTestPartternMode(getAvailableTestPatternMode(cc));
+                    data.setAvailableToneMapMode(getAvailableToneMapMode(cc));
+                    data.setAvailableVideoStabilizationMode(getAvailableVideoStabilizationMode(cc));
+                    data.setColorFilterArrangement(getColorFilterArrangement(cc));
+                    data.setExposureTimeRange(getExposureTimeRange(cc));
+                    data.setFocusDistanceCalibration(getFocusDistanceCalibration(cc));
+                    data.setHyperfocalDistance(getHyperfocalDistance(cc));
+                    data.setLensFacing(getLensFacing(cc));
+                    data.setMaxAnalogSensitivity(getMaxAnalogSensitivity(cc));
+                    data.setMaxFaceCount(getMaxFaceCount(cc));
+                    data.setMaxFrameDutaion(getMaxFrameDuration(cc));
+                    data.setMaxNumOutputProc(getMaxNumOutputProc(cc));
+                    data.setMaxNumOutputProcStall(getMaxNumOutputProcStall(cc));
+                    data.setMaxNumOutputRaw(getMaxNumOutputRaw(cc));
+                    data.setMaxRegionAE(getMaxRegionAE(cc));
+                    data.setMaxRegionAF(getMaxRegionAF(cc));
+                    data.setMaxRegionAWB(getMaxRegionAWB(cc));
+                    data.setMinimumFocusDistance(getMinimumFocusDistance(cc));
+                    data.setPartialResultCount(getPartialResultCount(cc));
+                    data.setPhysicalSize(getPhysicalSize(cc));
+                    data.setPipelineMaxDepth(getPipelineMaxDepth(cc));
+                    data.setPixelArraySize(getPixelArraySize(cc));
+                    data.setReferenceIlluminant1(getReferenceIlluminant1(cc));
+                    data.setReferenceIlluminant2(getReferenceIlluminant2(cc));
+                    data.setScaleCroppingType(getScaleCroppingType(cc));
+                    data.setSensitivityRange(getSensitivityRange(cc));
+                    data.setSensorOrientation(getSensorOrientation(cc));
+                    data.setSupportAberrationMode(getSupportAberrationMode(cc));
+                    data.setSupportHardwareLevel(getSupportHardwareLevel(cc));
+                    data.setSupportHighSpeedVideoFpsRange(getSupportHighSpeedVideoFpsRange(cc));
+                    data.setSupportHighSpeedVideoSize(getSupportHighSpeedVideoSize(cc));
+                    data.setSupportImageFormat(getSupportImageFormat(cc));
+                    data.setSupportOutputSize(getSupportOutputSize(cc));
+                    data.setSyncMaxLatency(getSyncMaxLatency(cc));
+                    data.setTimestampSource(getTimestampSource(cc));
+                    data.setToneMapMaxCurvePoint(getToneMapMaxCurvePoint(cc));
+                    data.setWhiteLevel(getWhiteLevel(cc));
+
                     cameraDataList.add(cameraData);
                 }
 
@@ -557,7 +561,7 @@ public class Camera2Manager {
     }
 
     @SuppressLint("NewApi")
-    private static String getRequestAvailableCapability(CameraCharacteristics cc) {
+    private static String getAvailableRequestCapability(CameraCharacteristics cc) {
         int[] values = cc.get(CameraCharacteristics.REQUEST_AVAILABLE_CAPABILITIES);
         if(values != null) {
             String str = "";
@@ -580,7 +584,7 @@ public class Camera2Manager {
     }
 
     @SuppressLint("NewApi")
-    private static String getNoiseReductionAvailableNoiseReductionMode(CameraCharacteristics cc) {
+    private static String getAvailableNoiseReductionMode(CameraCharacteristics cc) {
         int[] modes = cc.get(CameraCharacteristics.NOISE_REDUCTION_AVAILABLE_NOISE_REDUCTION_MODES);
         if(modes != null) {
             String str = "";
@@ -715,7 +719,7 @@ public class Camera2Manager {
     }
 
     @SuppressLint("NewApi")
-    private static String getSupportedHardwareLevel(CameraCharacteristics cc) {
+    private static String getSupportHardwareLevel(CameraCharacteristics cc) {
         Integer level = cc.get(CameraCharacteristics.INFO_SUPPORTED_HARDWARE_LEVEL);
         if(level != null) {
             if(level.intValue() == CameraCharacteristics.INFO_SUPPORTED_HARDWARE_LEVEL_FULL) {
@@ -964,7 +968,7 @@ public class Camera2Manager {
     }
 
     @SuppressLint("NewApi")
-    private static String getAvailableAETargetFPSRanges(CameraCharacteristics cc) {
+    private static String getAvailableAETargetFPSRange(CameraCharacteristics cc) {
         Range<Integer>[] ranges = cc.get(CameraCharacteristics.CONTROL_AE_AVAILABLE_TARGET_FPS_RANGES);
         if(ranges != null && ranges.length > 0) {
             String str = "";

@@ -63,13 +63,13 @@
                     <TextView
                         android:layout_width="@dimen/camera_card_title_width"
                         android:layout_height="wrap_content"
-                        android:text="Antibanding"
+                        android:text="Active Array Size"
                         android:textColor="@color/dark_gray"
                         android:textSize="@dimen/global_text_size"
                         android:textStyle="bold" />
 
                     <TextView
-                        android:id="@+id/tv_antibanding"
+                        android:id="@+id/tv_active_array_size"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:layout_marginLeft="@dimen/global_margin_padding"
@@ -88,13 +88,13 @@
                     <TextView
                         android:layout_width="@dimen/camera_card_title_width"
                         android:layout_height="wrap_content"
-                        android:text="Can Disable Shutter Sound"
+                        android:text="AE Compensation Range"
                         android:textColor="@color/dark_gray"
                         android:textSize="@dimen/global_text_size"
                         android:textStyle="bold" />
 
                     <TextView
-                        android:id="@+id/tv_shutter_sound"
+                        android:id="@+id/tv_ae_compensation_range"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:layout_marginLeft="@dimen/global_margin_padding"
@@ -113,13 +113,13 @@
                     <TextView
                         android:layout_width="@dimen/camera_card_title_width"
                         android:layout_height="wrap_content"
-                        android:text="Color Effect"
+                        android:text="AE Compensation Step"
                         android:textColor="@color/dark_gray"
                         android:textSize="@dimen/global_text_size"
                         android:textStyle="bold" />
 
                     <TextView
-                        android:id="@+id/tv_color_effect"
+                        android:id="@+id/tv_ae_compensation_step"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:layout_marginLeft="@dimen/global_margin_padding"
@@ -138,13 +138,13 @@
                     <TextView
                         android:layout_width="@dimen/camera_card_title_width"
                         android:layout_height="wrap_content"
-                        android:text="Facing"
+                        android:text="Available AE Antibanding Mode"
                         android:textColor="@color/dark_gray"
                         android:textSize="@dimen/global_text_size"
                         android:textStyle="bold" />
 
                     <TextView
-                        android:id="@+id/tv_facing"
+                        android:id="@+id/tv_available_ae_antibanding_mode"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:layout_marginLeft="@dimen/global_margin_padding"
@@ -163,13 +163,13 @@
                     <TextView
                         android:layout_width="@dimen/camera_card_title_width"
                         android:layout_height="wrap_content"
-                        android:text="Flash Mode"
+                        android:text="Available AE Mode"
                         android:textColor="@color/dark_gray"
                         android:textSize="@dimen/global_text_size"
                         android:textStyle="bold" />
 
                     <TextView
-                        android:id="@+id/tv_flash_mode"
+                        android:id="@+id/tv_available_ae_mode"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:layout_marginLeft="@dimen/global_margin_padding"
@@ -188,13 +188,13 @@
                     <TextView
                         android:layout_width="@dimen/camera_card_title_width"
                         android:layout_height="wrap_content"
-                        android:text="Focus Mode"
+                        android:text="Available AF Mode"
                         android:textColor="@color/dark_gray"
                         android:textSize="@dimen/global_text_size"
                         android:textStyle="bold" />
 
                     <TextView
-                        android:id="@+id/tv_focus_mode"
+                        android:id="@+id/tv_available_af_mode"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:layout_marginLeft="@dimen/global_margin_padding"
@@ -213,13 +213,13 @@
                     <TextView
                         android:layout_width="@dimen/camera_card_title_width"
                         android:layout_height="wrap_content"
-                        android:text="JPEG Thumbnail Size (PX)"
+                        android:text="Available AE Target FPS Range"
                         android:textColor="@color/dark_gray"
                         android:textSize="@dimen/global_text_size"
                         android:textStyle="bold" />
 
                     <TextView
-                        android:id="@+id/tv_jpeg_thumbnail"
+                        android:id="@+id/tv_available_ae_target_fps_range"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:layout_marginLeft="@dimen/global_margin_padding"
@@ -238,13 +238,13 @@
                     <TextView
                         android:layout_width="@dimen/camera_card_title_width"
                         android:layout_height="wrap_content"
-                        android:text="Image Orientation"
+                        android:text="Available Aperture"
                         android:textColor="@color/dark_gray"
                         android:textSize="@dimen/global_text_size"
                         android:textStyle="bold" />
 
                     <TextView
-                        android:id="@+id/tv_image_orientation"
+                        android:id="@+id/tv_available_aperture"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:layout_marginLeft="@dimen/global_margin_padding"
@@ -263,13 +263,13 @@
                     <TextView
                         android:layout_width="@dimen/camera_card_title_width"
                         android:layout_height="wrap_content"
-                        android:text="Picture Format"
+                        android:text="Available AWB Mode"
                         android:textColor="@color/dark_gray"
                         android:textSize="@dimen/global_text_size"
                         android:textStyle="bold" />
 
                     <TextView
-                        android:id="@+id/tv_picture_format"
+                        android:id="@+id/tv_available_awb_mode"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:layout_marginLeft="@dimen/global_margin_padding"
@@ -288,13 +288,13 @@
                     <TextView
                         android:layout_width="@dimen/camera_card_title_width"
                         android:layout_height="wrap_content"
-                        android:text="Preview Format"
+                        android:text="Available Edge Mode"
                         android:textColor="@color/dark_gray"
                         android:textSize="@dimen/global_text_size"
                         android:textStyle="bold" />
 
                     <TextView
-                        android:id="@+id/tv_preview_format"
+                        android:id="@+id/tv_available_edge_mode"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:layout_marginLeft="@dimen/global_margin_padding"
@@ -313,13 +313,13 @@
                     <TextView
                         android:layout_width="@dimen/camera_card_title_width"
                         android:layout_height="wrap_content"
-                        android:text="Picture Size (PX)"
+                        android:text="Available Effect"
                         android:textColor="@color/dark_gray"
                         android:textSize="@dimen/global_text_size"
                         android:textStyle="bold" />
 
                     <TextView
-                        android:id="@+id/tv_picture_size"
+                        android:id="@+id/tv_available_effect"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:layout_marginLeft="@dimen/global_margin_padding"
@@ -338,13 +338,13 @@
                     <TextView
                         android:layout_width="@dimen/camera_card_title_width"
                         android:layout_height="wrap_content"
-                        android:text="Preview Frame Rate (FPS)"
+                        android:text="Available Face Detect Mode"
                         android:textColor="@color/dark_gray"
                         android:textSize="@dimen/global_text_size"
                         android:textStyle="bold" />
 
                     <TextView
-                        android:id="@+id/tv_preview_framerate"
+                        android:id="@+id/tv_available_face_detect_mode"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:layout_marginLeft="@dimen/global_margin_padding"
@@ -363,13 +363,13 @@
                     <TextView
                         android:layout_width="@dimen/camera_card_title_width"
                         android:layout_height="wrap_content"
-                        android:text="Preview Size (PX)"
+                        android:text="Available Filter Density"
                         android:textColor="@color/dark_gray"
                         android:textSize="@dimen/global_text_size"
                         android:textStyle="bold" />
 
                     <TextView
-                        android:id="@+id/tv_preview_size"
+                        android:id="@+id/tv_available_filter_density"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:layout_marginLeft="@dimen/global_margin_padding"
@@ -388,13 +388,13 @@
                     <TextView
                         android:layout_width="@dimen/camera_card_title_width"
                         android:layout_height="wrap_content"
-                        android:text="Preview FPS Range"
+                        android:text="Available Flash"
                         android:textColor="@color/dark_gray"
                         android:textSize="@dimen/global_text_size"
                         android:textStyle="bold" />
 
                     <TextView
-                        android:id="@+id/tv_preview_fps_range"
+                        android:id="@+id/tv_available_flash"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:layout_marginLeft="@dimen/global_margin_padding"
@@ -413,13 +413,13 @@
                     <TextView
                         android:layout_width="@dimen/camera_card_title_width"
                         android:layout_height="wrap_content"
-                        android:text="Scene Mode"
+                        android:text="Available Focal Length"
                         android:textColor="@color/dark_gray"
                         android:textSize="@dimen/global_text_size"
                         android:textStyle="bold" />
 
                     <TextView
-                        android:id="@+id/tv_scene_mode"
+                        android:id="@+id/tv_available_focal_length"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:layout_marginLeft="@dimen/global_margin_padding"
@@ -438,13 +438,13 @@
                     <TextView
                         android:layout_width="@dimen/camera_card_title_width"
                         android:layout_height="wrap_content"
-                        android:text="Video Quality Profile (PX)"
+                        android:text="Available Hot Pixel Map Mode"
                         android:textColor="@color/dark_gray"
                         android:textSize="@dimen/global_text_size"
                         android:textStyle="bold" />
 
                     <TextView
-                        android:id="@+id/tv_video_quality_profile"
+                        android:id="@+id/tv_available_hot_pixel_map_mode"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:layout_marginLeft="@dimen/global_margin_padding"
@@ -463,13 +463,13 @@
                     <TextView
                         android:layout_width="@dimen/camera_card_title_width"
                         android:layout_height="wrap_content"
-                        android:text="Time Lapse Quality Profile (PX)"
+                        android:text="Available Hot Pixel Mode"
                         android:textColor="@color/dark_gray"
                         android:textSize="@dimen/global_text_size"
                         android:textStyle="bold" />
 
                     <TextView
-                        android:id="@+id/tv_timelapse_quality_profile"
+                        android:id="@+id/tv_available_hot_pixel_mode"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:layout_marginLeft="@dimen/global_margin_padding"
@@ -488,13 +488,13 @@
                     <TextView
                         android:layout_width="@dimen/camera_card_title_width"
                         android:layout_height="wrap_content"
-                        android:text="Video Size (PX)"
+                        android:text="Available JPEG Thumbnail Size"
                         android:textColor="@color/dark_gray"
                         android:textSize="@dimen/global_text_size"
                         android:textStyle="bold" />
 
                     <TextView
-                        android:id="@+id/tv_video_size"
+                        android:id="@+id/tv_available_jpeg_thumbnail_size"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:layout_marginLeft="@dimen/global_margin_padding"
@@ -513,13 +513,13 @@
                     <TextView
                         android:layout_width="@dimen/camera_card_title_width"
                         android:layout_height="wrap_content"
-                        android:text="White Balance"
+                        android:text="Available Max Digital Zoom"
                         android:textColor="@color/dark_gray"
                         android:textSize="@dimen/global_text_size"
                         android:textStyle="bold" />
 
                     <TextView
-                        android:id="@+id/tv_white_balance"
+                        android:id="@+id/tv_available_max_digital_zoom"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:layout_marginLeft="@dimen/global_margin_padding"
@@ -538,13 +538,13 @@
                     <TextView
                         android:layout_width="@dimen/camera_card_title_width"
                         android:layout_height="wrap_content"
-                        android:text="Auto Exposure Lock Supported"
+                        android:text="Available Noise Reduction Mode"
                         android:textColor="@color/dark_gray"
                         android:textSize="@dimen/global_text_size"
                         android:textStyle="bold" />
 
                     <TextView
-                        android:id="@+id/tv_auto_exposure"
+                        android:id="@+id/tv_available_noise_reduction_mode"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:layout_marginLeft="@dimen/global_margin_padding"
@@ -563,13 +563,13 @@
                     <TextView
                         android:layout_width="@dimen/camera_card_title_width"
                         android:layout_height="wrap_content"
-                        android:text="Auto White Balance Lock Stupported"
+                        android:text="Available Optical Stabilization"
                         android:textColor="@color/dark_gray"
                         android:textSize="@dimen/global_text_size"
                         android:textStyle="bold" />
 
                     <TextView
-                        android:id="@+id/tv_auto_white_balance"
+                        android:id="@+id/tv_available_optical_stabilization"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:layout_marginLeft="@dimen/global_margin_padding"
@@ -588,13 +588,13 @@
                     <TextView
                         android:layout_width="@dimen/camera_card_title_width"
                         android:layout_height="wrap_content"
-                        android:text="Smooth Zoom Supported"
+                        android:text="Available Request Capability"
                         android:textColor="@color/dark_gray"
                         android:textSize="@dimen/global_text_size"
                         android:textStyle="bold" />
 
                     <TextView
-                        android:id="@+id/tv_smooth_zoom"
+                        android:id="@+id/tv_available_request_capability"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:layout_marginLeft="@dimen/global_margin_padding"
@@ -613,13 +613,13 @@
                     <TextView
                         android:layout_width="@dimen/camera_card_title_width"
                         android:layout_height="wrap_content"
-                        android:text="Video Snapshot Supported"
+                        android:text="Available Scene Mode"
                         android:textColor="@color/dark_gray"
                         android:textSize="@dimen/global_text_size"
                         android:textStyle="bold" />
 
                     <TextView
-                        android:id="@+id/tv_video_snapshot"
+                        android:id="@+id/tv_available_scene_mode"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:layout_marginLeft="@dimen/global_margin_padding"
@@ -638,13 +638,13 @@
                     <TextView
                         android:layout_width="@dimen/camera_card_title_width"
                         android:layout_height="wrap_content"
-                        android:text="Video Stabilization Supported"
+                        android:text="Available Test Pattern Mode"
                         android:textColor="@color/dark_gray"
                         android:textSize="@dimen/global_text_size"
                         android:textStyle="bold" />
 
                     <TextView
-                        android:id="@+id/tv_video_stabilizatioin"
+                        android:id="@+id/tv_available_test_pattern_mode"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:layout_marginLeft="@dimen/global_margin_padding"
@@ -663,13 +663,863 @@
                     <TextView
                         android:layout_width="@dimen/camera_card_title_width"
                         android:layout_height="wrap_content"
-                        android:text="Zoom Supported"
+                        android:text="Available Tone Map Mode"
                         android:textColor="@color/dark_gray"
                         android:textSize="@dimen/global_text_size"
                         android:textStyle="bold" />
 
                     <TextView
-                        android:id="@+id/tv_zoom_supported"
+                        android:id="@+id/tv_available_tone_map_mode"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="@dimen/global_margin_padding"
+                        android:text="Detail"
+                        android:textColor="@color/dark_gray"
+                        android:textSize="@dimen/global_text_size" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="fill_parent"
+                    android:layout_height="fill_parent"
+                    android:orientation="horizontal"
+                    android:paddingBottom="@dimen/global_margin_padding"
+                    android:paddingTop="@dimen/global_margin_padding_small">
+
+                    <TextView
+                        android:layout_width="@dimen/camera_card_title_width"
+                        android:layout_height="wrap_content"
+                        android:text="Available Video Stabilization Mode"
+                        android:textColor="@color/dark_gray"
+                        android:textSize="@dimen/global_text_size"
+                        android:textStyle="bold" />
+
+                    <TextView
+                        android:id="@+id/tv_available_video_stabilization_mode"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="@dimen/global_margin_padding"
+                        android:text="Detail"
+                        android:textColor="@color/dark_gray"
+                        android:textSize="@dimen/global_text_size" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="fill_parent"
+                    android:layout_height="fill_parent"
+                    android:orientation="horizontal"
+                    android:paddingBottom="@dimen/global_margin_padding"
+                    android:paddingTop="@dimen/global_margin_padding_small">
+
+                    <TextView
+                        android:layout_width="@dimen/camera_card_title_width"
+                        android:layout_height="wrap_content"
+                        android:text="Color Filter Arrangement"
+                        android:textColor="@color/dark_gray"
+                        android:textSize="@dimen/global_text_size"
+                        android:textStyle="bold" />
+
+                    <TextView
+                        android:id="@+id/tv_color_filter_arrangement"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="@dimen/global_margin_padding"
+                        android:text="Detail"
+                        android:textColor="@color/dark_gray"
+                        android:textSize="@dimen/global_text_size" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="fill_parent"
+                    android:layout_height="fill_parent"
+                    android:orientation="horizontal"
+                    android:paddingBottom="@dimen/global_margin_padding"
+                    android:paddingTop="@dimen/global_margin_padding_small">
+
+                    <TextView
+                        android:layout_width="@dimen/camera_card_title_width"
+                        android:layout_height="wrap_content"
+                        android:text="Exposure Time Range"
+                        android:textColor="@color/dark_gray"
+                        android:textSize="@dimen/global_text_size"
+                        android:textStyle="bold" />
+
+                    <TextView
+                        android:id="@+id/tv_exposure_time_range"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="@dimen/global_margin_padding"
+                        android:text="Detail"
+                        android:textColor="@color/dark_gray"
+                        android:textSize="@dimen/global_text_size" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="fill_parent"
+                    android:layout_height="fill_parent"
+                    android:orientation="horizontal"
+                    android:paddingBottom="@dimen/global_margin_padding"
+                    android:paddingTop="@dimen/global_margin_padding_small">
+
+                    <TextView
+                        android:layout_width="@dimen/camera_card_title_width"
+                        android:layout_height="wrap_content"
+                        android:text="Focus Distance Calibration"
+                        android:textColor="@color/dark_gray"
+                        android:textSize="@dimen/global_text_size"
+                        android:textStyle="bold" />
+
+                    <TextView
+                        android:id="@+id/tv_focus_distance_calibration"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="@dimen/global_margin_padding"
+                        android:text="Detail"
+                        android:textColor="@color/dark_gray"
+                        android:textSize="@dimen/global_text_size" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="fill_parent"
+                    android:layout_height="fill_parent"
+                    android:orientation="horizontal"
+                    android:paddingBottom="@dimen/global_margin_padding"
+                    android:paddingTop="@dimen/global_margin_padding_small">
+
+                    <TextView
+                        android:layout_width="@dimen/camera_card_title_width"
+                        android:layout_height="wrap_content"
+                        android:text="Hyper Focal Distance Supported"
+                        android:textColor="@color/dark_gray"
+                        android:textSize="@dimen/global_text_size"
+                        android:textStyle="bold" />
+
+                    <TextView
+                        android:id="@+id/tv_hyper_focal_distance_supported"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="@dimen/global_margin_padding"
+                        android:text="Detail"
+                        android:textColor="@color/dark_gray"
+                        android:textSize="@dimen/global_text_size" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="fill_parent"
+                    android:layout_height="fill_parent"
+                    android:orientation="horizontal"
+                    android:paddingBottom="@dimen/global_margin_padding"
+                    android:paddingTop="@dimen/global_margin_padding_small">
+
+                    <TextView
+                        android:layout_width="@dimen/camera_card_title_width"
+                        android:layout_height="wrap_content"
+                        android:text="Lens Facing"
+                        android:textColor="@color/dark_gray"
+                        android:textSize="@dimen/global_text_size"
+                        android:textStyle="bold" />
+
+                    <TextView
+                        android:id="@+id/tv_lens_facing"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="@dimen/global_margin_padding"
+                        android:text="Detail"
+                        android:textColor="@color/dark_gray"
+                        android:textSize="@dimen/global_text_size" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="fill_parent"
+                    android:layout_height="fill_parent"
+                    android:orientation="horizontal"
+                    android:paddingBottom="@dimen/global_margin_padding"
+                    android:paddingTop="@dimen/global_margin_padding_small">
+
+                    <TextView
+                        android:layout_width="@dimen/camera_card_title_width"
+                        android:layout_height="wrap_content"
+                        android:text="Max Analog Sensitivity"
+                        android:textColor="@color/dark_gray"
+                        android:textSize="@dimen/global_text_size"
+                        android:textStyle="bold" />
+
+                    <TextView
+                        android:id="@+id/tv_max_analog_sensitivity"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="@dimen/global_margin_padding"
+                        android:text="Detail"
+                        android:textColor="@color/dark_gray"
+                        android:textSize="@dimen/global_text_size" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="fill_parent"
+                    android:layout_height="fill_parent"
+                    android:orientation="horizontal"
+                    android:paddingBottom="@dimen/global_margin_padding"
+                    android:paddingTop="@dimen/global_margin_padding_small">
+
+                    <TextView
+                        android:layout_width="@dimen/camera_card_title_width"
+                        android:layout_height="wrap_content"
+                        android:text="Max Face Count"
+                        android:textColor="@color/dark_gray"
+                        android:textSize="@dimen/global_text_size"
+                        android:textStyle="bold" />
+
+                    <TextView
+                        android:id="@+id/tv_max_face_count"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="@dimen/global_margin_padding"
+                        android:text="Detail"
+                        android:textColor="@color/dark_gray"
+                        android:textSize="@dimen/global_text_size" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="fill_parent"
+                    android:layout_height="fill_parent"
+                    android:orientation="horizontal"
+                    android:paddingBottom="@dimen/global_margin_padding"
+                    android:paddingTop="@dimen/global_margin_padding_small">
+
+                    <TextView
+                        android:layout_width="@dimen/camera_card_title_width"
+                        android:layout_height="wrap_content"
+                        android:text="Max Frame Duration"
+                        android:textColor="@color/dark_gray"
+                        android:textSize="@dimen/global_text_size"
+                        android:textStyle="bold" />
+
+                    <TextView
+                        android:id="@+id/tv_max_frame_duration"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="@dimen/global_margin_padding"
+                        android:text="Detail"
+                        android:textColor="@color/dark_gray"
+                        android:textSize="@dimen/global_text_size" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="fill_parent"
+                    android:layout_height="fill_parent"
+                    android:orientation="horizontal"
+                    android:paddingBottom="@dimen/global_margin_padding"
+                    android:paddingTop="@dimen/global_margin_padding_small">
+
+                    <TextView
+                        android:layout_width="@dimen/camera_card_title_width"
+                        android:layout_height="wrap_content"
+                        android:text="Max Number Output Proc"
+                        android:textColor="@color/dark_gray"
+                        android:textSize="@dimen/global_text_size"
+                        android:textStyle="bold" />
+
+                    <TextView
+                        android:id="@+id/tv_max_number_output_proc"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="@dimen/global_margin_padding"
+                        android:text="Detail"
+                        android:textColor="@color/dark_gray"
+                        android:textSize="@dimen/global_text_size" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="fill_parent"
+                    android:layout_height="fill_parent"
+                    android:orientation="horizontal"
+                    android:paddingBottom="@dimen/global_margin_padding"
+                    android:paddingTop="@dimen/global_margin_padding_small">
+
+                    <TextView
+                        android:layout_width="@dimen/camera_card_title_width"
+                        android:layout_height="wrap_content"
+                        android:text="Max Number Output Proc Stall"
+                        android:textColor="@color/dark_gray"
+                        android:textSize="@dimen/global_text_size"
+                        android:textStyle="bold" />
+
+                    <TextView
+                        android:id="@+id/tv_max_number_output_proc_stall"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="@dimen/global_margin_padding"
+                        android:text="Detail"
+                        android:textColor="@color/dark_gray"
+                        android:textSize="@dimen/global_text_size" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="fill_parent"
+                    android:layout_height="fill_parent"
+                    android:orientation="horizontal"
+                    android:paddingBottom="@dimen/global_margin_padding"
+                    android:paddingTop="@dimen/global_margin_padding_small">
+
+                    <TextView
+                        android:layout_width="@dimen/camera_card_title_width"
+                        android:layout_height="wrap_content"
+                        android:text="Max Number Output RAW"
+                        android:textColor="@color/dark_gray"
+                        android:textSize="@dimen/global_text_size"
+                        android:textStyle="bold" />
+
+                    <TextView
+                        android:id="@+id/tv_max_number_output_raw"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="@dimen/global_margin_padding"
+                        android:text="Detail"
+                        android:textColor="@color/dark_gray"
+                        android:textSize="@dimen/global_text_size" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="fill_parent"
+                    android:layout_height="fill_parent"
+                    android:orientation="horizontal"
+                    android:paddingBottom="@dimen/global_margin_padding"
+                    android:paddingTop="@dimen/global_margin_padding_small">
+
+                    <TextView
+                        android:layout_width="@dimen/camera_card_title_width"
+                        android:layout_height="wrap_content"
+                        android:text="Max Region AE"
+                        android:textColor="@color/dark_gray"
+                        android:textSize="@dimen/global_text_size"
+                        android:textStyle="bold" />
+
+                    <TextView
+                        android:id="@+id/tv_max_region_ae"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="@dimen/global_margin_padding"
+                        android:text="Detail"
+                        android:textColor="@color/dark_gray"
+                        android:textSize="@dimen/global_text_size" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="fill_parent"
+                    android:layout_height="fill_parent"
+                    android:orientation="horizontal"
+                    android:paddingBottom="@dimen/global_margin_padding"
+                    android:paddingTop="@dimen/global_margin_padding_small">
+
+                    <TextView
+                        android:layout_width="@dimen/camera_card_title_width"
+                        android:layout_height="wrap_content"
+                        android:text="Max Region AF"
+                        android:textColor="@color/dark_gray"
+                        android:textSize="@dimen/global_text_size"
+                        android:textStyle="bold" />
+
+                    <TextView
+                        android:id="@+id/tv_max_region_af"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="@dimen/global_margin_padding"
+                        android:text="Detail"
+                        android:textColor="@color/dark_gray"
+                        android:textSize="@dimen/global_text_size" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="fill_parent"
+                    android:layout_height="fill_parent"
+                    android:orientation="horizontal"
+                    android:paddingBottom="@dimen/global_margin_padding"
+                    android:paddingTop="@dimen/global_margin_padding_small">
+
+                    <TextView
+                        android:layout_width="@dimen/camera_card_title_width"
+                        android:layout_height="wrap_content"
+                        android:text="Minimum Focus Distance"
+                        android:textColor="@color/dark_gray"
+                        android:textSize="@dimen/global_text_size"
+                        android:textStyle="bold" />
+
+                    <TextView
+                        android:id="@+id/tv_minimum_focus_distance"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="@dimen/global_margin_padding"
+                        android:text="Detail"
+                        android:textColor="@color/dark_gray"
+                        android:textSize="@dimen/global_text_size" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="fill_parent"
+                    android:layout_height="fill_parent"
+                    android:orientation="horizontal"
+                    android:paddingBottom="@dimen/global_margin_padding"
+                    android:paddingTop="@dimen/global_margin_padding_small">
+
+                    <TextView
+                        android:layout_width="@dimen/camera_card_title_width"
+                        android:layout_height="wrap_content"
+                        android:text="Partial Result Count"
+                        android:textColor="@color/dark_gray"
+                        android:textSize="@dimen/global_text_size"
+                        android:textStyle="bold" />
+
+                    <TextView
+                        android:id="@+id/tv_partial_result_count"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="@dimen/global_margin_padding"
+                        android:text="Detail"
+                        android:textColor="@color/dark_gray"
+                        android:textSize="@dimen/global_text_size" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="fill_parent"
+                    android:layout_height="fill_parent"
+                    android:orientation="horizontal"
+                    android:paddingBottom="@dimen/global_margin_padding"
+                    android:paddingTop="@dimen/global_margin_padding_small">
+
+                    <TextView
+                        android:layout_width="@dimen/camera_card_title_width"
+                        android:layout_height="wrap_content"
+                        android:text="Physical Size"
+                        android:textColor="@color/dark_gray"
+                        android:textSize="@dimen/global_text_size"
+                        android:textStyle="bold" />
+
+                    <TextView
+                        android:id="@+id/tv_physical_size"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="@dimen/global_margin_padding"
+                        android:text="Detail"
+                        android:textColor="@color/dark_gray"
+                        android:textSize="@dimen/global_text_size" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="fill_parent"
+                    android:layout_height="fill_parent"
+                    android:orientation="horizontal"
+                    android:paddingBottom="@dimen/global_margin_padding"
+                    android:paddingTop="@dimen/global_margin_padding_small">
+
+                    <TextView
+                        android:layout_width="@dimen/camera_card_title_width"
+                        android:layout_height="wrap_content"
+                        android:text="Pipeline Max Depth"
+                        android:textColor="@color/dark_gray"
+                        android:textSize="@dimen/global_text_size"
+                        android:textStyle="bold" />
+
+                    <TextView
+                        android:id="@+id/tv_pipeline_max_depth"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="@dimen/global_margin_padding"
+                        android:text="Detail"
+                        android:textColor="@color/dark_gray"
+                        android:textSize="@dimen/global_text_size" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="fill_parent"
+                    android:layout_height="fill_parent"
+                    android:orientation="horizontal"
+                    android:paddingBottom="@dimen/global_margin_padding"
+                    android:paddingTop="@dimen/global_margin_padding_small">
+
+                    <TextView
+                        android:layout_width="@dimen/camera_card_title_width"
+                        android:layout_height="wrap_content"
+                        android:text="Pixel Array Size"
+                        android:textColor="@color/dark_gray"
+                        android:textSize="@dimen/global_text_size"
+                        android:textStyle="bold" />
+
+                    <TextView
+                        android:id="@+id/tv_pixel_array_size"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="@dimen/global_margin_padding"
+                        android:text="Detail"
+                        android:textColor="@color/dark_gray"
+                        android:textSize="@dimen/global_text_size" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="fill_parent"
+                    android:layout_height="fill_parent"
+                    android:orientation="horizontal"
+                    android:paddingBottom="@dimen/global_margin_padding"
+                    android:paddingTop="@dimen/global_margin_padding_small">
+
+                    <TextView
+                        android:layout_width="@dimen/camera_card_title_width"
+                        android:layout_height="wrap_content"
+                        android:text="Reference Illuminant 1"
+                        android:textColor="@color/dark_gray"
+                        android:textSize="@dimen/global_text_size"
+                        android:textStyle="bold" />
+
+                    <TextView
+                        android:id="@+id/tv_reference_illuminant_1"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="@dimen/global_margin_padding"
+                        android:text="Detail"
+                        android:textColor="@color/dark_gray"
+                        android:textSize="@dimen/global_text_size" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="fill_parent"
+                    android:layout_height="fill_parent"
+                    android:orientation="horizontal"
+                    android:paddingBottom="@dimen/global_margin_padding"
+                    android:paddingTop="@dimen/global_margin_padding_small">
+
+                    <TextView
+                        android:layout_width="@dimen/camera_card_title_width"
+                        android:layout_height="wrap_content"
+                        android:text="Reference Illuminant 2"
+                        android:textColor="@color/dark_gray"
+                        android:textSize="@dimen/global_text_size"
+                        android:textStyle="bold" />
+
+                    <TextView
+                        android:id="@+id/tv_reference_illuminant_2"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="@dimen/global_margin_padding"
+                        android:text="Detail"
+                        android:textColor="@color/dark_gray"
+                        android:textSize="@dimen/global_text_size" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="fill_parent"
+                    android:layout_height="fill_parent"
+                    android:orientation="horizontal"
+                    android:paddingBottom="@dimen/global_margin_padding"
+                    android:paddingTop="@dimen/global_margin_padding_small">
+
+                    <TextView
+                        android:layout_width="@dimen/camera_card_title_width"
+                        android:layout_height="wrap_content"
+                        android:text="Scale Cropping Type"
+                        android:textColor="@color/dark_gray"
+                        android:textSize="@dimen/global_text_size"
+                        android:textStyle="bold" />
+
+                    <TextView
+                        android:id="@+id/tv_scale_cropping_type"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="@dimen/global_margin_padding"
+                        android:text="Detail"
+                        android:textColor="@color/dark_gray"
+                        android:textSize="@dimen/global_text_size" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="fill_parent"
+                    android:layout_height="fill_parent"
+                    android:orientation="horizontal"
+                    android:paddingBottom="@dimen/global_margin_padding"
+                    android:paddingTop="@dimen/global_margin_padding_small">
+
+                    <TextView
+                        android:layout_width="@dimen/camera_card_title_width"
+                        android:layout_height="wrap_content"
+                        android:text="Sensitivity Range"
+                        android:textColor="@color/dark_gray"
+                        android:textSize="@dimen/global_text_size"
+                        android:textStyle="bold" />
+
+                    <TextView
+                        android:id="@+id/tv_sensitivity_range"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="@dimen/global_margin_padding"
+                        android:text="Detail"
+                        android:textColor="@color/dark_gray"
+                        android:textSize="@dimen/global_text_size" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="fill_parent"
+                    android:layout_height="fill_parent"
+                    android:orientation="horizontal"
+                    android:paddingBottom="@dimen/global_margin_padding"
+                    android:paddingTop="@dimen/global_margin_padding_small">
+
+                    <TextView
+                        android:layout_width="@dimen/camera_card_title_width"
+                        android:layout_height="wrap_content"
+                        android:text="Sensor Orientation"
+                        android:textColor="@color/dark_gray"
+                        android:textSize="@dimen/global_text_size"
+                        android:textStyle="bold" />
+
+                    <TextView
+                        android:id="@+id/tv_sensor_orientation"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="@dimen/global_margin_padding"
+                        android:text="Detail"
+                        android:textColor="@color/dark_gray"
+                        android:textSize="@dimen/global_text_size" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="fill_parent"
+                    android:layout_height="fill_parent"
+                    android:orientation="horizontal"
+                    android:paddingBottom="@dimen/global_margin_padding"
+                    android:paddingTop="@dimen/global_margin_padding_small">
+
+                    <TextView
+                        android:layout_width="@dimen/camera_card_title_width"
+                        android:layout_height="wrap_content"
+                        android:text="Support Aberration Mode"
+                        android:textColor="@color/dark_gray"
+                        android:textSize="@dimen/global_text_size"
+                        android:textStyle="bold" />
+
+                    <TextView
+                        android:id="@+id/tv_support_aberration_mode"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="@dimen/global_margin_padding"
+                        android:text="Detail"
+                        android:textColor="@color/dark_gray"
+                        android:textSize="@dimen/global_text_size" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="fill_parent"
+                    android:layout_height="fill_parent"
+                    android:orientation="horizontal"
+                    android:paddingBottom="@dimen/global_margin_padding"
+                    android:paddingTop="@dimen/global_margin_padding_small">
+
+                    <TextView
+                        android:layout_width="@dimen/camera_card_title_width"
+                        android:layout_height="wrap_content"
+                        android:text="Support Hardware Level"
+                        android:textColor="@color/dark_gray"
+                        android:textSize="@dimen/global_text_size"
+                        android:textStyle="bold" />
+
+                    <TextView
+                        android:id="@+id/tv_support_hardware_level"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="@dimen/global_margin_padding"
+                        android:text="Detail"
+                        android:textColor="@color/dark_gray"
+                        android:textSize="@dimen/global_text_size" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="fill_parent"
+                    android:layout_height="fill_parent"
+                    android:orientation="horizontal"
+                    android:paddingBottom="@dimen/global_margin_padding"
+                    android:paddingTop="@dimen/global_margin_padding_small">
+
+                    <TextView
+                        android:layout_width="@dimen/camera_card_title_width"
+                        android:layout_height="wrap_content"
+                        android:text="Highspeed Video FPS Range"
+                        android:textColor="@color/dark_gray"
+                        android:textSize="@dimen/global_text_size"
+                        android:textStyle="bold" />
+
+                    <TextView
+                        android:id="@+id/tv_highspeed_video_fps_range"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="@dimen/global_margin_padding"
+                        android:text="Detail"
+                        android:textColor="@color/dark_gray"
+                        android:textSize="@dimen/global_text_size" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="fill_parent"
+                    android:layout_height="fill_parent"
+                    android:orientation="horizontal"
+                    android:paddingBottom="@dimen/global_margin_padding"
+                    android:paddingTop="@dimen/global_margin_padding_small">
+
+                    <TextView
+                        android:layout_width="@dimen/camera_card_title_width"
+                        android:layout_height="wrap_content"
+                        android:text="Highspeed Video Size"
+                        android:textColor="@color/dark_gray"
+                        android:textSize="@dimen/global_text_size"
+                        android:textStyle="bold" />
+
+                    <TextView
+                        android:id="@+id/tv_highspeed_video_size"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="@dimen/global_margin_padding"
+                        android:text="Detail"
+                        android:textColor="@color/dark_gray"
+                        android:textSize="@dimen/global_text_size" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="fill_parent"
+                    android:layout_height="fill_parent"
+                    android:orientation="horizontal"
+                    android:paddingBottom="@dimen/global_margin_padding"
+                    android:paddingTop="@dimen/global_margin_padding_small">
+
+                    <TextView
+                        android:layout_width="@dimen/camera_card_title_width"
+                        android:layout_height="wrap_content"
+                        android:text="Support Image Format"
+                        android:textColor="@color/dark_gray"
+                        android:textSize="@dimen/global_text_size"
+                        android:textStyle="bold" />
+
+                    <TextView
+                        android:id="@+id/tv_support_image_format"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="@dimen/global_margin_padding"
+                        android:text="Detail"
+                        android:textColor="@color/dark_gray"
+                        android:textSize="@dimen/global_text_size" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="fill_parent"
+                    android:layout_height="fill_parent"
+                    android:orientation="horizontal"
+                    android:paddingBottom="@dimen/global_margin_padding"
+                    android:paddingTop="@dimen/global_margin_padding_small">
+
+                    <TextView
+                        android:layout_width="@dimen/camera_card_title_width"
+                        android:layout_height="wrap_content"
+                        android:text="Support Output Size"
+                        android:textColor="@color/dark_gray"
+                        android:textSize="@dimen/global_text_size"
+                        android:textStyle="bold" />
+
+                    <TextView
+                        android:id="@+id/tv_support_output_size"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="@dimen/global_margin_padding"
+                        android:text="Detail"
+                        android:textColor="@color/dark_gray"
+                        android:textSize="@dimen/global_text_size" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="fill_parent"
+                    android:layout_height="fill_parent"
+                    android:orientation="horizontal"
+                    android:paddingBottom="@dimen/global_margin_padding"
+                    android:paddingTop="@dimen/global_margin_padding_small">
+
+                    <TextView
+                        android:layout_width="@dimen/camera_card_title_width"
+                        android:layout_height="wrap_content"
+                        android:text="Sync Max Latency"
+                        android:textColor="@color/dark_gray"
+                        android:textSize="@dimen/global_text_size"
+                        android:textStyle="bold" />
+
+                    <TextView
+                        android:id="@+id/tv_sync_max_latency"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="@dimen/global_margin_padding"
+                        android:text="Detail"
+                        android:textColor="@color/dark_gray"
+                        android:textSize="@dimen/global_text_size" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="fill_parent"
+                    android:layout_height="fill_parent"
+                    android:orientation="horizontal"
+                    android:paddingBottom="@dimen/global_margin_padding"
+                    android:paddingTop="@dimen/global_margin_padding_small">
+
+                    <TextView
+                        android:layout_width="@dimen/camera_card_title_width"
+                        android:layout_height="wrap_content"
+                        android:text="Timestamp Source"
+                        android:textColor="@color/dark_gray"
+                        android:textSize="@dimen/global_text_size"
+                        android:textStyle="bold" />
+
+                    <TextView
+                        android:id="@+id/tv_timestamp_source"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="@dimen/global_margin_padding"
+                        android:text="Detail"
+                        android:textColor="@color/dark_gray"
+                        android:textSize="@dimen/global_text_size" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="fill_parent"
+                    android:layout_height="fill_parent"
+                    android:orientation="horizontal"
+                    android:paddingBottom="@dimen/global_margin_padding"
+                    android:paddingTop="@dimen/global_margin_padding_small">
+
+                    <TextView
+                        android:layout_width="@dimen/camera_card_title_width"
+                        android:layout_height="wrap_content"
+                        android:text="Tone Map Max Curve Point"
+                        android:textColor="@color/dark_gray"
+                        android:textSize="@dimen/global_text_size"
+                        android:textStyle="bold" />
+
+                    <TextView
+                        android:id="@+id/tv_tone_map_max_curve_point"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="@dimen/global_margin_padding"
+                        android:text="Detail"
+                        android:textColor="@color/dark_gray"
+                        android:textSize="@dimen/global_text_size" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="fill_parent"
+                    android:layout_height="fill_parent"
+                    android:orientation="horizontal"
+                    android:paddingBottom="@dimen/global_margin_padding"
+                    android:paddingTop="@dimen/global_margin_padding_small">
+
+                    <TextView
+                        android:layout_width="@dimen/camera_card_title_width"
+                        android:layout_height="wrap_content"
+                        android:text="White Level"
+                        android:textColor="@color/dark_gray"
+                        android:textSize="@dimen/global_text_size"
+                        android:textStyle="bold" />
+
+                    <TextView
+                        android:id="@+id/tv_white_level"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:layout_marginLeft="@dimen/global_margin_padding"

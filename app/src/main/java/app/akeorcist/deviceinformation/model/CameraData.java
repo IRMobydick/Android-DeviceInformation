@@ -22,6 +22,7 @@ public class CameraData {
     private String sceneMode;
     private String videoQualityProfile;
     private String timelapseQualityProfile;
+    private String highSpeedQualityProfile;
     private String videoSize;
     private String whiteBalance;
     private String autoExposure;
@@ -175,6 +176,13 @@ public class CameraData {
 
     public void setTimelapseQualityProfile(String timelapseQualityProfile) {
         this.timelapseQualityProfile = timelapseQualityProfile;
+    }
+    public String getHighSpeedQualityProfile() {
+        return highSpeedQualityProfile;
+    }
+
+    public void setHighSpeedQualityProfile(String highSpeedQualityProfile) {
+        this.highSpeedQualityProfile = highSpeedQualityProfile;
     }
 
     public String getVideoSize() {
