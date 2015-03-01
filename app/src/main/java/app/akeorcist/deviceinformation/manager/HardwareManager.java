@@ -34,6 +34,14 @@ public class HardwareManager {
     private static String cpuRawData;
 
     public static void initialData(Activity activity, GLSurfaceView glSurfaceView) {
+        androidDataList.clear();
+        buildDataList.clear();
+        communicationDataList.clear();
+        gpuDataList.clear();
+        memoryDataList.clear();
+        storageDataList.clear();
+        cpuDataList.clear();
+
         initialAndroidData();
         initialBuildData();
         initialCommunicationData(activity);
@@ -127,7 +135,7 @@ public class HardwareManager {
                 gpuDataList.add(new TwoColumnData("Renderer", gl.glGetString(GL10.GL_RENDERER)));
                 gpuDataList.add(new TwoColumnData("Vendor", gl.glGetString(GL10.GL_VENDOR)));
                 gpuDataList.add(new TwoColumnData("Version", gl.glGetString(GL10.GL_VERSION)));
-                gpuDataList.add(new TwoColumnData("Extensions", gl.glGetString(GL10.GL_EXTENSIONS).replace(" ", "\n")));
+                gpuDataList.add(new TwoColumnData("Extensions", gl.glGetString(GL10.GL_EXTENSIONS)));
             }
         }));
         gpuDataList.add(new TwoColumnData("OpenGL Supported", GpuManager.getOpenGLVersion(activity) + ""));

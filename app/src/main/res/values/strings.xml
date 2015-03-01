@@ -25,6 +25,7 @@
     <string name="menu_sensor">Sensor</string>
     <string name="menu_screen">Screen</string>
     <string name="menu_camera">Camera</string>
+    <string name="menu_camera2">Camera 2</string>
     <string name="menu_features">Feature</string>
     <string name="menu_applist">App List</string>
     <string name="menu_exit">Exit</string>

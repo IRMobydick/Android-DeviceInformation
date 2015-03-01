@@ -22,14 +22,13 @@ import java.util.ArrayList;
 
 import app.akeorcist.deviceinformation.Utilities.StringUtils;
 import app.akeorcist.deviceinformation.model.Camera2Data;
-import app.akeorcist.deviceinformation.model.TwoColumnData;
 
 /**
  * Created by Ake on 2/28/2015.
  */
 public class Camera2Manager {
     private static final int DATA_COUNT = 60;
-    private static ArrayList<ArrayList<TwoColumnData>> cameraDataList = new ArrayList<>();
+    private static ArrayList<Camera2Data> cameraDataList = new ArrayList<>();
 
     private static String str = "";
 
@@ -45,19 +44,19 @@ public class Camera2Manager {
         return DATA_COUNT;
     }
 
-    public static ArrayList<TwoColumnData> getCameraData(int position) {
+    public static Camera2Data getCameraData(int position) {
         return cameraDataList.get(position);
     }
 
     @SuppressLint("NewApi")
     public static void initialData(Activity activity) {
+        cameraDataList.clear();
         if(Build.VERSION.SDK_INT >= Build.VERSION_CODES.LOLLIPOP) {
             CameraManager manager = (CameraManager) activity.getSystemService(Context.CAMERA_SERVICE);
             try {
                 String[] cameraList = manager.getCameraIdList();
                 for (int i = 0; i < cameraList.length; i++) {
                     CameraCharacteristics cc = manager.getCameraCharacteristics(cameraList[i]);
-                    ArrayList<TwoColumnData> cameraData = new ArrayList<>();
                     Camera2Data data = new Camera2Data();
                     data.setCameraId(cameraList[i]);
                     data.setActiveArraySize(getActiveArraySize(cc));
@@ -121,84 +120,13 @@ public class Camera2Manager {
                     data.setToneMapMaxCurvePoint(getToneMapMaxCurvePoint(cc));
                     data.setWhiteLevel(getWhiteLevel(cc));
 
-                    cameraDataList.add(cameraData);
+                    cameraDataList.add(data);
                 }
 
             } catch (CameraAccessException e) {
                 e.printStackTrace();
             }
-        } else {
-            ArrayList<TwoColumnData> cameraData = new ArrayList<>();
-            cameraData.add(new TwoColumnData("Tone Map Max Curve Point", "unknown"));
-            cameraData.add(new TwoColumnData("Available Tone Map Mode", "unknown"));
-            cameraData.add(new TwoColumnData("Sync Max Latency", "unknown"));
-            cameraData.add(new TwoColumnData("Max Face Count", "unknown"));
-            cameraData.add(new TwoColumnData("Available Hot Pixel Map Mode", "unknown"));
-            cameraData.add(new TwoColumnData("Available Face Detect Mode", "unknown"));
-            cameraData.add(new TwoColumnData("Reference Illuminant 1", "unknown"));
-            cameraData.add(new TwoColumnData("Reference Illuminant 2", "unknown"));
-            cameraData.add(new TwoColumnData("Sensor Orientation", "unknown"));
-            cameraData.add(new TwoColumnData("Max Analog Sensitivity", "unknown"));
-            cameraData.add(new TwoColumnData("White Level", "unknown"));
-            cameraData.add(new TwoColumnData("Timestamp Source", "unknown"));
-            cameraData.add(new TwoColumnData("Sensitivity Range", "unknown"));
-            cameraData.add(new TwoColumnData("Pixel Array Size", "unknown"));
-            cameraData.add(new TwoColumnData("Physical Size", "unknown"));
-            cameraData.add(new TwoColumnData("Max Frame Duration", "unknown"));
-            cameraData.add(new TwoColumnData("Exposure Time Range", "unknown"));
-            cameraData.add(new TwoColumnData("Color Filter Arrangement", "unknown"));
-            cameraData.add(new TwoColumnData("Active Array Size", "unknown"));
-            cameraData.add(new TwoColumnData("Available Test Pattern Mode", "unknown"));
-            cameraData.add(new TwoColumnData("Scale Cropping Type", "unknown"));
-            cameraData.add(new TwoColumnData("Available Max Digital Zoom", "unknown"));
-            cameraData.add(new TwoColumnData("Pipeline Max Depth", "unknown"));
-            cameraData.add(new TwoColumnData("Partial Result Count", "unknown"));
-            cameraData.add(new TwoColumnData("Max Num Output Raw", "unknown"));
-            cameraData.add(new TwoColumnData("Max Num Output Proc Stall", "unknown"));
-            cameraData.add(new TwoColumnData("Max Num Output Proc", "unknown"));
-            cameraData.add(new TwoColumnData("Request Available Capability", "unknown"));
-            cameraData.add(new TwoColumnData("Noise Reduction Available Noise Reduction Mode", "unknown"));
-            cameraData.add(new TwoColumnData("Minimum Focus Distance", "unknown"));
-            cameraData.add(new TwoColumnData("Hyperfocal Distance", "unknown"));
-            cameraData.add(new TwoColumnData("Focus Distance Calibration", "unknown"));
-            cameraData.add(new TwoColumnData("Available Optical Stabilization", "unknown"));
-            cameraData.add(new TwoColumnData("Available Focal Length", "unknown"));
-            cameraData.add(new TwoColumnData("Available Filter Density", "unknown"));
-            cameraData.add(new TwoColumnData("Available Aperture", "unknown"));
-            cameraData.add(new TwoColumnData("Lens Facing", "unknown"));
-            cameraData.add(new TwoColumnData("Available JPEG Thumbnail Size", "unknown"));
-            cameraData.add(new TwoColumnData("Supported Hardware Level", "unknown"));
-            cameraData.add(new TwoColumnData("Available HotPixel Mode", "unknown"));
-            cameraData.add(new TwoColumnData("Available Flash", "unknown"));
-            cameraData.add(new TwoColumnData("Available Edge Mode", "unknown"));
-            cameraData.add(new TwoColumnData("Max Region AE", "unknown"));
-            cameraData.add(new TwoColumnData("Max Region AF", "unknown"));
-            cameraData.add(new TwoColumnData("Max Region AWB", "unknown"));
-            cameraData.add(new TwoColumnData("Available AWB Mode", "unknown"));
-            cameraData.add(new TwoColumnData("Available Video Stabilization Mode", "unknown"));
-            cameraData.add(new TwoColumnData("Available Scene Mode", "unknown"));
-            cameraData.add(new TwoColumnData("Available Effect", "unknown"));
-            cameraData.add(new TwoColumnData("AE Compensation Step", "unknown"));
-            cameraData.add(new TwoColumnData("AE Compensation Range", "unknown"));
-            cameraData.add(new TwoColumnData("Available AE Target FPS Ranges", "unknown"));
-            cameraData.add(new TwoColumnData("Available AE Mode", "unknown"));
-            cameraData.add(new TwoColumnData("Available AE Antibanding Mode", "unknown"));
-            cameraData.add(new TwoColumnData("Available AF Mode", "unknown"));
-            cameraData.add(new TwoColumnData("Support High Speed Video Size", "unknown"));
-            cameraData.add(new TwoColumnData("Support High Speed Video FPS Range", "unknown"));
-            cameraData.add(new TwoColumnData("SupportAberrationMode", "unknown"));
-            cameraData.add(new TwoColumnData("Support Image Format", "unknown"));
-            cameraData.add(new TwoColumnData("Support Output Size", "unknown"));
-            cameraDataList.add(cameraData);
         }
-        clipboard(activity);
-    }
-
-    @SuppressLint("NewApi")
-    public static void clipboard(Activity activity) {
-        ClipboardManager clipboard = (android.content.ClipboardManager) activity.getSystemService(Context.CLIPBOARD_SERVICE);
-        ClipData clip = android.content.ClipData.newPlainText("Data", str);
-        clipboard.setPrimaryClip(clip);
     }
 
     @SuppressLint("NewApi")

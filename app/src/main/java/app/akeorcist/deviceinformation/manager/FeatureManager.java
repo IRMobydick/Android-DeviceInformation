@@ -32,6 +32,8 @@ public class FeatureManager {
     private static ArrayList<FeatureData> unsupportFeatureDataList = new ArrayList<>();
 
     public static void initialData(Activity activity) {
+        supportFeatureDataList.clear();
+        unsupportFeatureDataList.clear();
         getFeatureList(activity);
     }
 

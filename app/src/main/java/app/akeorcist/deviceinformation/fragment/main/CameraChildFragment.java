@@ -2,17 +2,12 @@ package app.akeorcist.deviceinformation.fragment.main;
 
 import android.os.Bundle;
 import android.support.v4.app.Fragment;
-import android.support.v7.widget.RecyclerView;
-import android.support.v7.widget.StaggeredGridLayoutManager;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.TextView;
 
 import app.akeorcist.deviceinformation.R;
-import app.akeorcist.deviceinformation.Utilities.StringUtils;
-import app.akeorcist.deviceinformation.adapter.CameraCardAdapter;
-import app.akeorcist.deviceinformation.adapter.FeatureCardAdapter;
 import app.akeorcist.deviceinformation.manager.CameraManager;
 import app.akeorcist.deviceinformation.model.CameraData;
 
@@ -33,7 +28,6 @@ public class CameraChildFragment extends Fragment {
 		View rootView = inflater.inflate(R.layout.view_row_camera_card, container, false);
 
         int cameraId = getArguments().getInt(CAMERA_ID);
-
 
         TextView tvCameraId = (TextView) rootView.findViewById(R.id.tv_camera_id);
         TextView tvAntibanding = (TextView) rootView.findViewById(R.id.tv_antibanding);

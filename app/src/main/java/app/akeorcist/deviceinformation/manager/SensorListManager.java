@@ -16,12 +16,12 @@ import app.akeorcist.deviceinformation.model.SensorData;
  * Created by Akexorcist on 2/27/15 AD.
  */
 public class SensorListManager {
-    private static List<Sensor> sensorList;
     private static ArrayList<SensorData> sensorDataList = new ArrayList<>();
 
     public static void initialData(Activity activity) {
+        sensorDataList.clear();
         SensorManager sensorManager = (SensorManager)activity.getSystemService(Context.SENSOR_SERVICE);
-        sensorList = sensorManager.getSensorList(Sensor.TYPE_ALL);
+        List<Sensor> sensorList = sensorManager.getSensorList(Sensor.TYPE_ALL);
         for(Sensor sensor : sensorList) {
             sensorDataList.add(new SensorData(sensor.getName())
                     .setVendor(sensor.getVendor())

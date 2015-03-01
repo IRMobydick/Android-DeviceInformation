@@ -21,6 +21,7 @@ public class CameraManager {
     private static ArrayList<CameraData> cameraDataList = new ArrayList<>();
 
     public static void initialData(Activity activity) {
+        cameraDataList.clear();
         int cameraCount = 0;
         if(Build.VERSION.SDK_INT >= Build.VERSION_CODES.GINGERBREAD) {
             cameraCount = Camera.getNumberOfCameras();

@@ -105,6 +105,7 @@ public class NavigationDrawerFragment extends Fragment {
                 getString(R.string.menu_sensor),
                 getString(R.string.menu_screen),
                 getString(R.string.menu_camera),
+                getString(R.string.menu_camera2),
                 getString(R.string.menu_features),
                 getString(R.string.menu_applist)
         };
@@ -114,6 +115,7 @@ public class NavigationDrawerFragment extends Fragment {
                 R.drawable.menu_icon_hardware,
                 R.drawable.menu_icon_sensor,
                 R.drawable.menu_icon_screen,
+                R.drawable.menu_icon_camera,
                 R.drawable.menu_icon_camera,
                 R.drawable.menu_icon_feature,
                 R.drawable.menu_icon_app
