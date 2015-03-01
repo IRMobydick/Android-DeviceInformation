@@ -1,21 +1,78 @@
 package app.akeorcist.deviceinformation.manager;
 
+import android.annotation.SuppressLint;
 import android.app.Activity;
 import android.hardware.Camera;
 import android.os.Build;
 import android.util.Log;
 
+import java.lang.reflect.Array;
+import java.util.ArrayList;
 import java.util.List;
 
 import app.akeorcist.deviceinformation.Utilities.StringUtils;
+import app.akeorcist.deviceinformation.model.CameraData;
+import app.akeorcist.deviceinformation.model.TwoColumnData;
 
 /**
  * Created by Ake on 3/1/2015.
  */
 public class CameraManager {
+    private static ArrayList<ArrayList<CameraData>> cameraDataList = new ArrayList<>();
 
     public static void initialData(Activity activity) {
+        int cameraCount = 0;
+
+        if(Build.VERSION.SDK_INT >= Build.VERSION_CODES.GINGERBREAD) {
+            cameraCount = Camera.getNumberOfCameras();
+        } else {
+            Camera cam = Camera.open();
+            if(cam == null)
+                cameraCount = 0;
+            else
+                cameraCount = 1;
+        }
+
+        for(int i = 0 ; i < cameraCount ; i++) {
+            CameraData data = new CameraData();
+            Camera.Parameters params;
+            if(Build.VERSION.SDK_INT >= Build.VERSION_CODES.GINGERBREAD) {
+                Camera.CameraInfo ci = new Camera.CameraInfo();
+                Camera.getCameraInfo(i, ci);
+                Camera mCamera = Camera.open(i);
+                params = mCamera.getParameters();
+                mCamera.release();
+                data.setShutterSound(canDisableShutterSound(ci));
+                data.setImageOrientation(getImageOrientation(ci));
+                data.setFacing(getCameraFacing(ci));
+
+            } else {
+                Camera mCamera = Camera.open();
+                params = mCamera.getParameters();
+                mCamera.release();
+                data.setShutterSound("unknown");
+                data.setImageOrientation("unknown");
+                data.setFacing("unknown");
+            }
+
+            data.setCameraId(i + "");
+            data.setAntibanding(getSupportedAntibanding(params));
+        }
+
         //Log.e("Check", getSupportedJpegThumbnailSizes();
+        //data.setCameraId(getCamer);
+    }
+
+    public static int getCameraCount() {
+        return cameraDataList.size();
+    }
+
+    public static int getCameraDataCount(int position) {
+        return cameraDataList.get(position).size();
+    }
+
+    public static ArrayList<CameraData> getCameraData(int position) {
+        return cameraDataList.get(position);
     }
 
     @SuppressWarnings("deprecation")
@@ -184,5 +241,30 @@ public class CameraManager {
         } else {
             return "null";
         }*/
+    }
+
+
+
+    @SuppressWarnings("deprecation")
+    @SuppressLint("NewApi")
+    public static String getCameraFacing(Camera.CameraInfo ci) {
+        int facing = ci.facing;
+        if(facing == Camera.CameraInfo.CAMERA_FACING_BACK)
+            return "back";
+        else if(facing == Camera.CameraInfo.CAMERA_FACING_FRONT)
+            return "front";
+        return "unknown";
+    }
+
+    @SuppressWarnings("deprecation")
+    @SuppressLint("NewApi")
+    public static String getImageOrientation(Camera.CameraInfo ci) {
+        return StringUtils.wrapUnknownLower(ci.orientation + "");
+    }
+
+    @SuppressWarnings("deprecation")
+    @SuppressLint("NewApi")
+    public static String canDisableShutterSound(Camera.CameraInfo ci) {
+        return StringUtils.wrapUnknownLower(ci.canDisableShutterSound + "");
     }
 }

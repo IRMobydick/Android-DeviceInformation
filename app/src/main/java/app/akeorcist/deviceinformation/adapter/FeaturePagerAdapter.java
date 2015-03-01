@@ -13,15 +13,19 @@ import app.akeorcist.deviceinformation.fragment.main.FeatureChildFragment;
 
 public class FeaturePagerAdapter extends FragmentStatePagerAdapter {
     private static final int PAGE_COUNT = 2;
+    private String[] strTitle;
 
-    public FeaturePagerAdapter(FragmentManager fm) {
+    public FeaturePagerAdapter(FragmentManager fm, String[] strTitle) {
         super(fm);
+        this.strTitle = strTitle;
     }
 
+    @Override
     public int getCount() {
         return PAGE_COUNT;
     }
 
+    @Override
     public Fragment getItem(int position) {
         if(position == 0) {
             return FeatureChildFragment.newInstance(Features.SUPPORTED_FEATURES);
@@ -29,5 +33,10 @@ public class FeaturePagerAdapter extends FragmentStatePagerAdapter {
             return FeatureChildFragment.newInstance(Features.UNSUPPORTED_FEATURES);
         }
         return null;
+    }
+
+    @Override
+    public CharSequence getPageTitle(int position) {
+        return strTitle[position];
     }
 }

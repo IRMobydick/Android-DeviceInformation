@@ -100,7 +100,15 @@
     <dimen name="sensor_card_icon_size">50dp</dimen>
     <dimen name="sensor_card_info_icon_size">40dp</dimen>
 
+    <!-- Camera -->
+    <dimen name="camera_card_title_width">150dp</dimen>
+
     <!-- Feature -->
     <dimen name="feature_button_info_size">20dp</dimen>
-    
+
+    <!-- ViewPager Form -->
+    <dimen name="pager_tab_height">48dp</dimen>
+    <dimen name="pager_indicator_height">5dp</dimen>
+
+
 </resources>

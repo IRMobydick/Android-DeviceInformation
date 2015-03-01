@@ -11,6 +11,7 @@ import com.astuetz.PagerSlidingTabStrip;
 
 import app.akeorcist.deviceinformation.R;
 import app.akeorcist.deviceinformation.adapter.FeaturePagerAdapter;
+import app.akeorcist.deviceinformation.manager.Camera2Manager;
 
 public class CameraFragment extends Fragment {
 
@@ -25,7 +26,11 @@ public class CameraFragment extends Fragment {
 			Bundle savedInstanceState) {
 		View rootView = inflater.inflate(R.layout.fragment_viewpager_form, container, false);
 
-        String[] strTitle = { "Support", "Unsupport" };
+        int cameraCount = Camera2Manager.getCameraCount();
+        String[] strTitle = new String[cameraCount];
+        for(int i = 0 ; i < cameraCount ; i++) {
+            strTitle[i] = "Camera " + i;
+        }
         FeaturePagerAdapter adapter = new FeaturePagerAdapter(getFragmentManager(), strTitle);
         ViewPager vpContent = (ViewPager) rootView.findViewById(R.id.vp_content);
         vpContent.setAdapter(adapter);

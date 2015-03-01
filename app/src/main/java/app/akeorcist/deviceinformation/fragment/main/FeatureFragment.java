@@ -7,6 +7,8 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 
+import com.astuetz.PagerSlidingTabStrip;
+
 import app.akeorcist.deviceinformation.R;
 import app.akeorcist.deviceinformation.adapter.FeaturePagerAdapter;
 
@@ -23,9 +25,12 @@ public class FeatureFragment extends Fragment {
 			Bundle savedInstanceState) {
 		View rootView = inflater.inflate(R.layout.fragment_viewpager_form, container, false);
 
-        FeaturePagerAdapter adapter = new FeaturePagerAdapter(getFragmentManager());
-        ViewPager vp_content = (ViewPager) rootView.findViewById(R.id.vp_content);
-        vp_content.setAdapter(adapter);
+        String[] strTitle = { "Support", "Unsupport" };
+        FeaturePagerAdapter adapter = new FeaturePagerAdapter(getFragmentManager(), strTitle);
+        ViewPager vpContent = (ViewPager) rootView.findViewById(R.id.vp_content);
+        vpContent.setAdapter(adapter);
+        PagerSlidingTabStrip pagerTab = (PagerSlidingTabStrip) rootView.findViewById(R.id.pager_tab);
+        pagerTab.setViewPager(vpContent);
 /*
 
 

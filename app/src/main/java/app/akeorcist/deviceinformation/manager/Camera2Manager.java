@@ -36,11 +36,15 @@ public class Camera2Manager {
         str += string + "\n";
     }
 
-    public int getCameraCount() {
+    public static int getCameraCount() {
         return cameraDataList.size();
     }
 
-    public ArrayList<TwoColumnData> getCameraData(int position) {
+    public static int getCameraDataCount(int position) {
+        return cameraDataList.get(position).size();
+    }
+
+    public static ArrayList<TwoColumnData> getCameraData(int position) {
         return cameraDataList.get(position);
     }
 
@@ -82,7 +86,7 @@ public class Camera2Manager {
                     cameraData.add(new TwoColumnData("Max Num Output Proc", getMaxNumOutputProc(cc)));
                     cameraData.add(new TwoColumnData("Request Available Capability", getRequestAvailableCapability(cc)));
                     cameraData.add(new TwoColumnData("Noise Reduction Available Noise Reduction Mode", getNoiseReductionAvailableNoiseReductionMode(cc)));
-                    cameraData.add(new TwoColumnData("Minimum Focus Distance",getMinimumFocusDistance(cc)));
+                    cameraData.add(new TwoColumnData("Minimum Focus Distance", getMinimumFocusDistance(cc)));
                     cameraData.add(new TwoColumnData("Hyperfocal Distance", getHyperfocalDistance(cc)));
                     cameraData.add(new TwoColumnData("Focus Distance Calibration", getFocusDistanceCalibration(cc)));
                     cameraData.add(new TwoColumnData("Available Optical Stabilization", getAvailableOpticalStabilization(cc)));
@@ -119,6 +123,69 @@ public class Camera2Manager {
             } catch (CameraAccessException e) {
                 e.printStackTrace();
             }
+        } else {
+            ArrayList<TwoColumnData> cameraData = new ArrayList<>();
+            cameraData.add(new TwoColumnData("Tone Map Max Curve Point", "unknown"));
+            cameraData.add(new TwoColumnData("Available Tone Map Mode", "unknown"));
+            cameraData.add(new TwoColumnData("Sync Max Latency", "unknown"));
+            cameraData.add(new TwoColumnData("Max Face Count", "unknown"));
+            cameraData.add(new TwoColumnData("Available Hot Pixel Map Mode", "unknown"));
+            cameraData.add(new TwoColumnData("Available Face Detect Mode", "unknown"));
+            cameraData.add(new TwoColumnData("Reference Illuminant 1", "unknown"));
+            cameraData.add(new TwoColumnData("Reference Illuminant 2", "unknown"));
+            cameraData.add(new TwoColumnData("Sensor Orientation", "unknown"));
+            cameraData.add(new TwoColumnData("Max Analog Sensitivity", "unknown"));
+            cameraData.add(new TwoColumnData("White Level", "unknown"));
+            cameraData.add(new TwoColumnData("Timestamp Source", "unknown"));
+            cameraData.add(new TwoColumnData("Sensitivity Range", "unknown"));
+            cameraData.add(new TwoColumnData("Pixel Array Size", "unknown"));
+            cameraData.add(new TwoColumnData("Physical Size", "unknown"));
+            cameraData.add(new TwoColumnData("Max Frame Duration", "unknown"));
+            cameraData.add(new TwoColumnData("Exposure Time Range", "unknown"));
+            cameraData.add(new TwoColumnData("Color Filter Arrangement", "unknown"));
+            cameraData.add(new TwoColumnData("Active Array Size", "unknown"));
+            cameraData.add(new TwoColumnData("Available Test Pattern Mode", "unknown"));
+            cameraData.add(new TwoColumnData("Scale Cropping Type", "unknown"));
+            cameraData.add(new TwoColumnData("Available Max Digital Zoom", "unknown"));
+            cameraData.add(new TwoColumnData("Pipeline Max Depth", "unknown"));
+            cameraData.add(new TwoColumnData("Partial Result Count", "unknown"));
+            cameraData.add(new TwoColumnData("Max Num Output Raw", "unknown"));
+            cameraData.add(new TwoColumnData("Max Num Output Proc Stall", "unknown"));
+            cameraData.add(new TwoColumnData("Max Num Output Proc", "unknown"));
+            cameraData.add(new TwoColumnData("Request Available Capability", "unknown"));
+            cameraData.add(new TwoColumnData("Noise Reduction Available Noise Reduction Mode", "unknown"));
+            cameraData.add(new TwoColumnData("Minimum Focus Distance", "unknown"));
+            cameraData.add(new TwoColumnData("Hyperfocal Distance", "unknown"));
+            cameraData.add(new TwoColumnData("Focus Distance Calibration", "unknown"));
+            cameraData.add(new TwoColumnData("Available Optical Stabilization", "unknown"));
+            cameraData.add(new TwoColumnData("Available Focal Length", "unknown"));
+            cameraData.add(new TwoColumnData("Available Filter Density", "unknown"));
+            cameraData.add(new TwoColumnData("Available Aperture", "unknown"));
+            cameraData.add(new TwoColumnData("Lens Facing", "unknown"));
+            cameraData.add(new TwoColumnData("Available JPEG Thumbnail Size", "unknown"));
+            cameraData.add(new TwoColumnData("Supported Hardware Level", "unknown"));
+            cameraData.add(new TwoColumnData("Available HotPixel Mode", "unknown"));
+            cameraData.add(new TwoColumnData("Available Flash", "unknown"));
+            cameraData.add(new TwoColumnData("Available Edge Mode", "unknown"));
+            cameraData.add(new TwoColumnData("Max Region AE", "unknown"));
+            cameraData.add(new TwoColumnData("Max Region AF", "unknown"));
+            cameraData.add(new TwoColumnData("Max Region AWB", "unknown"));
+            cameraData.add(new TwoColumnData("Available AWB Mode", "unknown"));
+            cameraData.add(new TwoColumnData("Available Video Stabilization Mode", "unknown"));
+            cameraData.add(new TwoColumnData("Available Scene Mode", "unknown"));
+            cameraData.add(new TwoColumnData("Available Effect", "unknown"));
+            cameraData.add(new TwoColumnData("AE Compensation Step", "unknown"));
+            cameraData.add(new TwoColumnData("AE Compensation Range", "unknown"));
+            cameraData.add(new TwoColumnData("Available AE Target FPS Ranges", "unknown"));
+            cameraData.add(new TwoColumnData("Available AE Mode", "unknown"));
+            cameraData.add(new TwoColumnData("Available AE Antibanding Mode", "unknown"));
+            cameraData.add(new TwoColumnData("Available AF Mode", "unknown"));
+            cameraData.add(new TwoColumnData("Support High Speed Video Size", "unknown"));
+            cameraData.add(new TwoColumnData("Support High Speed Video FPS Range", "unknown"));
+            cameraData.add(new TwoColumnData("SupportAberrationMode", "unknown"));
+            cameraData.add(new TwoColumnData("Support Image Format", "unknown"));
+            cameraData.add(new TwoColumnData("Support Output Size", "unknown"));
+            cameraDataList.add(cameraData);
         }
         clipboard(activity);
     }

@@ -1,40 +1,23 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@color/light_gray"
     android:orientation="vertical">
 
-    <LinearLayout
+    <com.astuetz.PagerSlidingTabStrip
+        android:id="@+id/pager_tab"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:background="@color/white"
-        android:orientation="horizontal"
-        android:paddingTop="@dimen/global_margin_padding"
-        android:paddingRight="@dimen/global_margin_padding"
-        android:paddingLeft="@dimen/global_margin_padding">
-
-        <Button
-            android:id="@+id/btn_tab1"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="New Button"
-            android:background="@color/red" />
-
-        <Button
-            android:id="@+id/btn_tab2"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="New Button"
-            android:background="@color/white" />
-
-        <Button
-            android:id="@+id/btn_tab3"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="New Button"
-            android:background="@color/red" />
-    </LinearLayout>
+        android:layout_height="@dimen/pager_tab_height"
+        android:background="@color/light_blue"
+        android:textColor="@color/white"
+        android:textStyle="normal"
+        android:textSize="@dimen/global_text_size"
+        app:pstsDividerColor="@color/blue"
+        app:pstsIndicatorColor="@color/yellow"
+        app:pstsIndicatorHeight="@dimen/pager_indicator_height"
+        app:pstsTextAllCaps="false"/>
 
     <android.support.v4.view.ViewPager
         android:id="@+id/vp_content"

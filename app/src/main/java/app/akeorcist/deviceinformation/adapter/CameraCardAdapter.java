@@ -12,41 +12,32 @@ import android.view.ViewGroup;
 
 import app.akeorcist.deviceinformation.R;
 import app.akeorcist.deviceinformation.constants.Features;
+import app.akeorcist.deviceinformation.holder.CameraDataHolder;
 import app.akeorcist.deviceinformation.holder.FeatureDataHolder;
+import app.akeorcist.deviceinformation.manager.CameraManager;
 import app.akeorcist.deviceinformation.manager.FeatureManager;
 import app.akeorcist.deviceinformation.model.FeatureData;
 
-public class CameraCardAdapter extends RecyclerView.Adapter<FeatureDataHolder> {
-    private Context context;
-    private String featureType;
+public class CameraCardAdapter extends RecyclerView.Adapter<CameraDataHolder> {
+    private int position;
 
-    public CameraCardAdapter(Context context, String featureType) {
-        this.context = context;
-        this.featureType = featureType;
+    public CameraCardAdapter(int position) {
+        this.position = position;
     }
 
-    public FeatureDataHolder onCreateViewHolder(ViewGroup viewGroup, int viewType) {
-        View itemView = LayoutInflater.from(viewGroup.getContext()).inflate(R.layout.view_row_feature_card, viewGroup, false);
-        return new FeatureDataHolder(itemView);
+    public CameraDataHolder onCreateViewHolder(ViewGroup viewGroup, int viewType) {
+        View itemView = LayoutInflater.from(viewGroup.getContext()).inflate(R.layout.view_row_camera_card, viewGroup, false);
+        return new CameraDataHolder(itemView);
     }
 
     @Override
-    public void onBindViewHolder(FeatureDataHolder viewHolder, int position) {
-        FeatureData featureData = null;
-        if(featureType.equals(Features.SUPPORTED_FEATURES))
-            featureData = FeatureManager.getSupportFeature(position);
-        else if(featureType.equals(Features.UNSUPPORTED_FEATURES))
-            featureData = FeatureManager.getUnsupportFeature(position);
+    public void onBindViewHolder(CameraDataHolder viewHolder, int position) {
         viewHolder.tvFeatureTitle.setText(featureData.getName());
         viewHolder.tvFeaturePackage.setText(featureData.getPackage());
     }
 
     @Override
     public int getItemCount() {
-        if(featureType.equals(Features.SUPPORTED_FEATURES))
-            return FeatureManager.getSupportFeatureCount();
-        else if(featureType.equals(Features.UNSUPPORTED_FEATURES))
-            return FeatureManager.getUnsupportFeatureCount();
-        return 0;
+        return CameraManager.getCameraDataCount(position);
     }
 }
