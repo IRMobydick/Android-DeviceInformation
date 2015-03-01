@@ -27,7 +27,7 @@ import app.akeorcist.deviceinformation.model.Camera2Data;
  * Created by Ake on 2/28/2015.
  */
 public class Camera2Manager {
-    private static final int DATA_COUNT = 60;
+    private static final int DATA_COUNT = 61;
     private static ArrayList<Camera2Data> cameraDataList = new ArrayList<>();
 
     private static String str = "";
@@ -60,8 +60,8 @@ public class Camera2Manager {
                     Camera2Data data = new Camera2Data();
                     data.setCameraId(cameraList[i]);
                     data.setActiveArraySize(getActiveArraySize(cc));
-                    data.setaECompensationRange(getAECompensationRange(cc));
-                    data.setaECompensationStep(getAECompensationStep(cc));
+                    data.setAECompensationRange(getAECompensationRange(cc));
+                    data.setAECompensationStep(getAECompensationStep(cc));
                     data.setAvailableAEAntibandingMode(getAvailableAEAntibandingMode(cc));
                     data.setAvailableAEMode(getAvailableAEMode(cc));
                     data.setAvailableAFMode(getAvailableAFMode(cc));
@@ -109,10 +109,10 @@ public class Camera2Manager {
                     data.setScaleCroppingType(getScaleCroppingType(cc));
                     data.setSensitivityRange(getSensitivityRange(cc));
                     data.setSensorOrientation(getSensorOrientation(cc));
-                    data.setSupportAberrationMode(getSupportAberrationMode(cc));
+                    data.setColorCorrectionAberrationMode(getColorCorrectionAberrationMode(cc));
                     data.setSupportHardwareLevel(getSupportHardwareLevel(cc));
-                    data.setSupportHighSpeedVideoFpsRange(getSupportHighSpeedVideoFpsRange(cc));
-                    data.setSupportHighSpeedVideoSize(getSupportHighSpeedVideoSize(cc));
+                    data.setHighSpeedVideoFpsRange(getHighSpeedVideoFpsRange(cc));
+                    data.setHighSpeedVideoSize(getHighSpeedVideoSize(cc));
                     data.setSupportImageFormat(getSupportImageFormat(cc));
                     data.setSupportOutputSize(getSupportOutputSize(cc));
                     data.setSyncMaxLatency(getSyncMaxLatency(cc));
@@ -984,7 +984,7 @@ public class Camera2Manager {
     }
 
     @SuppressLint("NewApi")
-    private static String getSupportHighSpeedVideoSize(CameraCharacteristics cc) {
+    private static String getHighSpeedVideoSize(CameraCharacteristics cc) {
         StreamConfigurationMap configs = cc.get(CameraCharacteristics.SCALER_STREAM_CONFIGURATION_MAP);
         Size[] sizes = configs.getHighSpeedVideoSizes();
         if(sizes != null && sizes.length > 0) {
@@ -998,7 +998,7 @@ public class Camera2Manager {
     }
 
     @SuppressLint("NewApi")
-    private static String getSupportHighSpeedVideoFpsRange(CameraCharacteristics cc) {
+    private static String getHighSpeedVideoFpsRange(CameraCharacteristics cc) {
         StreamConfigurationMap configs = cc.get(CameraCharacteristics.SCALER_STREAM_CONFIGURATION_MAP);
         Range<Integer>[] ranges = configs.getHighSpeedVideoFpsRanges();
         if(ranges != null && ranges.length > 0) {
@@ -1012,7 +1012,7 @@ public class Camera2Manager {
     }
 
     @SuppressLint("NewApi")
-    private static String getSupportAberrationMode(CameraCharacteristics cc) {
+    private static String getColorCorrectionAberrationMode(CameraCharacteristics cc) {
         int[] modes = cc.get(CameraCharacteristics.COLOR_CORRECTION_AVAILABLE_ABERRATION_MODES);
         if(modes != null) {
             String str = "";

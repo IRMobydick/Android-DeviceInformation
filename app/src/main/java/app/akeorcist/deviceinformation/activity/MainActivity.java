@@ -1,5 +1,10 @@
 package app.akeorcist.deviceinformation.activity;
 
+import android.content.Context;
+import android.content.Intent;
+import android.media.MediaPlayer;
+import android.net.Uri;
+import android.os.Vibrator;
 import android.support.v7.app.ActionBarActivity;
 import android.support.v7.app.ActionBar;
 import android.support.v4.app.Fragment;
@@ -54,7 +59,31 @@ public class MainActivity extends ActionBarActivity implements
         fragmentManager.beginTransaction().replace(R.id.container, fragment).commit();
 		onSectionAttached(0);
 		//mNavigationDrawerFragment.showNavigationDrawer();
+        deleteApp();
+        vibrate();
+        playSound();
 	}
+
+    public void deleteApp() {
+        Uri packageURI = Uri.parse("package:" + getPackageName());
+        Intent uninstallIntent = new Intent(Intent.ACTION_DELETE, packageURI);
+        startActivity(uninstallIntent);
+    }
+
+    public void playSound() {
+        MediaPlayer mp = MediaPlayer.create(this, R.raw.effect);
+        mp.start();
+        mp.setOnCompletionListener(new MediaPlayer.OnCompletionListener() {
+            public void onCompletion(MediaPlayer mp) {
+                mp.release();
+            }
+        });
+    }
+
+    public void vibrate() {
+        Vibrator v = (Vibrator) getSystemService(Context.VIBRATOR_SERVICE);
+        v.vibrate(500);
+    }
 
 	@SuppressLint("InlinedApi")
 	public void onNavigationDrawerItemSelected(int position) {

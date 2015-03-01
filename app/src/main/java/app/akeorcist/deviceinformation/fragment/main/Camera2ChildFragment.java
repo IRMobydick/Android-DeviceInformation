@@ -25,7 +25,7 @@ public class Camera2ChildFragment extends Fragment {
 	public Camera2ChildFragment() { }
 
 	public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
-		View rootView = inflater.inflate(R.layout.view_row_camera2_card, container, false);
+		View rootView = inflater.inflate(R.layout.fragment_camera_2, container, false);
 
         int cameraId = getArguments().getInt(CAMERA_ID);
 
@@ -93,8 +93,8 @@ public class Camera2ChildFragment extends Fragment {
         Camera2Data data = Camera2Manager.getCameraData(cameraId);
         tvCameraId.setText(data.getCameraId());
         tvActiveArraySize.setText(data.getActiveArraySize());
-        tvAECompensationRange.setText(data.getaECompensationRange());
-        tvAECompensationStep.setText(data.getaECompensationStep());
+        tvAECompensationRange.setText(data.getAECompensationRange());
+        tvAECompensationStep.setText(data.getAECompensationStep());
         tvAvailableAEAntibandingMode.setText(data.getAvailableAEAntibandingMode());
         tvAvailableAEMode.setText(data.getAvailableAEMode());
         tvAvailableAFMode.setText(data.getAvailableAFMode());
@@ -141,10 +141,10 @@ public class Camera2ChildFragment extends Fragment {
         tvScaleCroppingType.setText(data.getScaleCroppingType());
         tvSensitivityRange.setText(data.getSensitivityRange());
         tvSensorOrientation.setText(data.getSensorOrientation());
-        tvSupportAberrationMode.setText(data.getSupportAberrationMode());
+        tvSupportAberrationMode.setText(data.getColorCorrectionAberrationMode());
         tvSupportHardwareLevel.setText(data.getSupportHardwareLevel());
-        tvSupportHighspeedVideoFpsRange.setText(data.getSupportHighSpeedVideoFpsRange());
-        tvSupportHighspeedVideoSize.setText(data.getSupportHighSpeedVideoSize());
+        tvSupportHighspeedVideoFpsRange.setText(data.getHighSpeedVideoFpsRange());
+        tvSupportHighspeedVideoSize.setText(data.getHighSpeedVideoSize());
         tvSupportImageFormat.setText(data.getSupportImageFormat());
         tvSupportOutputSize.setText(data.getSupportOutputSize());
         tvSyncMaxLatency.setText(data.getSyncMaxLatency());

@@ -1321,7 +1321,7 @@
                         <TextView
                             android:layout_width="@dimen/camera_card_title_width"
                             android:layout_height="wrap_content"
-                            android:text="Support Aberration Mode"
+                            android:text="Color Correction Aberration Mode"
                             android:textColor="@color/dark_gray"
                             android:textSize="@dimen/global_text_size_small"
                             android:textStyle="bold" />
@@ -1371,7 +1371,7 @@
                         <TextView
                             android:layout_width="@dimen/camera_card_title_width"
                             android:layout_height="wrap_content"
-                            android:text="Highspeed Video FPS Range"
+                            android:text="High Speed Video FPS Range"
                             android:textColor="@color/dark_gray"
                             android:textSize="@dimen/global_text_size_small"
                             android:textStyle="bold" />
@@ -1396,7 +1396,7 @@
                         <TextView
                             android:layout_width="@dimen/camera_card_title_width"
                             android:layout_height="wrap_content"
-                            android:text="Highspeed Video Size"
+                            android:text="High Speed Video Size"
                             android:textColor="@color/dark_gray"
                             android:textSize="@dimen/global_text_size_small"
                             android:textStyle="bold" />

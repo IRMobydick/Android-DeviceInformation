@@ -25,7 +25,7 @@ public class CameraChildFragment extends Fragment {
 	public CameraChildFragment() { }
 
 	public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
-		View rootView = inflater.inflate(R.layout.view_row_camera_card, container, false);
+		View rootView = inflater.inflate(R.layout.fragment_camera, container, false);
 
         int cameraId = getArguments().getInt(CAMERA_ID);
 

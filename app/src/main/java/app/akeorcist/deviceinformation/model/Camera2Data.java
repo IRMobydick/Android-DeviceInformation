@@ -60,9 +60,9 @@ public class Camera2Data {
     private String availableAEMode;
     private String availableAEAntibandingMode;
     private String availableAFMode;
-    private String supportHighSpeedVideoSize;
-    private String supportHighSpeedVideoFpsRange;
-    private String supportAberrationMode;
+    private String highSpeedVideoSize;
+    private String highSpeedVideoFpsRange;
+    private String colorCorrectionAberrationMode;
     private String supportImageFormat;
     private String supportOutputSize;
 
@@ -468,19 +468,19 @@ public class Camera2Data {
         this.availableEffect = availableEffect;
     }
 
-    public String getaECompensationStep() {
+    public String getAECompensationStep() {
         return aECompensationStep;
     }
 
-    public void setaECompensationStep(String aECompensationStep) {
+    public void setAECompensationStep(String aECompensationStep) {
         this.aECompensationStep = aECompensationStep;
     }
 
-    public String getaECompensationRange() {
+    public String getAECompensationRange() {
         return aECompensationRange;
     }
 
-    public void setaECompensationRange(String aECompensationRange) {
+    public void setAECompensationRange(String aECompensationRange) {
         this.aECompensationRange = aECompensationRange;
     }
 
@@ -516,28 +516,28 @@ public class Camera2Data {
         this.availableAFMode = availableAFMode;
     }
 
-    public String getSupportHighSpeedVideoSize() {
-        return supportHighSpeedVideoSize;
+    public String getHighSpeedVideoSize() {
+        return highSpeedVideoSize;
     }
 
-    public void setSupportHighSpeedVideoSize(String supportHighSpeedVideoSize) {
-        this.supportHighSpeedVideoSize = supportHighSpeedVideoSize;
+    public void setHighSpeedVideoSize(String highSpeedVideoSize) {
+        this.highSpeedVideoSize = highSpeedVideoSize;
     }
 
-    public String getSupportHighSpeedVideoFpsRange() {
-        return supportHighSpeedVideoFpsRange;
+    public String getHighSpeedVideoFpsRange() {
+        return highSpeedVideoFpsRange;
     }
 
-    public void setSupportHighSpeedVideoFpsRange(String supportHighSpeedVideoFpsRange) {
-        this.supportHighSpeedVideoFpsRange = supportHighSpeedVideoFpsRange;
+    public void setHighSpeedVideoFpsRange(String supportHighSpeedVideoFpsRange) {
+        this.highSpeedVideoFpsRange = supportHighSpeedVideoFpsRange;
     }
 
-    public String getSupportAberrationMode() {
-        return supportAberrationMode;
+    public String getColorCorrectionAberrationMode() {
+        return colorCorrectionAberrationMode;
     }
 
-    public void setSupportAberrationMode(String supportAberrationMode) {
-        this.supportAberrationMode = supportAberrationMode;
+    public void setColorCorrectionAberrationMode(String colorCorrectionAberrationMode) {
+        this.colorCorrectionAberrationMode = colorCorrectionAberrationMode;
     }
 
     public String getSupportImageFormat() {

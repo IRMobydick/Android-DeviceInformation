@@ -17,7 +17,8 @@
             android:layout_width="80dp"
             android:layout_height="80dp"
             android:layout_marginRight="@dimen/global_margin_padding"
-            android:background="@color/light_gray" />
+            android:background="@color/light_gray"
+            android:src="@drawable/device_unknown" />
 
         <LinearLayout
             android:layout_width="fill_parent"
@@ -29,7 +30,7 @@
                 android:id="@+id/tv_menu_device_title"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="New Text"
+                android:text="Your Device"
                 android:textColor="@color/white"
                 android:textSize="@dimen/global_text_size_large" />
 
@@ -38,7 +39,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_gravity="right"
-                android:text="New Text"
+                android:text="Unknown"
                 android:textColor="@color/white"
                 android:textSize="@dimen/global_text_size" />
         </LinearLayout>

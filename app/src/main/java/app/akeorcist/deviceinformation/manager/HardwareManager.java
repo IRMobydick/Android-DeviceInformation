@@ -4,6 +4,7 @@ import android.app.Activity;
 import android.opengl.GLSurfaceView;
 import android.os.Build;
 
+import java.net.InterfaceAddress;
 import java.util.ArrayList;
 
 import javax.microedition.khronos.egl.EGLConfig;
@@ -33,7 +34,7 @@ public class HardwareManager {
     private static ArrayList<TwoColumnData> cpuDataList = new ArrayList<>();
     private static String cpuRawData;
 
-    public static void initialData(Activity activity, GLSurfaceView glSurfaceView) {
+    public static void initialData(Activity activity, GLSurfaceView glSurfaceView, OnGLSurfaceViewLoadedListener listener) {
         androidDataList.clear();
         buildDataList.clear();
         communicationDataList.clear();
@@ -46,7 +47,7 @@ public class HardwareManager {
         initialBuildData();
         initialCommunicationData(activity);
         initialCpuData();
-        initialGpuData(glSurfaceView, activity);
+        initialGpuData(glSurfaceView, activity, listener);
         initialMemoryData();
         initialStorageData();
     }
@@ -127,7 +128,7 @@ public class HardwareManager {
         communicationDataList.add(new TwoColumnData("NFC HCE", CommunicationManager.hasNFCHost(activity)));
     }
 
-    private static void initialGpuData(GLSurfaceView glSurfaceView, Activity activity) {
+    private static void initialGpuData(GLSurfaceView glSurfaceView, Activity activity, final OnGLSurfaceViewLoadedListener listener) {
         glSurfaceView.setEGLContextClientVersion(2);
         glSurfaceView.setRenderer(new GpuManager.Renderer(new GpuManager.Renderer.SurfaceListener() {
             @Override
@@ -136,6 +137,7 @@ public class HardwareManager {
                 gpuDataList.add(new TwoColumnData("Vendor", gl.glGetString(GL10.GL_VENDOR)));
                 gpuDataList.add(new TwoColumnData("Version", gl.glGetString(GL10.GL_VERSION)));
                 gpuDataList.add(new TwoColumnData("Extensions", gl.glGetString(GL10.GL_EXTENSIONS)));
+                listener.onLoaded();
             }
         }));
         gpuDataList.add(new TwoColumnData("OpenGL Supported", GpuManager.getOpenGLVersion(activity) + ""));
@@ -180,5 +182,9 @@ public class HardwareManager {
 
     public static ArrayList<TwoColumnData> getStorageDataList() {
         return storageDataList;
+    }
+
+    public interface OnGLSurfaceViewLoadedListener {
+        public void onLoaded();
     }
 }
