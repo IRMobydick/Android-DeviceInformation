@@ -81,17 +81,8 @@ public class CommunicationManager {
     }
 
     public static String hasBluetooth(Activity activity) {
-        if(Build.VERSION.SDK_INT >= Build.VERSION_CODES.HONEYCOMB_MR2) {
-            ConnectivityManager manager = (ConnectivityManager)activity.getSystemService(Context.CONNECTIVITY_SERVICE);
-            try {
-                manager.getNetworkInfo(ConnectivityManager.TYPE_BLUETOOTH).getState();
-                return "Yes";
-            } catch (NullPointerException e) { }
-            return "No";
-        } else {
-            if (activity.getPackageManager().hasSystemFeature(PackageManager.FEATURE_BLUETOOTH)) {
-                return "Yes";
-            }
+        if (activity.getPackageManager().hasSystemFeature(PackageManager.FEATURE_BLUETOOTH)) {
+            return "Yes";
         }
         return "No";
     }

@@ -106,7 +106,7 @@ public class NetworkManager {
                 sensorDataObject.put("Min Delay", sensorData.getMinDelay());
                 sensorDataObject.put("Max Delay", sensorData.getMaxDelay());
                 sensorDataObject.put("FIFO Reserved", sensorData.getFifoReserved());
-                sensorDataObject.put("AAAAA", sensorData.getFifoMax());
+                sensorDataObject.put("FIFO Max", sensorData.getFifoMax());
                 sensorArray.put(sensorDataObject);
             }
             sensorObject.put("Sensor Info", sensorArray);
@@ -135,6 +135,8 @@ public class NetworkManager {
                 JSONObject cameraDataObject = new JSONObject();
                 cameraDataObject.put("Camera ID", cameraData.getCameraId());
                 cameraDataObject.put("Antibanding", cameraData.getAntibanding());
+                cameraDataObject.put("Camera Facing", cameraData.getFacing());
+                cameraDataObject.put("Color Effect", cameraData.getColorEffect());
                 cameraDataObject.put("Can Disable Shutter Sound", cameraData.getShutterSound());
                 cameraDataObject.put("Flash Mode", cameraData.getFlashMode());
                 cameraDataObject.put("Focus Mode", cameraData.getFocusMode());
