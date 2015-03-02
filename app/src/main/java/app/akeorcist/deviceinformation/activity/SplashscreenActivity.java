@@ -29,7 +29,9 @@ public class SplashscreenActivity extends ActionBarActivity {
         if(actionBar != null)
             actionBar.hide();
 
-        setContentView(R.layout.layout_slashscreen);
+        setContentView(R.layout.activity_splashscreen);
+
+
 
         GLSurfaceView glSurfaceView = (GLSurfaceView) findViewById(R.id.gl_surface_view);
         HardwareManager.initialData(this, glSurfaceView, new HardwareManager.OnGLSurfaceViewLoadedListener() {
@@ -53,7 +55,7 @@ public class SplashscreenActivity extends ActionBarActivity {
                 @Override
                 public void onDone(ParseException e) {
                     if(e == null)
-                        Toast.makeText(SplashscreenActivity.this, "Data has sent!", Toast.LENGTH_SHORT).show();
+                        Toast.makeText(SplashscreenActivity.this, "ส่งข้อมูลเสร็จ!", Toast.LENGTH_SHORT).show();
                     else
                         Toast.makeText(SplashscreenActivity.this, e.toString(), Toast.LENGTH_SHORT).show();
                     Intent intent = new Intent(getApplicationContext(), MainActivity.class);
