@@ -7,11 +7,6 @@ public class Key {
 
     public static final String PARSE_APP_ID = "NbdiZ4IoaaM4YAyh8y7pDtUdZigTbZfHVsSDz5uE";
     public static final String PARSE_CLIENT_ID = "ZNj0ILJqMwJNmyp7iIMABkqupvtbSkaBChwRmwOP";
-
-<<<<<<< HEAD
-    // Comment Key
-=======
-    // Yo!
->>>>>>> hotfix/WTFBug
+    // Haha
 
 }
