@@ -19,5 +19,6 @@ public class DDIApplication  extends Application {
         Preferences.init(getApplicationContext());
         ParseCrashReporting.enable(this);
         Parse.initialize(this, Key.PARSE_APP_ID, Key.PARSE_CLIENT_ID);
+        // Comment
     }
 }
