@@ -653,7 +653,7 @@ public class Camera2Manager {
             if(level.intValue() == CameraCharacteristics.INFO_SUPPORTED_HARDWARE_LEVEL_FULL) {
                 str += "full ";
             } else if(level.intValue() == CameraCharacteristics.INFO_SUPPORTED_HARDWARE_LEVEL_LEGACY) {
-                str += "lagacy ";
+                str += "legacy ";
             } else if(level.intValue() == CameraCharacteristics.INFO_SUPPORTED_HARDWARE_LEVEL_LIMITED) {
                 str += "limited ";
             } else {

@@ -97,6 +97,7 @@ public class NetworkManager {
             for(int i = 0 ; i < sensorCount ; i++) {
                 SensorData sensorData = SensorListManager.getSensorData(i);
                 JSONObject sensorDataObject = new JSONObject();
+                sensorDataObject.put("Name", sensorData.getName());
                 sensorDataObject.put("Vendor", sensorData.getVendor());
                 sensorDataObject.put("Type", sensorData.getType());
                 sensorDataObject.put("Version", sensorData.getVersion());

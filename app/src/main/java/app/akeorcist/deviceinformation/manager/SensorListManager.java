@@ -23,7 +23,7 @@ public class SensorListManager {
         SensorManager sensorManager = (SensorManager)activity.getSystemService(Context.SENSOR_SERVICE);
         List<Sensor> sensorList = sensorManager.getSensorList(Sensor.TYPE_ALL);
         for(Sensor sensor : sensorList) {
-            sensorDataList.add(new SensorData(sensor.getName())
+            sensorDataList.add(new SensorData(getName(sensor))
                     .setVendor(sensor.getVendor())
                     .setType(getType(sensor.getType()))
                     .setVersion(sensor.getVersion() + "")
@@ -36,6 +36,14 @@ public class SensorListManager {
                     .setFifoReserved(getFifoReservedEventCount(sensor))
                     .setImageResId(getImageResourceId(sensor)));
         }
+    }
+
+    @SuppressLint("NewApi")
+    private static String getName(Sensor sensor) {
+        if(Build.VERSION.SDK_INT >= Build.VERSION_CODES.GINGERBREAD) {
+            return sensor.getName() + "";
+        }
+        return "Unknown";
     }
 
     @SuppressLint("NewApi")
@@ -124,7 +132,7 @@ public class SensorListManager {
             case Sensor.TYPE_TEMPERATURE:
                 return "Temperature";
         }
-        return "Unknown";
+        return "Unknown (" + type + ")";
     }
 
     private static int getImageResourceId(Sensor sensor) {
