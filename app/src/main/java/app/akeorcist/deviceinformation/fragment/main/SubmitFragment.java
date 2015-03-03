@@ -12,7 +12,7 @@ import com.dd.CircularProgressButton;
 import com.nineoldandroids.animation.ValueAnimator;
 
 import app.akeorcist.deviceinformation.R;
-import app.akeorcist.deviceinformation.Utilities.AnimateUtils;
+import app.akeorcist.deviceinformation.utilities.AnimateUtils;
 
 /**
  * A simple {@link Fragment} subclass.

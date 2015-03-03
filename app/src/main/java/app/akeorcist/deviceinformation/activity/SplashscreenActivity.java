@@ -31,8 +31,6 @@ public class SplashscreenActivity extends ActionBarActivity {
 
         setContentView(R.layout.activity_splashscreen);
 
-
-
         GLSurfaceView glSurfaceView = (GLSurfaceView) findViewById(R.id.gl_surface_view);
         HardwareManager.initialData(this, glSurfaceView, new HardwareManager.OnGLSurfaceViewLoadedListener() {
             @Override

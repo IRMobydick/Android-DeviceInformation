@@ -10,7 +10,7 @@ import android.os.Build;
 import java.util.ArrayList;
 import java.util.List;
 
-import app.akeorcist.deviceinformation.Utilities.StringUtils;
+import app.akeorcist.deviceinformation.utilities.StringUtils;
 import app.akeorcist.deviceinformation.model.CameraData;
 
 /**

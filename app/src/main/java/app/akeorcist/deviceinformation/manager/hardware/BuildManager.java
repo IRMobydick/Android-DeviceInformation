@@ -3,7 +3,7 @@ package app.akeorcist.deviceinformation.manager.hardware;
 import android.annotation.SuppressLint;
 import android.os.Build;
 
-import app.akeorcist.deviceinformation.Utilities.StringUtils;
+import app.akeorcist.deviceinformation.utilities.StringUtils;
 
 /**
  * Created by Akexorcist on 2/27/15 AD.

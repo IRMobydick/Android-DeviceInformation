@@ -2,8 +2,6 @@ package app.akeorcist.deviceinformation.manager;
 
 import android.annotation.SuppressLint;
 import android.app.Activity;
-import android.content.ClipData;
-import android.content.ClipboardManager;
 import android.content.Context;
 import android.graphics.ImageFormat;
 import android.graphics.Rect;
@@ -20,7 +18,7 @@ import android.util.SizeF;
 
 import java.util.ArrayList;
 
-import app.akeorcist.deviceinformation.Utilities.StringUtils;
+import app.akeorcist.deviceinformation.utilities.StringUtils;
 import app.akeorcist.deviceinformation.model.Camera2Data;
 
 /**

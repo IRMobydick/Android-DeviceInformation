@@ -1,18 +1,14 @@
 package app.akeorcist.deviceinformation.adapter;
 
 import android.content.Context;
-import android.util.Log;
 import android.view.LayoutInflater;
-import android.view.MotionEvent;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.BaseAdapter;
 import android.widget.ImageView;
-import android.widget.LinearLayout;
 import android.widget.TextView;
 
 import app.akeorcist.deviceinformation.R;
-import app.akeorcist.deviceinformation.Utilities.AnimateUtils;
 
 /**
  * Created by Ake on 2/26/2015.

@@ -1,4 +1,4 @@
-package app.akeorcist.deviceinformation.Utilities;
+package app.akeorcist.deviceinformation.utilities;
 
 import android.content.Context;
 import android.content.pm.PackageManager.NameNotFoundException;

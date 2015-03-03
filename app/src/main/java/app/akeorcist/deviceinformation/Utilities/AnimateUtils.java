@@ -1,14 +1,11 @@
-package app.akeorcist.deviceinformation.Utilities;
+package app.akeorcist.deviceinformation.utilities;
 
-import android.util.Log;
 import android.view.MotionEvent;
 import android.view.View;
 import android.view.animation.OvershootInterpolator;
 
 import com.nineoldandroids.animation.AnimatorSet;
 import com.nineoldandroids.animation.ObjectAnimator;
-
-import app.akeorcist.deviceinformation.R;
 
 /**
  * Created by Akexorcist on 2/26/15 AD.

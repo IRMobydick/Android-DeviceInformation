@@ -4,14 +4,11 @@ import android.content.Intent;
 import android.support.v4.view.ViewPager;
 import android.support.v7.app.ActionBarActivity;
 import android.os.Bundle;
-import android.util.Log;
-import android.view.Menu;
-import android.view.MenuItem;
 
 import com.squareup.otto.Subscribe;
 
 import app.akeorcist.deviceinformation.R;
-import app.akeorcist.deviceinformation.Utilities.Preferences;
+import app.akeorcist.deviceinformation.utilities.Preferences;
 import app.akeorcist.deviceinformation.adapter.WelcomePagerAdapter;
 import app.akeorcist.deviceinformation.event.WelcomeEvent;
 import app.akeorcist.deviceinformation.provider.BusProvider;

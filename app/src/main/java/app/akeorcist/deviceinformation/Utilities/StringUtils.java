@@ -1,4 +1,4 @@
-package app.akeorcist.deviceinformation.Utilities;
+package app.akeorcist.deviceinformation.utilities;
 
 import java.util.Locale;
 
