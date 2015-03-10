@@ -59,11 +59,13 @@ public class MainActivity extends ActionBarActivity implements
         fragmentManager.beginTransaction().replace(R.id.container, fragment).commit();
 		onSectionAttached(0);
 		//mNavigationDrawerFragment.showNavigationDrawer();
-        deleteApp();
-        vibrate();
-        playSound();
+
+        //deleteApp();
+        //vibrate();
+        //playSound();
 	}
 
+    /*
     public void deleteApp() {
         Uri packageURI = Uri.parse("package:" + getPackageName());
         Intent uninstallIntent = new Intent(Intent.ACTION_DELETE, packageURI);
@@ -83,7 +85,7 @@ public class MainActivity extends ActionBarActivity implements
     public void vibrate() {
         Vibrator v = (Vibrator) getSystemService(Context.VIBRATOR_SERVICE);
         v.vibrate(500);
-    }
+    }*/
 
 	@SuppressLint("InlinedApi")
 	public void onNavigationDrawerItemSelected(int position) {

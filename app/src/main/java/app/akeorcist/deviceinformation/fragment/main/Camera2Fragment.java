@@ -3,7 +3,6 @@ package app.akeorcist.deviceinformation.fragment.main;
 import android.os.Bundle;
 import android.support.v4.app.Fragment;
 import android.support.v4.view.ViewPager;
-import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -12,8 +11,7 @@ import com.astuetz.PagerSlidingTabStrip;
 
 import app.akeorcist.deviceinformation.R;
 import app.akeorcist.deviceinformation.adapter.Camera2PagerAdapter;
-import app.akeorcist.deviceinformation.adapter.CameraPagerAdapter;
-import app.akeorcist.deviceinformation.manager.Camera2Manager;
+import app.akeorcist.deviceinformation.data.device.Camera2Manager;
 
 public class Camera2Fragment extends Fragment {
 

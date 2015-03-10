@@ -8,7 +8,7 @@ import android.os.Bundle;
 import com.squareup.otto.Subscribe;
 
 import app.akeorcist.deviceinformation.R;
-import app.akeorcist.deviceinformation.utilities.Preferences;
+import app.akeorcist.deviceinformation.utility.Preferences;
 import app.akeorcist.deviceinformation.adapter.WelcomePagerAdapter;
 import app.akeorcist.deviceinformation.event.WelcomeEvent;
 import app.akeorcist.deviceinformation.provider.BusProvider;
@@ -21,7 +21,7 @@ public class WelcomeActivity extends ActionBarActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
 
-        if(!Preferences.isFirstRun()) {
+        if(!Preferences.isFirstRun(this)) {
             handleButtonPress(new WelcomeEvent(WelcomeEvent.EVENT_SKIP));
         }
 

@@ -9,7 +9,7 @@ import android.view.View;
 import android.view.ViewGroup;
 
 import app.akeorcist.deviceinformation.R;
-import app.akeorcist.deviceinformation.utilities.StringUtils;
+import app.akeorcist.deviceinformation.utility.StringUtils;
 import app.akeorcist.deviceinformation.adapter.FeatureCardAdapter;
 
 public class FeatureChildFragment extends Fragment {

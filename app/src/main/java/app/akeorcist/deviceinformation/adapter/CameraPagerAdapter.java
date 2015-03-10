@@ -8,10 +8,8 @@ import android.support.v4.app.Fragment;
 import android.support.v4.app.FragmentManager;
 import android.support.v4.app.FragmentStatePagerAdapter;
 
-import app.akeorcist.deviceinformation.constants.Features;
 import app.akeorcist.deviceinformation.fragment.main.CameraChildFragment;
-import app.akeorcist.deviceinformation.fragment.main.FeatureChildFragment;
-import app.akeorcist.deviceinformation.manager.CameraManager;
+import app.akeorcist.deviceinformation.data.device.CameraManager;
 
 public class CameraPagerAdapter extends FragmentStatePagerAdapter {
     private static int PAGE_COUNT = 0;

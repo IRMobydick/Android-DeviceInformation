@@ -1,13 +1,13 @@
 apply plugin: 'com.android.application'
 
 android {
-    compileSdkVersion 21
-    buildToolsVersion "21.1.2"
+    compileSdkVersion 22
+    buildToolsVersion "22"
 
     defaultConfig {
         applicationId "app.akeorcist.deviceinformation"
         minSdkVersion 10
-        targetSdkVersion 19
+        targetSdkVersion 22
     }
 
     buildTypes {
@@ -33,4 +33,9 @@ dependencies {
     compile 'com.ms-square:etsyblur:0.1.0'
     compile 'com.nineoldandroids:library:2.4.0'
     compile 'com.astuetz:pagerslidingtabstrip:1.0.1'
+    compile 'com.squareup.retrofit:retrofit:1.9.0'
+    compile 'com.mcxiaoke.volley:library:1.0.+@aar'
+    compile 'com.koushikdutta.ion:ion:2.+'
+    compile 'com.squareup.okhttp:okhttp:2.2.0'
+
 }

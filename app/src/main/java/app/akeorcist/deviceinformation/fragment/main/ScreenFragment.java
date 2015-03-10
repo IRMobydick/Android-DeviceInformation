@@ -13,9 +13,9 @@ import android.view.ViewGroup;
 import android.widget.TextView;
 
 import app.akeorcist.deviceinformation.R;
-import app.akeorcist.deviceinformation.utilities.AnimateUtils;
+import app.akeorcist.deviceinformation.utility.AnimateUtils;
 import app.akeorcist.deviceinformation.activity.ScreenMeasureActivity;
-import app.akeorcist.deviceinformation.manager.ScreenManager;
+import app.akeorcist.deviceinformation.data.device.ScreenManager;
 import app.akeorcist.deviceinformation.model.ScreenData;
 
 public class ScreenFragment extends Fragment {

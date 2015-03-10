@@ -13,7 +13,7 @@ import android.view.ViewGroup;
 import app.akeorcist.deviceinformation.R;
 import app.akeorcist.deviceinformation.constants.Features;
 import app.akeorcist.deviceinformation.holder.FeatureDataHolder;
-import app.akeorcist.deviceinformation.manager.FeatureManager;
+import app.akeorcist.deviceinformation.data.device.FeatureManager;
 import app.akeorcist.deviceinformation.model.FeatureData;
 
 public class FeatureCardAdapter extends RecyclerView.Adapter<FeatureDataHolder> {

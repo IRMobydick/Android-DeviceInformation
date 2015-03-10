@@ -32,10 +32,7 @@ import android.app.Activity;
 import android.app.Dialog;
 import android.content.Context;
 import android.content.SharedPreferences;
-import android.content.pm.PackageManager;
 import android.hardware.Camera;
-import android.hardware.Sensor;
-import android.hardware.SensorManager;
 import android.net.ConnectivityManager;
 import android.net.NetworkInfo;
 import android.opengl.GLSurfaceView;
@@ -53,10 +50,9 @@ import android.view.Window;
 import android.widget.Button;
 import android.widget.TextView;
 import android.widget.Toast;
-import app.akeorcist.deviceinformation.manager.InfoManager.HardwareInfo;
-import app.akeorcist.deviceinformation.manager.InfoManager.ScreenInfo;
-import app.akeorcist.deviceinformation.manager.InfoManager.SensorInfo;
-import app.akeorcist.deviceinformation.manager.InfoManager.CameraInfo;
+import app.akeorcist.deviceinformation.data.device.InfoManager.HardwareInfo;
+import app.akeorcist.deviceinformation.data.device.InfoManager.ScreenInfo;
+import app.akeorcist.deviceinformation.data.device.InfoManager.CameraInfo;
 import app.akeorcist.deviceinformation.R;
 
 public class TestingFragment extends Fragment {

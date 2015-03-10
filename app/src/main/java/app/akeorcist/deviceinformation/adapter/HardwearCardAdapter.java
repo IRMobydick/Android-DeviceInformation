@@ -15,8 +15,8 @@ import java.util.ArrayList;
 
 import app.akeorcist.deviceinformation.R;
 import app.akeorcist.deviceinformation.constants.Data;
-import app.akeorcist.deviceinformation.manager.HardwareManager;
-import app.akeorcist.deviceinformation.model.TwoColumnData;
+import app.akeorcist.deviceinformation.data.device.HardwareManager;
+import app.akeorcist.deviceinformation.model.SimpleData;
 import app.akeorcist.deviceinformation.holder.HardwareDataHolder;
 
 public class HardwearCardAdapter extends RecyclerView.Adapter<HardwareDataHolder> {
@@ -35,7 +35,7 @@ public class HardwearCardAdapter extends RecyclerView.Adapter<HardwareDataHolder
     public void onBindViewHolder(HardwareDataHolder viewHolder, int position) {
         viewHolder.layoutHardwareCard.removeAllViews();
 
-        ArrayList<TwoColumnData> arrData = null;
+        ArrayList<SimpleData> arrData = null;
         if(position == Data.DATA_ANDROID) {
             arrData = HardwareManager.getAndroidDataList();
             viewHolder.tvCardHeader.setText(Data.TITLE_ANDROID);

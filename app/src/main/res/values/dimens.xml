@@ -97,7 +97,6 @@
 
     <!-- Sensor -->
     <dimen name="sensor_card_title_width">120dp</dimen>
-    <dimen name="sensor_card_icon_size">50dp</dimen>
     <dimen name="sensor_card_info_icon_size">40dp</dimen>
 
     <!-- Camera -->

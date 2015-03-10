@@ -18,175 +18,167 @@
         android:textSize="@dimen/global_text_size"
         app:cpb_cornerRadius="@dimen/global_corner_radius"
         app:cpb_iconComplete="@drawable/menu_icon_app"
+        app:cpb_iconError="@drawable/menu_icon_feature"
         app:cpb_selectorComplete="@drawable/selector_green"
-        app:cpb_selectorError="@drawable/selector_green"
+        app:cpb_selectorError="@drawable/selector_yellow"
         app:cpb_selectorIdle="@drawable/selector_red"
         app:cpb_textIdle="Send" />
 
-    <LinearLayout
+    <RelativeLayout
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:orientation="vertical">
+        android:layout_marginLeft="@dimen/global_margin_padding_large"
+        android:layout_marginRight="@dimen/global_margin_padding_large">
 
         <LinearLayout
-            android:layout_width="match_parent"
+            android:id="@+id/layout_validated"
+            android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:gravity="center_vertical"
-            android:orientation="horizontal"
-            android:padding="@dimen/global_margin_padding_small">
-
-            <ImageView
-                android:id="@+id/iv_submit_hwsw"
-                android:layout_width="30dp"
-                android:layout_height="30dp"
-                android:layout_marginRight="@dimen/global_margin_padding"
-                android:background="@color/light_gray" />
+            android:orientation="vertical"
+            android:visibility="gone">
 
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="Collect hardware/software info"
+                android:text="Thank you for submit your device"
                 android:textColor="@color/dark_gray"
-                android:textSize="@dimen/global_text_size_small" />
-
+                android:textSize="@dimen/global_text_size"
+                android:gravity="center" />
         </LinearLayout>
 
         <LinearLayout
-            android:layout_width="match_parent"
+            android:id="@+id/layout_existing"
+            android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:gravity="center_vertical"
-            android:orientation="horizontal"
-            android:padding="@dimen/global_margin_padding_small">
-
-            <ImageView
-                android:id="@+id/iv_submit_sensor"
-                android:layout_width="30dp"
-                android:layout_height="30dp"
-                android:layout_marginRight="@dimen/global_margin_padding"
-                android:background="@color/light_gray" />
+            android:orientation="vertical"
+            android:visibility="gone">
 
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="Collect sensor info"
+                android:text="Thank you!\nbut we already have this device information"
                 android:textColor="@color/dark_gray"
-                android:textSize="@dimen/global_text_size_small" />
-
+                android:textSize="@dimen/global_text_size"
+                android:gravity="center" />
         </LinearLayout>
 
         <LinearLayout
-            android:layout_width="match_parent"
+            android:id="@+id/layout_connection_unavailable"
+            android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:gravity="center_vertical"
-            android:orientation="horizontal"
-            android:padding="@dimen/global_margin_padding_small">
-
-            <ImageView
-                android:id="@+id/iv_submit_screen"
-                android:layout_width="30dp"
-                android:layout_height="30dp"
-                android:layout_marginRight="@dimen/global_margin_padding"
-                android:background="@color/light_gray" />
+            android:orientation="vertical"
+            android:visibility="gone">
 
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="Collect screen info"
-                android:textColor="@color/dark_gray"
-                android:textSize="@dimen/global_text_size_small" />
-
+                android:text="Connection failed.\nPlease check your internet connection."
+                android:textColor="@color/red"
+                android:textSize="@dimen/global_text_size"
+                android:gravity="center" />
         </LinearLayout>
 
         <LinearLayout
-            android:layout_width="match_parent"
+            android:id="@+id/layout_submit_status"
+            android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:gravity="center_vertical"
-            android:orientation="horizontal"
-            android:padding="@dimen/global_margin_padding_small">
+            android:orientation="vertical"
+            android:visibility="gone"
+            android:touchscreenBlocksFocus="true"
+            android:layout_centerHorizontal="true">
 
-            <ImageView
-                android:id="@+id/iv_submit_camera"
-                android:layout_width="30dp"
-                android:layout_height="30dp"
-                android:layout_marginRight="@dimen/global_margin_padding"
-                android:background="@color/light_gray" />
-
-            <TextView
-                android:layout_width="wrap_content"
+            <LinearLayout
+                android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:text="Collect camera info"
-                android:textColor="@color/dark_gray"
-                android:textSize="@dimen/global_text_size_small" />
+                android:gravity="center_vertical"
+                android:orientation="horizontal">
 
-        </LinearLayout>
+                <app.akeorcist.deviceinformation.view.FinishButton
+                    android:id="@+id/iv_connection_available"
+                    android:layout_width="30dp"
+                    android:layout_height="30dp"
+                    android:layout_margin="@dimen/global_margin_padding"
+                    android:background="@drawable/shape_oval_light_gray"
+                    android:scaleType="fitCenter" />
 
-        <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:gravity="center_vertical"
-            android:orientation="horizontal"
-            android:padding="@dimen/global_margin_padding_small">
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Connection Available"
+                    android:textColor="@color/dark_gray"
+                    android:textSize="@dimen/global_text_size" />
 
-            <ImageView
-                android:id="@+id/iv_submit_feature"
-                android:layout_width="30dp"
-                android:layout_height="30dp"
-                android:layout_marginRight="@dimen/global_margin_padding"
-                android:background="@color/light_gray" />
+            </LinearLayout>
 
-            <TextView
-                android:layout_width="wrap_content"
+            <LinearLayout
+                android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:text="Collect feature info"
-                android:textColor="@color/dark_gray"
-                android:textSize="@dimen/global_text_size_small" />
+                android:gravity="center_vertical"
+                android:orientation="horizontal">
 
-        </LinearLayout>
+                <app.akeorcist.deviceinformation.view.FinishButton
+                    android:id="@+id/iv_collect_device_info"
+                    android:layout_width="30dp"
+                    android:layout_height="30dp"
+                    android:layout_margin="@dimen/global_margin_padding"
+                    android:background="@drawable/shape_oval_light_gray"
+                    android:scaleType="fitCenter" />
 
-        <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:gravity="center_vertical"
-            android:orientation="horizontal"
-            android:padding="@dimen/global_margin_padding_small">
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Collect Device Info"
+                    android:textColor="@color/dark_gray"
+                    android:textSize="@dimen/global_text_size" />
 
-            <ImageView
-                android:id="@+id/iv_submit_app"
-                android:layout_width="30dp"
-                android:layout_height="30dp"
-                android:layout_marginRight="@dimen/global_margin_padding"
-                android:background="@color/light_gray" />
+            </LinearLayout>
 
-            <TextView
-                android:layout_width="wrap_content"
+            <LinearLayout
+                android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:text="Collect app info"
-                android:textColor="@color/dark_gray"
-                android:textSize="@dimen/global_text_size_small" />
+                android:gravity="center_vertical"
+                android:orientation="horizontal">
 
-        </LinearLayout>
+                <app.akeorcist.deviceinformation.view.FinishButton
+                    android:id="@+id/iv_send_device_info"
+                    android:layout_width="30dp"
+                    android:layout_height="30dp"
+                    android:layout_margin="@dimen/global_margin_padding"
+                    android:background="@drawable/shape_oval_light_gray"
+                    android:scaleType="fitCenter" />
 
-        <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:gravity="center_vertical"
-            android:orientation="horizontal"
-            android:padding="@dimen/global_margin_padding_small">
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Send Device Info"
+                    android:textColor="@color/dark_gray"
+                    android:textSize="@dimen/global_text_size" />
 
-            <ImageView
-                android:id="@+id/iv_submit_send"
-                android:layout_width="30dp"
-                android:layout_height="30dp"
-                android:layout_marginRight="@dimen/global_margin_padding"
-                android:background="@color/light_gray" />
+            </LinearLayout>
 
-            <TextView
-                android:layout_width="wrap_content"
+            <LinearLayout
+                android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:text="Send device information"
-                android:textColor="@color/dark_gray"
-                android:textSize="@dimen/global_text_size_small" />
+                android:gravity="center_vertical"
+                android:orientation="horizontal">
 
+                <app.akeorcist.deviceinformation.view.FinishButton
+                    android:id="@+id/iv_finish"
+                    android:layout_width="30dp"
+                    android:layout_height="30dp"
+                    android:layout_margin="@dimen/global_margin_padding"
+                    android:background="@drawable/shape_oval_light_gray"
+                    android:scaleType="fitCenter" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Finish!"
+                    android:textColor="@color/dark_gray"
+                    android:textSize="@dimen/global_text_size" />
+
+            </LinearLayout>
         </LinearLayout>
-    </LinearLayout>
+    </RelativeLayout>
+
 </LinearLayout>

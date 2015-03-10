@@ -13,7 +13,6 @@ import app.akeorcist.deviceinformation.R;
  * Created by Akexorcist on 2/27/15 AD.
  */
 public class SensorDataHolder extends RecyclerView.ViewHolder {
-    public ImageView ivSensor;
     public TextView tvName;
     public TextView tvVendor;
     public TextView tvType;
@@ -29,7 +28,6 @@ public class SensorDataHolder extends RecyclerView.ViewHolder {
 
     public SensorDataHolder(View view) {
         super(view);
-        ivSensor = (ImageView) view.findViewById(R.id.iv_sensor);
         tvName = (TextView) view.findViewById(R.id.tv_name);
         tvVendor = (TextView) view.findViewById(R.id.tv_vendor);
         tvType = (TextView) view.findViewById(R.id.tv_type);

@@ -8,7 +8,7 @@ import android.view.ViewGroup;
 import android.widget.TextView;
 
 import app.akeorcist.deviceinformation.R;
-import app.akeorcist.deviceinformation.manager.Camera2Manager;
+import app.akeorcist.deviceinformation.data.device.Camera2Manager;
 import app.akeorcist.deviceinformation.model.Camera2Data;
 
 public class Camera2ChildFragment extends Fragment {

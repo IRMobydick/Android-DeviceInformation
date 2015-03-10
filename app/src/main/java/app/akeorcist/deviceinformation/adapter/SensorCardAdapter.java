@@ -12,7 +12,7 @@ import android.view.ViewGroup;
 
 import app.akeorcist.deviceinformation.R;
 import app.akeorcist.deviceinformation.holder.SensorDataHolder;
-import app.akeorcist.deviceinformation.manager.SensorListManager;
+import app.akeorcist.deviceinformation.data.device.SensorListManager;
 import app.akeorcist.deviceinformation.model.SensorData;
 
 public class SensorCardAdapter extends RecyclerView.Adapter<SensorDataHolder> {
@@ -31,7 +31,6 @@ public class SensorCardAdapter extends RecyclerView.Adapter<SensorDataHolder> {
     @Override
     public void onBindViewHolder(SensorDataHolder viewHolder, final int position) {
         SensorData sensor = SensorListManager.getSensorData(position);
-        viewHolder.ivSensor.setImageResource(sensor.getImageResId());
         viewHolder.tvName.setText(sensor.getName());
         viewHolder.tvVendor.setText(sensor.getVendor());
         viewHolder.tvType.setText(sensor.getType());

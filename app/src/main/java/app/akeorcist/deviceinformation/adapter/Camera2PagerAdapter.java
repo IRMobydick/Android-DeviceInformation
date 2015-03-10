@@ -9,7 +9,7 @@ import android.support.v4.app.FragmentManager;
 import android.support.v4.app.FragmentStatePagerAdapter;
 
 import app.akeorcist.deviceinformation.fragment.main.Camera2ChildFragment;
-import app.akeorcist.deviceinformation.manager.CameraManager;
+import app.akeorcist.deviceinformation.data.device.CameraManager;
 
 public class Camera2PagerAdapter extends FragmentStatePagerAdapter {
     private static int PAGE_COUNT = 0;

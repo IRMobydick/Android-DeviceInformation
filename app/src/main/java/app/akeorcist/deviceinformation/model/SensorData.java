@@ -5,7 +5,6 @@ package app.akeorcist.deviceinformation.model;
  */
 public class SensorData {
 
-    private int imageResId;
     private String name;
     private String vendor;
     private String type;
@@ -128,15 +127,6 @@ public class SensorData {
 
     public SensorData setUnit(String unit) {
         this.unit = unit;
-        return this;
-    }
-
-    public int getImageResId() {
-        return imageResId;
-    }
-
-    public SensorData setImageResId(int imageResId) {
-        this.imageResId = imageResId;
         return this;
     }
 }
